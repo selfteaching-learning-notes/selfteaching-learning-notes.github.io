@@ -1,0 +1,40 @@
+dist: trusty
+sudo: required
+addons:
+  ssh_known_hosts:
+  - github.com
+  apt:
+    packages:
+    - nasm
+env:
+  global:
+  - TZ=Asia/Shanghai
+language: node_js
+node_js: node
+branches:
+  only:
+  - source
+git:
+  depth: false
+  submodules: false
+cache:
+  apt: true
+  directories:
+  - node_modules
+before_install:
+- openssl aes-256-cbc -K $encrypted_245a25db3475_key -iv $encrypted_245a25db3475_iv
+  -in id_rsa_travis.enc -out deploy_key -d
+- eval "$(ssh-agent -s)"
+- chmod 600 ./deploy_key
+- ssh-add ./deploy_key
+- git config --global user.name "travis-ci"
+- git config --global user.email "travis-ci@tinfinite.com"
+- git ls-files -z | while read -d '' path; do touch -d "$(git log -1 --format="@%ct"
+  "$path")" "$path"; done
+- git clone --branch=source --single-branch git@github.com:selfteaching-learning-notes/selfteaching-learning-notes.github.io.git
+  .deploy_git
+install: npm install
+before_script: 
+script:
+- hexo clean
+- hexo g -d
