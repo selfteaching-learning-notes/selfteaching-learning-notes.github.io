@@ -4,12 +4,12 @@
 
 # Site
 title: 自学营学员笔记
-subtitle:
-description:
-keywords:
+subtitle: 总结、记录、打卡、沉淀
+description: 该博客用于收录自学营学员在学习过程中的笔记，包括学习心得、总结、记录解决问题的过程等。。。
+keywords: 自学营,训练营,自学训练营,数据营,量化营,MIT,Python,新生大学
 author: 自学营团队
 language: zh-CN
-timezone:
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
