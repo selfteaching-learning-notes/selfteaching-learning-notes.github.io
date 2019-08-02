@@ -102,3 +102,8 @@ feed:
   content_limit_delim: ' '
   order_by: -date
   icon: icon.png
+
+# Include/Exclude Files or Folders
+## https://hexo.io/docs/configuration.html#Include-Exclude-Files-or-Folders
+exclude:
+  - .github
