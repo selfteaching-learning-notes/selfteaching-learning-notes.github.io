@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":"enable","trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    search: {
+      root: '/',
+      path: 'search.xml'
+    },
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="打卡记录 学号：1901090022 学习课程：Introduction to Computer Science and Programming in Python 学习内容：Problem Set 2 (ZIP) 打卡天数：D06  Part 2 作业:A. 游戏要求: 程序必须从 words.txt 文件中随机挑选一个单词。hangman.py 文件中已经实现了加载单词列表 和 随机选择单词">
+<meta name="keywords" content="Python,MIT,学习打卡">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1901090022-MIT60001-ProblemSet2(Part2)">
+<meta property="og:url" content="https://selfteaching-learning-notes.github.io/MIT60001/1901090022-自学训练营-MIT-Python课-ProblemSet2(Part2)/index.html">
+<meta property="og:site_name" content="自学营学员笔记">
+<meta property="og:description" content="打卡记录 学号：1901090022 学习课程：Introduction to Computer Science and Programming in Python 学习内容：Problem Set 2 (ZIP) 打卡天数：D06  Part 2 作业:A. 游戏要求: 程序必须从 words.txt 文件中随机挑选一个单词。hangman.py 文件中已经实现了加载单词列表 和 随机选择单词">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-01T09:13:09.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="1901090022-MIT60001-ProblemSet2(Part2)">
+<meta name="twitter:description" content="打卡记录 学号：1901090022 学习课程：Introduction to Computer Science and Programming in Python 学习内容：Problem Set 2 (ZIP) 打卡天数：D06  Part 2 作业:A. 游戏要求: 程序必须从 words.txt 文件中随机挑选一个单词。hangman.py 文件中已经实现了加载单词列表 和 随机选择单词">
+  <link rel="alternate" href="/atom.xml" title="自学营学员笔记" type="application/atom+xml">
+  <link rel="canonical" href="https://selfteaching-learning-notes.github.io/MIT60001/1901090022-自学训练营-MIT-Python课-ProblemSet2(Part2)/">
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>1901090022-MIT60001-ProblemSet2(Part2) | 自学营学员笔记</title>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144933018-1"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-144933018-1');
+    }
+  </script>
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">自学营学员笔记</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">总结、记录、打卡、沉淀</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-search">
+          <a href="javascript:;" class="popup-trigger">
+          
+            <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>搜索</a>
+        </li>
+      
+    </ul>
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+    </div>
+</nav>
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://selfteaching-learning-notes.github.io/MIT60001/1901090022-自学训练营-MIT-Python课-ProblemSet2(Part2)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="自学营团队">
+      <meta itemprop="description" content="该博客用于收录自学营学员在学习过程中的笔记，包括学习心得、总结、记录解决问题的过程等。。。">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="自学营学员笔记">
+    </span>
+      <header class="post-header">
+
+        
+          <h2 class="post-title" itemprop="name headline">1901090022-MIT60001-ProblemSet2(Part2)
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-30 00:00:00" itemprop="dateCreated datePublished" datetime="2019-07-30T00:00:00+08:00">2019-07-30</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-01 17:13:09" itemprop="dateModified" datetime="2019-08-01T17:13:09+08:00">2019-08-01</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/MIT60001/" itemprop="url" rel="index"><span itemprop="name">MIT60001</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="fa fa-comment-o"></i>
+    </span>
+    
+      <span class="post-meta-item-text">评论数：</span>
+    
+  
+    <a href="/MIT60001/1901090022-自学训练营-MIT-Python课-ProblemSet2(Part2)/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="MIT60001/1901090022-自学训练营-MIT-Python课-ProblemSet2(Part2)/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          <br/>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="打卡记录"><a href="#打卡记录" class="headerlink" title="打卡记录"></a>打卡记录</h3><ul>
+<li>学号：1901090022</li>
+<li>学习课程：<a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/" target="_blank" rel="noopener">Introduction to Computer Science and Programming in Python</a></li>
+<li>学习内容：<a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/assignments/ps2.zip" target="_blank" rel="noopener">Problem Set 2 (ZIP)</a></li>
+<li>打卡天数：D06</li>
+</ul>
+<h3 id="Part-2-作业"><a href="#Part-2-作业" class="headerlink" title="Part 2 作业:"></a>Part 2 作业:</h3><h4 id="A-游戏要求"><a href="#A-游戏要求" class="headerlink" title="A. 游戏要求:"></a>A. 游戏要求:</h4><ol>
+<li>程序必须从 words.txt 文件中随机挑选一个单词。hangman.py 文件中已经实现了加载单词列表 和 随机选择单词 的功能。</li>
+<li>用户一开始有6次机会</li>
+<li>游戏一开始，提示用户有单词中有多少个字母，提示用户的机会次数。</li>
+<li>程序需要判断用户还有哪些字母可以猜</li>
+</ol>
+<h4 id="B-用户交互"><a href="#B-用户交互" class="headerlink" title="B. 用户交互:"></a>B. 用户交互:</h4><p>The game must be interactive and flow as follows:</p>
+<ol>
+<li>每次在用户猜测之前，你需要显示以下信息：<br> a. 提示用户所剩的次数<br> b. 还有哪些字母用户还没有猜测</li>
+<li>提示用户每次只能猜一个字母</li>
+<li>每次等用户输入后，需要告诉用户所输入的单词是否在单词中</li>
+<li>等用户输入后，你还需要显示结果，哪些才对哪些还没有猜到，使用下划线来标识没有猜到的字母位置。</li>
+<li>最后，输出(­­­­­)符号，用户区分每一轮游戏</li>
+</ol>
+<h4 id="C-用户输入要求："><a href="#C-用户输入要求：" class="headerlink" title="C. 用户输入要求："></a>C. 用户输入要求：</h4><ol>
+<li>你可以假设用户每次只输入一个字符，但用户也许会输入数字、特殊符号、字母，你的程序只接收小写字母</li>
+<li>如果用户输入了字母意外的内容，你需要告诉用户只能输入字母。每当用户输入非字母字符、或者已经输入过的字母，将会减少一次警告的机会，如果没有了警告机会，游戏就会结束。</li>
+</ol>
+<p>可以灵活运用一下函数：</p>
+<ul>
+<li>str.isalpha(‘your string’)</li>
+<li>str.lower(‘Your String’)</li>
+</ul>
+<h4 id="D-游戏规则"><a href="#D-游戏规则" class="headerlink" title="D. 游戏规则"></a>D. 游戏规则</h4><ol>
+<li>初始【警告次数【为3</li>
+<li>如果用户输入了非字母的内容，【警告次数】减一；没有警告次数，游戏失败</li>
+<li>如果用户输入了已经输入过的内容，【警告次数】减一 ；</li>
+<li>辅音：如果用户输入了辅音字母，且没有猜中，【猜测机会】减1</li>
+<li>元音：如果用户输入的原因字母，没有猜过，且没有猜中，【猜测机会】减2</li>
+</ol>
+<h4 id="E-游戏终止条件"><a href="#E-游戏终止条件" class="headerlink" title="E. 游戏终止条件"></a>E. 游戏终止条件</h4><ol>
+<li>当用户猜对了所有字母 或者 次数消耗完时终止游戏</li>
+<li>次数消耗完并且没有完成字母，告诉用户结果并显示正确的字母。</li>
+<li>用户赢了的话，输出恭喜信息，并显示用户分数</li>
+<li>Total score = guesses_remaining* number unique letters in secret_word（总分 = 剩余猜测次数 x 单词字母数（去重））</li>
+</ol>
+<h3 id="作业心得"><a href="#作业心得" class="headerlink" title="作业心得"></a>作业心得</h3><ul>
+<li>学习 not in list 的写法</li>
+<li><a href="https://blog.csdn.net/Jerry_1126/article/details/79843751" target="_blank" rel="noopener">list去重的方法 </a></li>
+</ul>
+<h3 id="程序代码"><a href="#程序代码" class="headerlink" title="程序代码"></a>程序代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Problem Set 2, hangman.py</span></span><br><span class="line"><span class="comment"># Name: </span></span><br><span class="line"><span class="comment"># Collaborators:</span></span><br><span class="line"><span class="comment"># Time spent:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Hangman Game</span></span><br><span class="line"><span class="comment"># -----------------------------------</span></span><br><span class="line"><span class="comment"># Helper code</span></span><br><span class="line"><span class="comment"># You don't need to understand this helper code,</span></span><br><span class="line"><span class="comment"># but you will have to know how to use the functions</span></span><br><span class="line"><span class="comment"># (so be sure to read the docstrings!)</span></span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> string</span><br><span class="line"></span><br><span class="line">WORDLIST_FILENAME = <span class="string">"words.txt"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">load_words</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    Returns a list of valid words. Words are strings of lowercase letters.</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Depending on the size of the word list, this function may</span></span><br><span class="line"><span class="string">    take a while to finish.</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    print(<span class="string">"Loading word list from file..."</span>)</span><br><span class="line">    <span class="comment"># inFile: file</span></span><br><span class="line">    inFile = open(WORDLIST_FILENAME, <span class="string">'r'</span>)</span><br><span class="line">    <span class="comment"># line: string</span></span><br><span class="line">    line = inFile.readline()</span><br><span class="line">    <span class="comment"># wordlist: list of strings</span></span><br><span class="line">    wordlist = line.split()</span><br><span class="line">    print(<span class="string">"  "</span>, len(wordlist), <span class="string">"words loaded."</span>)</span><br><span class="line">    <span class="keyword">return</span> wordlist</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">choose_word</span><span class="params">(wordlist)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    wordlist (list): list of words (strings)</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Returns a word from wordlist at random</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="keyword">return</span> random.choice(wordlist)</span><br><span class="line"></span><br><span class="line"><span class="comment"># end of helper code</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># -----------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Load the list of words into the variable wordlist</span></span><br><span class="line"><span class="comment"># so that it can be accessed from anywhere in the program</span></span><br><span class="line">wordlist = load_words()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_word_guessed</span><span class="params">(secret_word, letters_guessed)</span>:</span></span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">    secret_word: string, the word the user is guessing; assumes all letters are</span></span><br><span class="line"><span class="string">      lowercase; 用户需要猜的单词，假设所有字母都是小写</span></span><br><span class="line"><span class="string">    letters_guessed: list (of letters), which letters have been guessed so far;</span></span><br><span class="line"><span class="string">      assumes that all letters are lowercase; 用户已经猜过的字母列表</span></span><br><span class="line"><span class="string">    returns: boolean, True if all the letters of secret_word are in letters_guessed;</span></span><br><span class="line"><span class="string">      False otherwise; 如果 secret_word 的字母，都在 letters_guessed 中，返回 True，否则返回 False</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    <span class="keyword">for</span> letter <span class="keyword">in</span> secret_word:</span><br><span class="line">        <span class="keyword">if</span> letter <span class="keyword">not</span> <span class="keyword">in</span> letters_guessed:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_guessed_word</span><span class="params">(secret_word, letters_guessed)</span>:</span></span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">    secret_word: string, the word the user is guessing; 用户需要猜的单词</span></span><br><span class="line"><span class="string">    letters_guessed: list (of letters), which letters have been guessed so far; 目前猜过的字母</span></span><br><span class="line"><span class="string">    returns: string, comprised of letters, underscores (_), and spaces that represents</span></span><br><span class="line"><span class="string">      which letters in secret_word have been guessed so far.</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    res = <span class="string">""</span></span><br><span class="line">    <span class="keyword">for</span> letter <span class="keyword">in</span> secret_word:</span><br><span class="line">        <span class="keyword">if</span> letter <span class="keyword">not</span> <span class="keyword">in</span> letters_guessed:</span><br><span class="line">            res += <span class="string">"_ "</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            res += letter</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_available_letters</span><span class="params">(letters_guessed)</span>:</span></span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">    letters_guessed: list (of letters), which letters have been guessed so far; 目前猜过的字母</span></span><br><span class="line"><span class="string">    returns: string (of letters), comprised of letters that represents which letters have not</span></span><br><span class="line"><span class="string">      yet been guessed. 返回目前还没有猜过的字母</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    res = <span class="string">""</span></span><br><span class="line">    <span class="keyword">for</span> letter <span class="keyword">in</span> string.ascii_lowercase:</span><br><span class="line">        <span class="keyword">if</span> letter <span class="keyword">not</span> <span class="keyword">in</span> letters_guessed:</span><br><span class="line">            res += letter</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">score_counter</span><span class="params">(guesses_remaining, secret_word)</span>:</span></span><br><span class="line">    <span class="string">'''计算分数</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    guesses_remaining: 剩余可猜单词的次数</span></span><br><span class="line"><span class="string">    secret_word: 要猜测但单词</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    <span class="keyword">return</span> guesses_remaining * len(list(set(list(secret_word))))</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hangman</span><span class="params">(secret_word)</span>:</span></span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">    secret_word: string, the secret word to guess.</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Starts up an interactive game of Hangman.</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    * At the start of the game, let the user know how many </span></span><br><span class="line"><span class="string">      letters the secret_word contains and how many guesses s/he starts with.</span></span><br><span class="line"><span class="string">      </span></span><br><span class="line"><span class="string">    * The user should start with 6 guesses</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    * Before each round, you should display to the user how many guesses</span></span><br><span class="line"><span class="string">      s/he has left and the letters that the user has not yet guessed.</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    * Ask the user to supply one guess per round. Remember to make</span></span><br><span class="line"><span class="string">      sure that the user puts in a letter!</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    * The user should receive feedback immediately after each guess </span></span><br><span class="line"><span class="string">      about whether their guess appears in the computer's word.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    * After each guess, you should display to the user the </span></span><br><span class="line"><span class="string">      partially guessed word so far.</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Follows the other limitations detailed in the problem write-up.</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    </span><br><span class="line">    print(<span class="string">"Welcome to the game Hangman!"</span>)</span><br><span class="line">    print(<span class="string">"I am thinking of a word that is &#123;&#125; letters long."</span>.format(len(secret_word)))</span><br><span class="line"></span><br><span class="line">    warnings_remaining = <span class="number">3</span></span><br><span class="line">    print(<span class="string">"You have &#123;&#125; warnings left.."</span>.format(warnings_remaining))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    letters_guessed = []</span><br><span class="line">    guesses_remaining = <span class="number">6</span></span><br><span class="line">    available_letters = string.ascii_lowercase</span><br><span class="line">    current_guessed_word = get_guessed_word(secret_word, letters_guessed)</span><br><span class="line"></span><br><span class="line">    VOWELS = [<span class="string">'a'</span>, <span class="string">'e'</span>, <span class="string">'i'</span>, <span class="string">'o'</span>, <span class="string">'u'</span>]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># while guesses_remaining &gt; 0:</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> is_word_guessed(secret_word, letters_guessed):</span><br><span class="line">            <span class="comment"># 整个单词都猜对了</span></span><br><span class="line">            print(<span class="string">"Congratulations, you won!"</span>)</span><br><span class="line">            total_score = score_counter(guesses_remaining, secret_word)</span><br><span class="line">            print(<span class="string">"Your total score for this game is: &#123;&#125;"</span>.format(total_score))</span><br><span class="line">            exit()</span><br><span class="line">        <span class="keyword">elif</span> guesses_remaining &lt;= <span class="number">0</span>:</span><br><span class="line">            print(<span class="string">"Sorry, you ran out of guesses. The word was: &#123;&#125;"</span>.format(secret_word))</span><br><span class="line">            exit()</span><br><span class="line"></span><br><span class="line">        print(<span class="string">"-------------"</span>)</span><br><span class="line">        print(<span class="string">"You have &#123;&#125; guesses left."</span>.format(guesses_remaining))</span><br><span class="line">        print(<span class="string">"Available letters: &#123;&#125;"</span>.format(available_letters))</span><br><span class="line">    </span><br><span class="line">        letter = input(<span class="string">"Please guess a letter: "</span>).lower()</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> letter.isalpha():</span><br><span class="line">            <span class="keyword">if</span> warnings_remaining &gt; <span class="number">0</span>:</span><br><span class="line">                warnings_remaining -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                guesses_remaining -= <span class="number">1</span></span><br><span class="line">            print(<span class="string">"Oops! That is not a valid letter. You have &#123;&#125; warnings left: &#123;&#125;"</span>.format(warnings_remaining, current_guessed_word))</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 判断用户输入的字母，之前是否输入过</span></span><br><span class="line">        <span class="keyword">if</span> letter <span class="keyword">in</span> letters_guessed:</span><br><span class="line">            <span class="keyword">if</span> warnings_remaining &gt; <span class="number">0</span>:</span><br><span class="line">                warnings_remaining -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                guesses_remaining -= <span class="number">1</span></span><br><span class="line">            print(<span class="string">"Oops! You've already guessed that letter. You have &#123;&#125; warnings left: &#123;&#125;"</span>.format(warnings_remaining, current_guessed_word))</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        </span><br><span class="line">        letters_guessed.append(letter)</span><br><span class="line"></span><br><span class="line">        current_guessed_word = get_guessed_word(secret_word, letters_guessed)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> letter <span class="keyword">in</span> secret_word:</span><br><span class="line">            print(<span class="string">"Good guess: &#123;&#125;"</span>.format(current_guessed_word))</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="comment"># 没有猜对</span></span><br><span class="line">            <span class="keyword">if</span> letter <span class="keyword">in</span> VOWELS: </span><br><span class="line">                guesses_remaining -= <span class="number">2</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                guesses_remaining -= <span class="number">1</span></span><br><span class="line">            print(<span class="string">"Oops! That letter is not in my word: &#123;&#125;"</span>.format(current_guessed_word))</span><br><span class="line"></span><br><span class="line">        available_letters = get_available_letters(letters_guessed)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># When you've completed your hangman function, scroll down to the bottom</span></span><br><span class="line"><span class="comment"># of the file and uncomment the first two lines to test</span></span><br><span class="line"><span class="comment">#(hint: you might want to pick your own</span></span><br><span class="line"><span class="comment"># secret_word while you're doing your own testing)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># -----------------------------------</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">match_with_gaps</span><span class="params">(my_word, other_word)</span>:</span></span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">    my_word: string with _ characters, current guess of secret word</span></span><br><span class="line"><span class="string">    other_word: string, regular English word</span></span><br><span class="line"><span class="string">    returns: boolean, True if all the actual letters of my_word match the </span></span><br><span class="line"><span class="string">        corresponding letters of other_word, or the letter is the special symbol</span></span><br><span class="line"><span class="string">        _ , and my_word and other_word are of the same length;</span></span><br><span class="line"><span class="string">        False otherwise: </span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    <span class="comment"># FILL IN YOUR CODE HERE AND DELETE "pass"</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">show_possible_matches</span><span class="params">(my_word)</span>:</span></span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">    my_word: string with _ characters, current guess of secret word</span></span><br><span class="line"><span class="string">    returns: nothing, but should print out every word in wordlist that matches my_word</span></span><br><span class="line"><span class="string">             Keep in mind that in hangman when a letter is guessed, all the positions</span></span><br><span class="line"><span class="string">             at which that letter occurs in the secret word are revealed.</span></span><br><span class="line"><span class="string">             Therefore, the hidden letter(_ ) cannot be one of the letters in the word</span></span><br><span class="line"><span class="string">             that has already been revealed.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    <span class="comment"># FILL IN YOUR CODE HERE AND DELETE "pass"</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hangman_with_hints</span><span class="params">(secret_word)</span>:</span></span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">    secret_word: string, the secret word to guess.</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Starts up an interactive game of Hangman.</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    * At the start of the game, let the user know how many </span></span><br><span class="line"><span class="string">      letters the secret_word contains and how many guesses s/he starts with.</span></span><br><span class="line"><span class="string">      </span></span><br><span class="line"><span class="string">    * The user should start with 6 guesses</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    * Before each round, you should display to the user how many guesses</span></span><br><span class="line"><span class="string">      s/he has left and the letters that the user has not yet guessed.</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    * Ask the user to supply one guess per round. Make sure to check that the user guesses a letter</span></span><br><span class="line"><span class="string">      </span></span><br><span class="line"><span class="string">    * The user should receive feedback immediately after each guess </span></span><br><span class="line"><span class="string">      about whether their guess appears in the computer's word.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    * After each guess, you should display to the user the </span></span><br><span class="line"><span class="string">      partially guessed word so far.</span></span><br><span class="line"><span class="string">      </span></span><br><span class="line"><span class="string">    * If the guess is the symbol *, print out all words in wordlist that</span></span><br><span class="line"><span class="string">      matches the current guessed word. </span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Follows the other limitations detailed in the problem write-up.</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    <span class="comment"># FILL IN YOUR CODE HERE AND DELETE "pass"</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># When you've completed your hangman_with_hint function, comment the two similar</span></span><br><span class="line"><span class="comment"># lines above that were used to run the hangman function, and then uncomment</span></span><br><span class="line"><span class="comment"># these two lines and run this file to test!</span></span><br><span class="line"><span class="comment"># Hint: You might want to pick your own secret_word while you're testing.</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    <span class="comment"># pass</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># To test part 2, comment out the pass line above and</span></span><br><span class="line">    <span class="comment"># uncomment the following two lines.</span></span><br><span class="line">    </span><br><span class="line">    secret_word = choose_word(wordlist)</span><br><span class="line">    secret_word = <span class="string">'else'</span></span><br><span class="line">    hangman(secret_word)</span><br><span class="line"></span><br><span class="line"><span class="comment">###############</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># To test part 3 re-comment out the above lines and </span></span><br><span class="line">    <span class="comment"># uncomment the following two lines. </span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">#secret_word = choose_word(wordlist)</span></span><br><span class="line">    <span class="comment">#hangman_with_hints(secret_word)</span></span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+        
+        <div class="post-tags">
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+            <a href="/tags/MIT/" rel="tag"># MIT</a>
+          
+            <a href="/tags/学习打卡/" rel="tag"># 学习打卡</a>
+          
+        </div>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+              <a href="/MIT60001/1901090022-自学训练营-MIT-Python课-ProblemSet1(PartC)/" rel="next" title="1901090022-MIT60001-ProblemSet1(PartB)">
+                <i class="fa fa-chevron-left"></i> 1901090022-MIT60001-ProblemSet1(PartB)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+              <a href="/MIT60001/1901090022-自学训练营-MIT-Python课-ProblemSet2(Part1)/" rel="prev" title="1901090022-MIT60001-ProblemSet2(Part1)">
+                1901090022-MIT60001-ProblemSet2(Part1) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    
+  <div class="comments" id="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+  
+
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">自学营团队</p>
+  <div class="site-description motion-element" itemprop="description">该博客用于收录自学营学员在学习过程中的笔记，包括学习心得、总结、记录解决问题的过程等。。。</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">30</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#打卡记录"><span class="nav-number">1.</span> <span class="nav-text">打卡记录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-2-作业"><span class="nav-number">2.</span> <span class="nav-text">Part 2 作业:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#A-游戏要求"><span class="nav-number">2.1.</span> <span class="nav-text">A. 游戏要求:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#B-用户交互"><span class="nav-number">2.2.</span> <span class="nav-text">B. 用户交互:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-用户输入要求："><span class="nav-number">2.3.</span> <span class="nav-text">C. 用户输入要求：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#D-游戏规则"><span class="nav-number">2.4.</span> <span class="nav-text">D. 游戏规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#E-游戏终止条件"><span class="nav-number">2.5.</span> <span class="nav-text">E. 游戏终止条件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#作业心得"><span class="nav-number">3.</span> <span class="nav-text">作业心得</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#程序代码"><span class="nav-number">4.</span> <span class="nav-text">程序代码</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">自学营团队</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.2.0</div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+  
+  <script src="/js/affix.js?v=7.2.0"></script>
+  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
+
+  
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.2.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://selfteaching-learning-notes.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://selfteaching-learning-notes.github.io/MIT60001/1901090022-自学训练营-MIT-Python课-ProblemSet2(Part2)/";
+    this.page.identifier = "MIT60001/1901090022-自学训练营-MIT-Python课-ProblemSet2(Part2)/";
+    this.page.title = '1901090022-MIT60001-ProblemSet2(Part2)';};
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://selfteaching-learning-notes.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+    window.addEventListener('load', loadComments, false);
+  
+</script>
+
+
+</body>
+</html>
