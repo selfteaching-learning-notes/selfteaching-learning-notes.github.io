@@ -1,6 +1,6 @@
 ---
-title: 2019-07-27-1901090022-MIT60001-ProblemSet1(PartB)
-date: 2019.07.27
+title: 1901090022-MIT60001-ProblemSet1(PartB)
+date: 2019-07-27
 tags: ['Python', 'MIT', '学习打卡']
 categories: 'MIT60001'
 ---
