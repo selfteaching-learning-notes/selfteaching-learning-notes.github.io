@@ -16,7 +16,7 @@ categories: 'MIT60001'
 1. **Information hiding**
 
 > So the whole reason why we’re using **classes** in object-oriented programming is so that you can abstract certain data from the user. One of the things you should be abstracting is these data attributes. So users shouldn’t really need to know how a class is implemented.
-> They should just know \_\h\o\w \t\o \u\s\e \t\h\e \c\l\a\s\s\.
+> They should just know \_how to use the class.\_
 
 > Eg: Let’s say whoever wrote the Animal class wants to change the implementation. And they’ve decided they don’t want to call the data attribute “age” anymore, they want to call it “years,” OK? So when they initialize an animal they say `self.years = age`. So an animal still gets initialized by its age. And the age gets passed into a data attribute named “years,”.
 
@@ -34,7 +34,7 @@ categories: 'MIT60001'
 
 3. 我就是想得offlined多一些。我如果不想做，想啥都不切题。有病要治，尝试找解药：
 
-\_\3\.\1\_ `Marcus.sleightofhand`
+\_3.1_ `Marcus.sleightofhand`
 
 > **“上手”，才能解决焦虑。**“上手”，没有重点，但是有“通”点。……永远记得，我们真正的目标是，“上”手。
 
@@ -45,12 +45,12 @@ categories: 'MIT60001'
 > 缺少反馈的一个最常见的情况是，我们平时会看一些书，看完了也就过去了，时间长了也就忘记了。就是因为没有反馈，我们并没有笑话书中的重要内容。
 >       **—— Marcus XU “SLEIGHT _OF_ HAND”**
 
-\_\3\.\2\_ `My Angel.letustalkaboutit`
+\_3.2_ `My Angel.letustalkaboutit`
 
 @糖糖今天在AMA里也回答了我的问题，以任务为导向开干，而且不能闭门造车，要持续反馈和反复沟通。
 所以，实际上最好的antivirus methods就是该干嘛干嘛，该作作业啊，，，“躲”着是个什么事儿，打开了作业指引读不进去的主要原因就是没想做作业。。。一条一条的读，记住自己读这个指引的任务是什么，拆解到最小单位的尝试输出，if offlined please try shifting back，practice makes progress。
 
-\_\3\.\3\_ `Max.piggiefight`
+\_3.3_ `Max.piggiefight`
 
 其实最大的鼓励还是来源于Max猪，他和爸比在玩的有一个游戏就是统计类的，然后他昨天的观察作业就是花的结构。和我数据营的作业一毛一样啊，，，他也不知道完整的统计啊，他也一开始并不全面知道花的那些结构的名词和作用啊，人家就是不怕地、兴致勃勃地完成自己的任务啊，他特别不理解的看着我苦闷的脸，然而，他还是patpat我说：麻麻你别怕哈，你来用电脑写你的作业，不懂的，我来教你。
 
