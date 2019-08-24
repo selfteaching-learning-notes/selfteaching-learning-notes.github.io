@@ -1,0 +1,11 @@
+#DAY 1 0818学习笔记 
+##From 2019-08-08 stop , till 08-18 finished. Until today make a record.  
+Homework 2.4，从develop 提交一个pull request 到master分支，然后，手太快，一顿乱操作，master倒腾developer ，developer 倒腾到master 文件，或者create new file ，只晓得conflict files ，想着delete , 然后看到commit delete file 时，又慌了。不晓得是提交delete request . 发问题给教练时突然又晓得了。
+所以，from develop commit pull request to master,  that is combine request from develop to master, and merger. Same file in two boxes. 
+
+Process:
+直接上手，未省题，即开展，像盲目抄作业，而后，卡在conflict files，之后10天未动过。一周后才提交的笔记。
+再然后，commit delete file, 重新上路。
+重新看题，先做，不会，看视频；
+或者不确定，先看视频，虽然还是过程有错的。但是还是算过了一边。
+every action concept contain its meaning and significant name. 
