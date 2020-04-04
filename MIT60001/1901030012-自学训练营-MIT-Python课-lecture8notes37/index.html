@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":"enable","trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    search: {
+      root: '/',
+      path: 'search.xml'
+    },
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="学员信息 学号：1901030012 学习内容：MIT第8课视频文稿p7-8及幻灯片p12-13 学习用时：67min Notes no.: Day37  学习笔记 assigned vs. equal to So now we have sort of a nice class. It’s very simple, but we can start actually creating coord">
+<meta name="keywords" content="Python,MIT,学习打卡">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1901030012-MIT-Python课-lecture 8">
+<meta property="og:url" content="https://selfteaching-learning-notes.github.io/MIT60001/1901030012-自学训练营-MIT-Python课-lecture8notes37/index.html">
+<meta property="og:site_name" content="自学营学员笔记">
+<meta property="og:description" content="学员信息 学号：1901030012 学习内容：MIT第8课视频文稿p7-8及幻灯片p12-13 学习用时：67min Notes no.: Day37  学习笔记 assigned vs. equal to So now we have sort of a nice class. It’s very simple, but we can start actually creating coord">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-02T09:27:55.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="1901030012-MIT-Python课-lecture 8">
+<meta name="twitter:description" content="学员信息 学号：1901030012 学习内容：MIT第8课视频文稿p7-8及幻灯片p12-13 学习用时：67min Notes no.: Day37  学习笔记 assigned vs. equal to So now we have sort of a nice class. It’s very simple, but we can start actually creating coord">
+  <link rel="alternate" href="/atom.xml" title="自学营学员笔记" type="application/atom+xml">
+  <link rel="canonical" href="https://selfteaching-learning-notes.github.io/MIT60001/1901030012-自学训练营-MIT-Python课-lecture8notes37/">
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>1901030012-MIT-Python课-lecture 8 | 自学营学员笔记</title>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144933018-1"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-144933018-1');
+    }
+  </script>
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">自学营学员笔记</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">总结、记录、打卡、沉淀</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-search">
+          <a href="javascript:;" class="popup-trigger">
+          
+            <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>搜索</a>
+        </li>
+      
+    </ul>
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+    </div>
+</nav>
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://selfteaching-learning-notes.github.io/MIT60001/1901030012-自学训练营-MIT-Python课-lecture8notes37/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="自学营团队">
+      <meta itemprop="description" content="该博客用于收录自学营学员在学习过程中的笔记，包括学习心得、总结、记录解决问题的过程等。。。">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="自学营学员笔记">
+    </span>
+      <header class="post-header">
+
+        
+          <h2 class="post-title" itemprop="name headline">1901030012-MIT-Python课-lecture 8
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-30 03:01:57" itemprop="dateCreated datePublished" datetime="2019-07-30T03:01:57+08:00">2019-07-30</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-02 17:27:55" itemprop="dateModified" datetime="2019-08-02T17:27:55+08:00">2019-08-02</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/MIT60001/" itemprop="url" rel="index"><span itemprop="name">MIT60001</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="fa fa-comment-o"></i>
+    </span>
+    
+      <span class="post-meta-item-text">评论数：</span>
+    
+  
+    <a href="/MIT60001/1901030012-自学训练营-MIT-Python课-lecture8notes37/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="MIT60001/1901030012-自学训练营-MIT-Python课-lecture8notes37/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          <br/>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="学员信息"><a href="#学员信息" class="headerlink" title="学员信息"></a>学员信息</h3><ul>
+<li>学号：1901030012</li>
+<li>学习内容：MIT第8课视频文稿p7-8及幻灯片p12-13</li>
+<li>学习用时：67min Notes no.: Day37</li>
+</ul>
+<h3 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h3><ol>
+<li><em>assigned vs. equal to</em><blockquote>
+<p>So now we have sort of a nice class. It’s very simple, but we can start actually creating coordinate objects. So when you create coordinate objects, you’re creating instances of the class.   </p>
+<p>So this line here, C is <strong>equal to</strong> coordinate 3,4, is going to call the init method. It’s going to call the init method with x is <strong>equal to</strong> 3 and y is <strong>equal to</strong> 4.  </p>
+</blockquote>
+</li>
+</ol>
+<p>Cat notes:<br>Here when prof. “read” this piece of codes, “=” read as “equal to” however be aware of its actual specific meaning in Python, “=” means to assign or passing it all the variables, “==” means to check operational “equal to”, and also bear in mind about “!=” —not equal to, when using in arguments to demonstrate boolean operation.</p>
+<ol start="2">
+<li><p><em>dot notion</em><br>We can access the data attributes using this dot notation and we’ve seen that before, right?<br>When we’ve worked with lists we’d say something like, L dot append, right, when we create a list. So the same dot notation can be used with your own objects in order to access data attributes. So here, this is going to print 3 because the x value for object C is 3, and the next line, print origin x is going to print 0 because the x value for the object origin is 0. </p>
+</li>
+<li><p><em>init method</em><br>We have to find the init method so we have a way to <strong>create</strong> objects when we use the class. And then we can <strong>access the data attributes</strong>. But that’s kind of lame, right, because there isn’t anything cool we can do with it.</p>
+</li>
+<li><p><em>add more methods</em><br>Remember methods are going to be <strong>procedural attributes</strong> that allow us to <strong>interact with</strong> our object. </p>
+</li>
+</ol>
+<p>Methods are <strong>like</strong> functions <strong>except</strong> that there’s a couple of differences which you’ll see in a moment.</p>
+<p>eg: “distance”<br>So notice this method is pretty much like a function, right? You have DF, some name, it takes in parameters. It does some stuff and then it returns a value. The <strong>only difference</strong> is the fact that you have a <strong>self</strong> here as the <strong>first thing</strong> and the fact that you <strong>always</strong> have to be conscious about <strong>whose</strong> data attributes <strong>you’re accessing</strong>. So you have to use the dot notation in order to <strong>decide</strong> whose data attributes you <strong>want access</strong>. So we’ve defined the method here, distance.</p>
+<ol start="5">
+<li><em>Euclidean distance formula</em><br>So here I’m going to just implement the Euclidean distance formula, which is x1 minus x2 squared, plus y1 minus y2 squared, and square root of all that. So that’s what I’m doing inside here.</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class Coordinate(object):</span><br><span class="line">    def __init__(self, x, y):</span><br><span class="line">        self.x = x</span><br><span class="line">        self.y = y</span><br><span class="line">    def distance(self, other):</span><br><span class="line">        x_diff_sq = (self.x - other.x) ** 2</span><br><span class="line">        y_diff_sq = (self.y - other.y) ** 2</span><br><span class="line">        return (x_diff_sq + y_diff_sq) ** 0.5</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Other than self and dot notation, methods behave like functions (take params, do operations, return)  </p>
+</blockquote>
+<ol start="6">
+<li><strong>我看到的</strong><br>时间和实践是最好的朋友，当和最好的朋友在一起的时候，人是真诚、充实、无需谎言的。<br>我们的Camp给我们提供了默认的methods来让我们和自己最好的朋友尽可能的相处，我们也许还不知道default的缘由，但是，能使用到这些methods然后逐渐地通过一步一步的迈进能看到default以及缘由，我们自己就可以create我们的methods，与别人交流，供别人使用，我觉得我这次真的看到了<strong>希望</strong>。下一步是，build it up。<br>感谢营友们的美好，这个世界有你们真好！！！<br>加油！</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+        
+        <div class="post-tags">
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+            <a href="/tags/MIT/" rel="tag"># MIT</a>
+          
+            <a href="/tags/学习打卡/" rel="tag"># 学习打卡</a>
+          
+        </div>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+              <a href="/MIT60001/1901090022-自学训练营-MIT-Python课-ProblemSet2(Part1)/" rel="next" title="1901090022-MIT60001-ProblemSet2(Part1)">
+                <i class="fa fa-chevron-left"></i> 1901090022-MIT60001-ProblemSet2(Part1)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+              <a href="/MIT60001/1901010000-MIT-自学-MIT-原版书-第三章/" rel="prev" title="1901010000-MIT-自学 MIT 原版书 第三章">
+                1901010000-MIT-自学 MIT 原版书 第三章 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    
+  <div class="comments" id="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+  
+
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">自学营团队</p>
+  <div class="site-description motion-element" itemprop="description">该博客用于收录自学营学员在学习过程中的笔记，包括学习心得、总结、记录解决问题的过程等。。。</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">130</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">64</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#学员信息"><span class="nav-number">1.</span> <span class="nav-text">学员信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习笔记"><span class="nav-number">2.</span> <span class="nav-text">学习笔记</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">自学营团队</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.2.0</div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+  
+  <script src="/js/affix.js?v=7.2.0"></script>
+  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
+
+  
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.2.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://selfteaching-learning-notes.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://selfteaching-learning-notes.github.io/MIT60001/1901030012-自学训练营-MIT-Python课-lecture8notes37/";
+    this.page.identifier = "MIT60001/1901030012-自学训练营-MIT-Python课-lecture8notes37/";
+    this.page.title = '1901030012-MIT-Python课-lecture 8';};
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://selfteaching-learning-notes.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+    window.addEventListener('load', loadComments, false);
+  
+</script>
+
+
+</body>
+</html>

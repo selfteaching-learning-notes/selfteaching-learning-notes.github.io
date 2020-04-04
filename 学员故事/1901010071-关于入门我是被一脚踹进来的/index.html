@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":"enable","trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    search: {
+      root: '/',
+      path: 'search.xml'
+    },
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="关于入门我是被一脚踹进来的作者：李龙斌(自学训练营学习2群) 学完14天编程营最直观的感受就是：  通往编程的门是窄的，我被编程营一脚踹进来了，然后我拿着手里的三两贝壳，望着远方的大海愣住了。  之所以有这个感受，是因为听过自学小能手许岑讲过他自学钢琴的故事。许岑为了逼自己，买了最贵的钢琴，找了最牛的老师。钢琴老师并没有一板一眼的从头教他弹钢琴，而是问了他一件事。  你学会钢琴后最想弹的是哪首曲子">
+<meta name="keywords" content="Python,自学营">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1901010071-关于入门我是被一脚踹进来的">
+<meta property="og:url" content="https://selfteaching-learning-notes.github.io/学员故事/1901010071-关于入门我是被一脚踹进来的/index.html">
+<meta property="og:site_name" content="自学营学员笔记">
+<meta property="og:description" content="关于入门我是被一脚踹进来的作者：李龙斌(自学训练营学习2群) 学完14天编程营最直观的感受就是：  通往编程的门是窄的，我被编程营一脚踹进来了，然后我拿着手里的三两贝壳，望着远方的大海愣住了。  之所以有这个感受，是因为听过自学小能手许岑讲过他自学钢琴的故事。许岑为了逼自己，买了最贵的钢琴，找了最牛的老师。钢琴老师并没有一板一眼的从头教他弹钢琴，而是问了他一件事。  你学会钢琴后最想弹的是哪首曲子">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://github.com/unscientific/selfteaching-python-camp/blob/master/exercises/1901010071/d13/day13.png?raw=true">
+<meta property="og:updated_time" content="2019-08-17T02:39:03.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="1901010071-关于入门我是被一脚踹进来的">
+<meta name="twitter:description" content="关于入门我是被一脚踹进来的作者：李龙斌(自学训练营学习2群) 学完14天编程营最直观的感受就是：  通往编程的门是窄的，我被编程营一脚踹进来了，然后我拿着手里的三两贝壳，望着远方的大海愣住了。  之所以有这个感受，是因为听过自学小能手许岑讲过他自学钢琴的故事。许岑为了逼自己，买了最贵的钢琴，找了最牛的老师。钢琴老师并没有一板一眼的从头教他弹钢琴，而是问了他一件事。  你学会钢琴后最想弹的是哪首曲子">
+<meta name="twitter:image" content="https://github.com/unscientific/selfteaching-python-camp/blob/master/exercises/1901010071/d13/day13.png?raw=true">
+  <link rel="alternate" href="/atom.xml" title="自学营学员笔记" type="application/atom+xml">
+  <link rel="canonical" href="https://selfteaching-learning-notes.github.io/学员故事/1901010071-关于入门我是被一脚踹进来的/">
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>1901010071-关于入门我是被一脚踹进来的 | 自学营学员笔记</title>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144933018-1"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-144933018-1');
+    }
+  </script>
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">自学营学员笔记</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">总结、记录、打卡、沉淀</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-search">
+          <a href="javascript:;" class="popup-trigger">
+          
+            <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>搜索</a>
+        </li>
+      
+    </ul>
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+    </div>
+</nav>
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://selfteaching-learning-notes.github.io/学员故事/1901010071-关于入门我是被一脚踹进来的/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="自学营团队">
+      <meta itemprop="description" content="该博客用于收录自学营学员在学习过程中的笔记，包括学习心得、总结、记录解决问题的过程等。。。">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="自学营学员笔记">
+    </span>
+      <header class="post-header">
+
+        
+          <h2 class="post-title" itemprop="name headline">1901010071-关于入门我是被一脚踹进来的
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-17 10:37:43 / 修改时间：10:39:03" itemprop="dateCreated datePublished" datetime="2019-08-17T10:37:43+08:00">2019-08-17</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学员故事/" itemprop="url" rel="index"><span itemprop="name">学员故事</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="fa fa-comment-o"></i>
+    </span>
+    
+      <span class="post-meta-item-text">评论数：</span>
+    
+  
+    <a href="/学员故事/1901010071-关于入门我是被一脚踹进来的/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="学员故事/1901010071-关于入门我是被一脚踹进来的/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          <br/>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="关于入门我是被一脚踹进来的"><a href="#关于入门我是被一脚踹进来的" class="headerlink" title="关于入门我是被一脚踹进来的"></a>关于入门我是被一脚踹进来的</h1><p><strong>作者：李龙斌(自学训练营学习2群)</strong></p>
+<p>学完14天编程营最直观的感受就是：</p>
+<blockquote>
+<p>通往编程的门是窄的，我被编程营一脚踹进来了，然后我拿着手里的三两贝壳，望着远方的大海愣住了。</p>
+</blockquote>
+<p>之所以有这个感受，是因为听过自学小能手许岑讲过他自学钢琴的故事。许岑为了逼自己，买了最贵的钢琴，找了最牛的老师。钢琴老师并没有一板一眼的从头教他弹钢琴，而是问了他一件事。</p>
+<blockquote>
+<p>你学会钢琴后最想弹的是哪首曲子？</p>
+</blockquote>
+<p>许岑说了，然后钢琴老师在接下来一段时间里教会了他弹这首曲子。许岑先是不解，后来开心极了。因为能够直接弹奏他最喜欢的曲子，所以他学起弹钢琴来更有兴趣了，即使从最基础的练起也不太容易放弃了，最近听说的是许岑一天要练十个小时左右的钢琴。</p>
+<p>所以我们参加这个14天的编程训练营不是为了让我们在能14天内就编程打遍天下无敌手，而是通过一系列作业让我们快速入门的，甚至在最后通过一个微信机器人实例让所有学到这的人知道怎么用起来。当编好的机器人把朋友分享过来的文章拆解成文字并返回一张统计图片的时候，自己获得的那种幸福感是极其强烈的，接下来就会想着怎么把学到的这个东西用到其它地方去，让自己获得更多的快乐，会上瘾！</p>
+<blockquote>
+<p>如果14天编程营没有让你享受到入门的乐趣，那是编程营的错;如果你从此就以为自己掌握了编程，那是你的错。</p>
+</blockquote>
+<p>一路兵荒马乱的跑完14天的课程，我虽然勉强入门了，但自己的基础是不牢靠的，前面也说了，当然这也是李笑来老师一直强调的。</p>
+<blockquote>
+<p>速成绝无可能，但快速入门是可以的。</p>
+</blockquote>
+<p>《自学是门手艺》如果现在再去看的话，一定已经打开了一层封印，我可以理解更多的东西了，我后面要做的事情估计也是老生常谈了。</p>
+<blockquote>
+<p>书读百遍，其义自见。无他，唯手熟尔。</p>
+</blockquote>
+<p>最后要感谢的是一路前进过程中的各种小伙伴们，还有教练和助教的默默鼓励和支持。每次自己写的程序出了问题的时候或者编不下去的时候，看着一个营的小伙伴在默默提交作业，自己都在想，那么大的人了，赶紧滚去再写。</p>
+<p>每次写完作业和总结交上去的时候总会得到教练、助教和辅导员的鼓励，开始的时候不觉得怎么样，但到后面编程编到怀疑人生的时候得到鼓励还是觉得心里面暖暖的，然后就一路摸爬滚打向前了，以后我也要经常去鼓励他人，期待在远方的时候我们再见！</p>
+<h2 id="day13"><a href="#day13" class="headerlink" title="day13"></a>day13</h2><p>这个做图一开始看着挺令人犯难的，因为前一天返回的数据不知道怎么拿来用，看了下别的同学的成果才知道，需要把结果字典化。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">result = dict(text) </span><br><span class="line">keys,values = zip(*r_dic.items())</span><br><span class="line"># 利用keys和value把词组和词频分开来用</span><br></pre></td></tr></table></figure>
+
+<p>然后再利用阅读材料中给定的表格编制样本，稍微调整改一下参数，就运行起来了，登录自己的小号，发文章测试了下，得到如下结果：</p>
+<p><img src="https://github.com/unscientific/selfteaching-python-camp/blob/master/exercises/1901010071/d13/day13.png?raw=true" alt="返回结果"></p>
+<p>其中在测试的时候图标中的文字一度不能显示为中文，是一些框框，看了issues中的同学的方法才解决的。直接在issues中的Filters搜索：<strong>1710</strong>可以找到这个问题。win系统解决方案如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.rcParams[&apos;font.sans-serif&apos;]=[&apos;SimHei&apos;] # 加在下一句前面</span><br><span class="line">ax.barh(y_pos, frequency, xerr=error, align=&apos;center&apos;, color=&apos;green&apos;, ecolor=&apos;black&apos;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Day12"><a href="#Day12" class="headerlink" title="Day12"></a>Day12</h2><p>今天的内容直接开始玩微信自动回复了，好玩。按照介绍编好了自动回复程序试运行起来，然后直接跳出一个二维码出来，扫描后微信网页登录。初次运行的时候老是跑不起来，然后检查了下自己的代码，发现是代码输入有问题。再次运行的时候，显示已经登录，然后给我匹配的朋友发了句：</p>
+<blockquote>
+<p>请给我分享一篇文章</p>
+</blockquote>
+<p>感觉自己特别像个机器人，但是朋友文章分享过来后返回的内容有问题，再次查看，还是有输错的代码，再次重输调试。最后终于运行成功，给对方返回了day11的字词统计，中英文一起统计，瞬间幸福感爆棚。</p>
+<p>从今天开始，感觉前几天的内容串起来了，一遍又一遍的让我们调试自己编写的函数，就是让我们对函数有更加深入的了解，从而在调用别人的函数的时候不会有太大的生硬感，然后对python编程有了更加深入的了解。</p>
+<p>内心对这些开源程序大牛更加佩服了，他们搭好一个又一个积木，让后面的人能拼出更牛的作品，而且是完全免费开源的，开源世界真是太棒了。</p>
+<h2 id="Day11"><a href="#Day11" class="headerlink" title="Day11"></a>Day11</h2><p>今天的作业就比较好玩了，直接上手了实用的内容。采铜是一个我很喜欢的作者，没想到今天的作业是要把采铜一篇爆文中所采用的办法用python程序来实现，而且一劳永逸，内心不禁泛起了欢乐，不知道采铜知道了会怎么想。</p>
+<p>我想今天的内容已经接触到了网页爬虫，用的是这个库：</p>
+<blockquote>
+<p>requests</p>
+</blockquote>
+<p>比较厉害，抓到网页后需要处理，尝试只在抓取后用print()函数测试抓到了什么，结果显示空白。然后需要用到的是这个库:</p>
+<blockquote>
+<p>PyQuery</p>
+</blockquote>
+<p>这个库我也用print()函数测试了下，第一次处理打印出来的是一大堆网页编码，文章混杂在其中，必须要用到作业中的第二步处理方法，打印出来的就是文字了。</p>
+<p>然后就是愉快的用我们自己前几天编好的函数进行处理了，其中一步会用到</p>
+<blockquote>
+<p>str() # 将结果转化为str类型</p>
+</blockquote>
+<p>这一步必须进行，否则的话邮件是发不出去的，会报错。</p>
+<p>然后就是编辑设置getpass和yagmail进行结果邮件发送了，必须注意的是要设置邮箱smpt码，然后用这个码发送要方便点。</p>
+<h2 id="Day10"><a href="#Day10" class="headerlink" title="Day10"></a>Day10</h2><p>day10的作业是要求词频统计，要求引入一个外部的库<strong>结巴</strong>,听起来很傻，但确实一个厉害的断词的库。<br>结巴一共有三种模式：</p>
+<blockquote>
+<p>全模式、精确模式、搜索模式</p>
+</blockquote>
+<p>作业要求的是精确模式。这是一个很神奇的库，有点类似于我们小学时候老师教的断句。</p>
+<blockquote>
+<p>我/来自 /云南省/曲靖</p>
+</blockquote>
+<p>以前是我们用自己的小脑袋来识别断句，现在是教会程序断句，我们直接调取来用就行了。</p>
+<p>想想我们现在所调试的函数，封装起来的话也算是勉强拿的出手给别人用用的库了吧。</p>
+<p>最后就是open(),close()与with语句。在使用open()函数的时候，一定会加一句file.close(),例如《自学是门手艺》第一部分第7章的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f = open(&apos;test-file.txt&apos;, &apos;w&apos;)</span><br><span class="line">print(f.name)</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+
+<p>因为文件用完必须被关闭，不然的话会占用系统资源，且系统同一时间能打开的文件是有限的。</p>
+<p>因为每次都这么写都太繁琐了，所以python把这个close()函数包裹进了with语句中去，直接写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">with open(...) as f:</span><br><span class="line">    f.write(...)</span><br></pre></td></tr></table></figure>
+
+<p>就好了，不用再加上close()函数在结尾了。</p>
+<h2 id="Day9"><a href="#Day9" class="headerlink" title="Day9"></a>Day9</h2><p>改写了好几天的函数，对函数有了一点点更加深入的认识.今天布置的作业是要在前几天作业的基础上加上collections.Counter most_common([n])这个函数，当看到这个函数中这一行介绍时有点难过</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; Counter(&apos;abracadabra&apos;).most_common(3)  # doctest: +SKIP</span><br><span class="line">[(&apos;a&apos;, 5), (&apos;r&apos;, 2), (&apos;b&apos;, 2)]</span><br></pre></td></tr></table></figure>
+
+<p>意味这我前几天写的函数是一个重复啰嗦的函数，而我只要调用已经封装好的函数，我写的那几行代码完全可以删掉了。于是我原本的函数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import re</span><br><span class="line">def stats_text_en(t_en): </span><br><span class="line">    if not isinstance(t_en,str):</span><br><span class="line">        raise ValueError(&apos;输入的不是文本格式，请重新输入：&apos;)</span><br><span class="line">    &apos;&apos;&apos;英文词频统计&apos;&apos;&apos;</span><br><span class="line">    a = t_en.replace(&apos;,&apos;,&apos;&apos;).replace(&apos;.&apos;,&apos;&apos;).replace(&apos;:&apos;,&apos;&apos;).replace(&apos;;&apos;,&apos;&apos;).replace(&apos;&quot;&apos;,&apos;&apos;).replace(&apos;!&apos;,&apos;&apos;).replace(&apos;?&apos;,&apos;&apos;).replace(&apos;、&apos;,&apos;&apos;).replace(&apos;，&apos;,&apos;&apos;).replace(&apos;。&apos;,&apos;&apos;).replace(&apos;“&apos;,&apos;&apos;).replace(&apos;”&apos;,&apos;&apos;).replace(&apos;：&apos;,&apos;&apos;).replace(&apos;；&apos;,&apos;&apos;).replace(&apos;\n&apos;,&apos;&apos;).replace(&apos;！&apos;,&apos;&apos;).replace(&apos;？&apos;,&apos;&apos;).replace(&apos;/&apos;,&apos;&apos;).replace(&apos;*&apos;,&apos; &apos;).replace(&apos;--&apos;,&apos; &apos;)</span><br><span class="line">    a = a.lower()</span><br><span class="line">    a = re.sub(&quot;[^A-Za-z]&quot;, &quot; &quot;, a)</span><br><span class="line">    a = a.split() </span><br><span class="line">    b = &#123;&#125;</span><br><span class="line">    for i in a:</span><br><span class="line">        count =  a.count(i)</span><br><span class="line">        r1 = &#123;i:count&#125; </span><br><span class="line">        b.update(r1)</span><br><span class="line">    c = sorted(b.items(),key=lambda x:x[1],reverse=True) </span><br><span class="line">    print(&apos;英文单词统计频率如下： \n&apos;,c)</span><br></pre></td></tr></table></figure>
+
+<p>可以精简成如下函数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import collections</span><br><span class="line">import re</span><br><span class="line"></span><br><span class="line">def stats_text_en(t_en,count): </span><br><span class="line">    &apos;&apos;&apos;该函数返回一个英文单词词频统计，样式为（word,count）&apos;&apos;&apos;</span><br><span class="line">    if type(t_en) == str:</span><br><span class="line">        text_en = re.sub(&quot;[^A-Za-z]&quot;, &quot; &quot;, t_en.strip())</span><br><span class="line">        enlist = text_en.split() </span><br><span class="line">        return collections.Counter(enlist).most_common(count)</span><br><span class="line">    else:</span><br><span class="line">        raise ValueError(&quot;输入不为字符串&quot;)</span><br></pre></td></tr></table></figure>
+
+<p>还有就是几乎可以嗅到一件可怕的事，那就是我好几天就看到counter函数了，而我只要在官方文档里查查看就可以试着拿来用，而我没有，这就意味这我的“未经声明，不能引用”的内置程序启用了，得赶紧删除了。</p>
+<p>=======</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>upstream/master</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="Day8"><a href="#Day8" class="headerlink" title="Day8"></a>Day8</h2><p>短跑过半了，坚持，坚持！</p>
+<h2 id="Day7"><a href="#Day7" class="headerlink" title="Day7"></a>Day7</h2><p>又是在前一天的基础上完成任务，虽然看着很简单的，但依然折腾了一天，开始是在jupyterlab上测试，老是显示错误，后面在Terimal中测试又可行。我把anaconda,jupyterlab等全部升级了一遍后不显示错误了，但还是有地方不对，因为第二个调用函数，虽然执行了结果，但会返回连个None,None.不清楚，不明了。</p>
+<h2 id="Day6"><a href="#Day6" class="headerlink" title="Day6"></a>Day6</h2><p>心得如下：</p>
+<p>1.进行到这一部分的时候干了一件蠢事，因为一看到要做一个函数，心理比较慌，下意识的去看了下别人是怎么做的，意图参考，然后我渡过了最难过的2天。</p>
+<blockquote>
+<p>别人的鞋不合脚呀</p>
+</blockquote>
+<p>想了一下午才想明白，其实day6的内容早在day5就完成了一大半，我只要把day5的内容改装一下封装进day6的函数就可以了呀，真是蠢到家了，然后在1个小时内就把两个函数写出来了。</p>
+<p>2.别人的作业也不是不可看</p>
+<blockquote>
+<p>但要合理借鉴</p>
+</blockquote>
+<p>我参考过两个同学的作业，一个同学写的简单，但两个函数只能单独统计。就是一个函数只能统计<em>纯英文</em>，另一个函数只能统计<em>纯中文</em>。</p>
+<p>然后是1班同学的，那叫一个复杂，直接调用了collections（集合） 和 re（正则表达式）模块，看不懂，想抄都没有办法。</p>
+<p>我的作业本来也是两个函数分开统计纯英文或者纯中文，但我实在想改进一下，让函数能够区分中英文，在统计英文的时候去掉中文，统计中文的时候去掉英文。然后就注意到了尖子生的正则表达式。</p>
+<blockquote>
+<p>虽然不懂，但不妨碍我拿来用。</p>
+</blockquote>
+<p>试了一下调用正则表达式模块，果然可以用，心理高兴极了，吃饭都嫌麻烦，调试了半天。</p>
+<p>3.我现在把这个正则表达式函数列出给大家看看，以防大家可以用到。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import re # 调用正则表达式模块</span><br><span class="line">a = &quot;simple is better than complex简单比复杂更好&quot;</span><br><span class="line">b = re.sub(&quot;[^A-Za-z]&quot;, &quot; &quot;, a) # re.sub(pattern, repl, string, count=0, flags=0)</span><br><span class="line">c = re.sub(&quot;[A-Za-z]&quot;, &quot;&quot;,a) # 注意A前面的^,对比下结果你应该明白这个符号是干嘛的</span><br><span class="line">print(b)</span><br><span class="line">print(c)</span><br></pre></td></tr></table></figure>
+
+<p>输出结果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">simple is better than complex        </span><br><span class="line">    简单比复杂更好</span><br></pre></td></tr></table></figure>
+
+<p>另外，大家感兴趣可以根据我的学号去看看我的作业，在大作业仓库的exercises文件夹中，应该相对简单一点。</p>
+<h2 id="Day5"><a href="#Day5" class="headerlink" title="Day5"></a>Day5</h2><p>一天不敲代码，现在总觉得心里面空唠唠的。今天是清明节假期，敲代码上瘾。</p>
+<p>这一次的收获：</p>
+<p>1.慢下来总能对代码有所理解的，学习后面的内容总能对前面的内容有更进一步的认识和理解。</p>
+<p>2.怕麻烦真的好费钱呀</p>
+<blockquote>
+<p>怕麻烦的人的钱都被不怕麻烦的人赚走了</p>
+</blockquote>
+<p>3.假期要拿来好好学习，要好总结下《自学是门手艺》第一部分的内容。</p>
+<h2 id="Day4"><a href="#Day4" class="headerlink" title="Day4"></a>Day4</h2><p>今天有点难过，任务是编一个乘法表，要求用for…in..等语句完成任务。我翻看了这一章介绍后，感觉无从下手，就像给你工具，材料，然后让你砌墙时，从来没砌过墙的你拿着工具盯着作业场地有点茫然。没有办法，还是先看看别人是怎么完成的吧。搜到几个教程，很花哨，有花式排列乘法表的，有加了制表函数，做成带框表格的。没有理那些YYJH,我还是找了个自己看得懂的慢慢琢磨。</p>
+<blockquote>
+<p>老司机才炫技，新手还是乖乖跟着开慢车吧。</p>
+</blockquote>
+<h4 id="心得要点"><a href="#心得要点" class="headerlink" title="心得要点"></a>心得要点</h4><p>1.for循环跟range()函数是个固定搭配，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">for i in range(10):</span><br><span class="line">    print(i)</span><br></pre></td></tr></table></figure>
+
+<p>这个表达式会列出0-9这10个数字。</p>
+<p>2.过程中我是先照者别人的写一遍，可以执行后，我又换个参数自己慢慢写一遍，看不懂的地方我就挪挪位置，换个方式，改变下参数看看会有什么变化，以便自己可以更理解这个写法。比如最开始的乘法表我把&lt;print ()&gt;这一行去掉了，也能运行，但结果是没有阶梯排序的乘法表。虽然还是不理解是什么原理，但我知道了这一行的重要性。同理我把去偶数乘法表最下面的&lt;y += 1&gt;,和&lt;x += 1&gt;去掉后,引发了程序的无限循环，看来这两行也挺重要，应该是终止循环的语句。</p>
+<p>3.在第二个去除偶数的任务中，参照了别的编程营小伙伴的作业，但觉得他们那个编写方法看不明白，我就想起了不是有break语句吗，怎么都没人用，我就自己尝试了下，写入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if x % 2 == 0: # 如果x除以2余数为零，说明是偶数，那么就终止</span><br><span class="line">    break</span><br></pre></td></tr></table></figure>
+
+<p>敲入结果一看，果然把左边的偶数干掉了，不禁有点小开心，貌似是比小伙伴们找到了个更好的解决方案。</p>
+<h2 id="Day3"><a href="#Day3" class="headerlink" title="Day3"></a>Day3</h2><p>今天的课程是要编写一个计算器，如果说前两天是带你认识工具的话，今天直接就要你用工具做出一个产品来了。画风不对呀，虽然有说明书，但怎么感觉中间少了n个要学的东西，懵了。</p>
+<p>还好我们有“老师”–“谷歌，必应”，大作业仓库，厚着脸皮先看看尖子生是怎么写的，再把别人的计算器“拆了”，自己组装一下。</p>
+<p>看了下别人的程序实现，有超级复杂的，调用了tkinter模块，直接输出了一个计算机可视化界面，跟win上的类似；也有超级简单的，只调用了int(),input(),print()函数利用if语句就实现了；也有隔壁的尖子生，直接定义函数实现的。</p>
+<p>我照着最简单的方法敲了个最简单的计算器，不仅有“加、减、乘、除法”，我自己加上了“幂、余”都能实现，然后我发现原代码不支持小数计算，翻看了一下函数那章，换了个float()浮点数函数就可以实现小数运算了，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># float()支持小数运算</span><br><span class="line"># 如果用int()函数的话就只支持输入整数</span><br><span class="line"># input()接收键盘输入</span><br><span class="line"></span><br><span class="line">a=float(input(&apos;请输入数值1&apos;))  </span><br><span class="line">b=input(&apos;请输入运算符号&apos;)</span><br><span class="line">c=float(input(&apos;请输入数值2&apos;))</span><br><span class="line">if b==&quot;+&quot;:</span><br><span class="line">    print(a+c)</span><br><span class="line">elif b==&quot;-&quot;:</span><br><span class="line">    print(a-c)</span><br><span class="line">elif b==&quot;*&quot;:</span><br><span class="line">    print(a*c)</span><br><span class="line">elif b==&quot;/&quot;:</span><br><span class="line">    print(a/c)</span><br><span class="line">elif b==&quot;**&quot;:</span><br><span class="line">    print(a**c)</span><br><span class="line">elif b==&quot;%&quot;:</span><br><span class="line">    print(a%c)</span><br></pre></td></tr></table></figure>
+
+<p>然后我试了试第二种方法，也是可以用的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">choice = float(input(&apos;请选择运算： \n1.加\n2.减\n3.乘\n4.除\n5.幂\n6.余\n请选择你的算法： &apos;))</span><br><span class="line">num1 = float(input(&apos;请输入第一个数： &apos;))</span><br><span class="line">num2 = float(input(&apos;请输入第二个数： &apos;))</span><br><span class="line">if choice == 1:</span><br><span class="line">    print(&apos;&#123;&#125; + &#123;&#125; = &#123;&#125;&apos;.format(num1, num2 ,num1+num2))</span><br><span class="line">elif choice == 2:</span><br><span class="line">    print(&apos;&#123;&#125; - &#123;&#125; = &#123;&#125;&apos;.format(num1, num2 ,num1-num2))</span><br><span class="line">elif choice == 3:</span><br><span class="line">    print(&apos;&#123;&#125; *&#123;&#125; = &#123;&#125;&apos;.format(num1, num2 ,num1*num2))</span><br><span class="line">elif choice == 4:</span><br><span class="line">    print(&apos;&#123;&#125; / &#123;&#125; = &#123;&#125;&apos;.format(num1, num2 ,num1/num2))</span><br><span class="line">elif choice == 5:</span><br><span class="line">    print(&apos;&#123;&#125; ** &#123;&#125; = &#123;&#125;&apos;.format(num1, num2 ,num1**num2))</span><br><span class="line">elif choice == 6:</span><br><span class="line">    print(&apos;&#123;&#125; % &#123;&#125; = &#123;&#125;&apos;.format(num1, num2 ,num1%num2))</span><br></pre></td></tr></table></figure>
+
+<p>以用带练，多学多用！</p>
+<h2 id="DAY2"><a href="#DAY2" class="headerlink" title="DAY2"></a>DAY2</h2><p>今天在运行hello world程序的时候踩了个莫名其妙的坑，那就是输入print函数括号里面的点符号踩的坑。我开始输入的是esc下面那个`，因为为看着别人好像也是输入的这个，然后程序一直报错，我快疯了，后面换了”才没有报错，最后我才发现是这个’（“不用shift的’)。</p>
+<h4 id="建立hello-world-py文件的方法有三种："><a href="#建立hello-world-py文件的方法有三种：" class="headerlink" title="建立hello_world.py文件的方法有三种："></a>建立hello_world.py文件的方法有三种：</h4><p>1.在vscode中可以直接通过点击建立。</p>
+<p>2.通过终端建立，在cd 文件夹后，输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">touch hello_world.py</span><br><span class="line">`</span><br></pre></td></tr></table></figure>
+
+<p>这个方法在windows中会报告错误，没找到解决方案，我是在电脑上用virtualbox安装了ubuntu系统然后在Ubuntu系统中的终端上实现的。</p>
+<p>3.直接在jupyterlab中建立一个hello_world.ipyb文件。</p>
+<h4 id="执行hello-world-py的方法有三种："><a href="#执行hello-world-py的方法有三种：" class="headerlink" title="执行hello_world.py的方法有三种："></a>执行hello_world.py的方法有三种：</h4><p>1.打开终端，cd打开hello_world.py程序所在的文件夹,执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python hello_world.py</span><br></pre></td></tr></table></figure>
+
+<p>可以看到输出结果</p>
+<p>2.在vscode中右键单击hello_world.py再点击在终端中运行也可以看到输出结果</p>
+<p>3.在jupyterlab中直接shift+enter，也可以直接看到输出结果。</p>
+<h2 id="DAY1"><a href="#DAY1" class="headerlink" title="DAY1"></a>DAY1</h2><p>今天进行了自学营的第一次训练，本来以为自己已经早就熟练掌握了github的创建仓库，提交更改之类的，但是今天发现自己仍然只是知道一部分。参加自学营前参加了刘娟娟的”you can you up,no bb”以为自己闯过了第一关，守关人跟我说你并没通过的时候，我理直气壮的跟他说，我完成了呀。守关人并没有说什么，让我去了第二关，今天才知道我真的是没有通过，人家一看截图，没有分支，没有commit，真是懒得理我。学习真的是切记骄傲啊。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+        
+        <div class="post-tags">
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+            <a href="/tags/自学营/" rel="tag"># 自学营</a>
+          
+        </div>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+              <a href="/学员故事/1901020025-给人生嫁接一次新的可能/" rel="next" title="1901020025-给人生嫁接一次新的可能">
+                <i class="fa fa-chevron-left"></i> 1901020025-给人生嫁接一次新的可能
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+              <a href="/学员故事/1901030032-自学——为自己而学/" rel="prev" title="1901030032-自学——为自己而学">
+                1901030032-自学——为自己而学 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    
+  <div class="comments" id="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+  
+
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">自学营团队</p>
+  <div class="site-description motion-element" itemprop="description">该博客用于收录自学营学员在学习过程中的笔记，包括学习心得、总结、记录解决问题的过程等。。。</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">130</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">64</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于入门我是被一脚踹进来的"><span class="nav-number">1.</span> <span class="nav-text">关于入门我是被一脚踹进来的</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#day13"><span class="nav-number">1.1.</span> <span class="nav-text">day13</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day12"><span class="nav-number">1.2.</span> <span class="nav-text">Day12</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day11"><span class="nav-number">1.3.</span> <span class="nav-text">Day11</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day10"><span class="nav-number">1.4.</span> <span class="nav-text">Day10</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day9"><span class="nav-number">1.5.</span> <span class="nav-text">Day9</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day8"><span class="nav-number">1.6.</span> <span class="nav-text">Day8</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day7"><span class="nav-number">1.7.</span> <span class="nav-text">Day7</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day6"><span class="nav-number">1.8.</span> <span class="nav-text">Day6</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day5"><span class="nav-number">1.9.</span> <span class="nav-text">Day5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day4"><span class="nav-number">1.10.</span> <span class="nav-text">Day4</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#心得要点"><span class="nav-number">1.10.0.1.</span> <span class="nav-text">心得要点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day3"><span class="nav-number">1.11.</span> <span class="nav-text">Day3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DAY2"><span class="nav-number">1.12.</span> <span class="nav-text">DAY2</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#建立hello-world-py文件的方法有三种："><span class="nav-number">1.12.0.1.</span> <span class="nav-text">建立hello_world.py文件的方法有三种：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#执行hello-world-py的方法有三种："><span class="nav-number">1.12.0.2.</span> <span class="nav-text">执行hello_world.py的方法有三种：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DAY1"><span class="nav-number">1.13.</span> <span class="nav-text">DAY1</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">自学营团队</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.2.0</div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+  
+  <script src="/js/affix.js?v=7.2.0"></script>
+  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
+
+  
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.2.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://selfteaching-learning-notes.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://selfteaching-learning-notes.github.io/学员故事/1901010071-关于入门我是被一脚踹进来的/";
+    this.page.identifier = "学员故事/1901010071-关于入门我是被一脚踹进来的/";
+    this.page.title = '1901010071-关于入门我是被一脚踹进来的';};
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://selfteaching-learning-notes.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+    window.addEventListener('load', loadComments, false);
+  
+</script>
+
+
+</body>
+</html>

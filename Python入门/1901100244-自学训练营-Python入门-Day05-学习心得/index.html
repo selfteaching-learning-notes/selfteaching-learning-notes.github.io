@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":"enable","trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    search: {
+      root: '/',
+      path: 'search.xml'
+    },
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="学员信息 学号：1901100244 操作系统：Windows 10 version 1903 (64-bit) 学习内容：字符串的基本处理，词频统计，数组操作，进制转换 学习用时：6 小时  收获总结 了解了字符串相关的替换、删除、大小写转换等工作的方法； 了解了由字符串分词生成列表的方法； 了解了列表的排序方法； 了解了字典的生成和排序方法； 明确了列表、元组、字典的联系和区别； 了解了切片的">
+<meta name="keywords" content="Python,学习打卡,自学营,学习总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019-08-12-1901100244-自学训练营-Python入门-Day05-学习心得">
+<meta property="og:url" content="https://selfteaching-learning-notes.github.io/Python入门/1901100244-自学训练营-Python入门-Day05-学习心得/index.html">
+<meta property="og:site_name" content="自学营学员笔记">
+<meta property="og:description" content="学员信息 学号：1901100244 操作系统：Windows 10 version 1903 (64-bit) 学习内容：字符串的基本处理，词频统计，数组操作，进制转换 学习用时：6 小时  收获总结 了解了字符串相关的替换、删除、大小写转换等工作的方法； 了解了由字符串分词生成列表的方法； 了解了列表的排序方法； 了解了字典的生成和排序方法； 明确了列表、元组、字典的联系和区别； 了解了切片的">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-26T14:37:28.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2019-08-12-1901100244-自学训练营-Python入门-Day05-学习心得">
+<meta name="twitter:description" content="学员信息 学号：1901100244 操作系统：Windows 10 version 1903 (64-bit) 学习内容：字符串的基本处理，词频统计，数组操作，进制转换 学习用时：6 小时  收获总结 了解了字符串相关的替换、删除、大小写转换等工作的方法； 了解了由字符串分词生成列表的方法； 了解了列表的排序方法； 了解了字典的生成和排序方法； 明确了列表、元组、字典的联系和区别； 了解了切片的">
+  <link rel="alternate" href="/atom.xml" title="自学营学员笔记" type="application/atom+xml">
+  <link rel="canonical" href="https://selfteaching-learning-notes.github.io/Python入门/1901100244-自学训练营-Python入门-Day05-学习心得/">
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>2019-08-12-1901100244-自学训练营-Python入门-Day05-学习心得 | 自学营学员笔记</title>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144933018-1"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-144933018-1');
+    }
+  </script>
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">自学营学员笔记</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">总结、记录、打卡、沉淀</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-search">
+          <a href="javascript:;" class="popup-trigger">
+          
+            <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>搜索</a>
+        </li>
+      
+    </ul>
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+    </div>
+</nav>
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://selfteaching-learning-notes.github.io/Python入门/1901100244-自学训练营-Python入门-Day05-学习心得/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="自学营团队">
+      <meta itemprop="description" content="该博客用于收录自学营学员在学习过程中的笔记，包括学习心得、总结、记录解决问题的过程等。。。">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="自学营学员笔记">
+    </span>
+      <header class="post-header">
+
+        
+          <h2 class="post-title" itemprop="name headline">2019-08-12-1901100244-自学训练营-Python入门-Day05-学习心得
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-12 23:50:00" itemprop="dateCreated datePublished" datetime="2019-08-12T23:50:00+08:00">2019-08-12</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-26 22:37:28" itemprop="dateModified" datetime="2019-08-26T22:37:28+08:00">2019-08-26</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python入门/" itemprop="url" rel="index"><span itemprop="name">Python入门</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="fa fa-comment-o"></i>
+    </span>
+    
+      <span class="post-meta-item-text">评论数：</span>
+    
+  
+    <a href="/Python入门/1901100244-自学训练营-Python入门-Day05-学习心得/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Python入门/1901100244-自学训练营-Python入门-Day05-学习心得/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          <br/>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="学员信息"><a href="#学员信息" class="headerlink" title="学员信息"></a>学员信息</h3><ul>
+<li>学号：1901100244</li>
+<li>操作系统：Windows 10 version 1903 (64-bit)</li>
+<li>学习内容：字符串的基本处理，词频统计，数组操作，进制转换</li>
+<li>学习用时：6 小时</li>
+</ul>
+<h3 id="收获总结"><a href="#收获总结" class="headerlink" title="收获总结"></a>收获总结</h3><ol>
+<li>了解了字符串相关的替换、删除、大小写转换等工作的方法；</li>
+<li>了解了由字符串分词生成列表的方法；</li>
+<li>了解了列表的排序方法；</li>
+<li>了解了字典的生成和排序方法；</li>
+<li>明确了列表、元组、字典的联系和区别；</li>
+<li>了解了切片的使用方法；</li>
+<li>了解了数字类型和字符串类型的转换方法；</li>
+<li>了解了由列表拼接字符串的方法；</li>
+<li>了解了十进制数到二进制数、八进制数、十六进制数的转换方法。</li>
+</ol>
+<h3 id="遇到的难点与问题"><a href="#遇到的难点与问题" class="headerlink" title="遇到的难点与问题"></a>遇到的难点与问题</h3><h4 id="1-字符串样本的形式"><a href="#1-字符串样本的形式" class="headerlink" title="1. 字符串样本的形式"></a>1. 字符串样本的形式</h4><p>任务手册中给出的字符串样本是著名的《Python 之禅》（<em>The Zen of Python</em>），其最早由蒂姆·彼得斯（Tim Peters）在 Python 邮件列表中发表，它包含了影响 Python 编程语言设计的 19 条程序编写原则。</p>
+<p>《Python 之禅》被内置到了 Python 的 <code>this</code> 模块中，只需要运行 <code>import this</code> 就会被输出。</p>
+<p>但手册中所呈现的字符串样本又与内置的内容有所区别，表现在：</p>
+<ul>
+<li>开头多了一个空行；</li>
+<li>标题和正文间多了一个空行；</li>
+<li>有错别字（“ambiguity”写成了“ambxiguity”）；</li>
+<li>结尾多了一个空行。</li>
+</ul>
+<p>另外，原始的文本由于种种原因，使用了“打字机风格”，具体表现在：</p>
+<ul>
+<li>单引号（‘、’）和缩略号（’）使用了直引号（’）进行替代；</li>
+<li>破折号（—）使用了两个连字符（–）进行替代；</li>
+<li>强调使用了成对星号（*）进行表达。</li>
+</ul>
+<p>原始文本还有令人纠结的一点，就是破折号左右的空格。破折号左右要不要留空格是个见仁见智的问题，但至少应当全文一致，可原始文本的三个破折号用法各异，这就难以解释了。</p>
+<p>这些问题虽然从完成任务的角度来说无需关心，但从排版的角度来说，足够让人产生如鲠在喉的感觉，况且 Python 3.x 默认使用的编码已经是 Unicode，完全可以在文本上解决引号、破折号等问题。</p>
+<p>本着这样的想法，我在原始文本的基础上，考虑了排版规则，结合<a href="https://en.wikipedia.org/wiki/Zen_of_Python" target="_blank" rel="noopener">维基百科的 The Zen of Python 页面</a>的内容，生成了作为练习使用的字符串文本。</p>
+<p>此外，我顺着《Python 之禅》找到了<a href="https://www.python.org/dev/peps/" target="_blank" rel="noopener">一系列的《Python 增强提案》（<em>Python Enhancement Proposals</em>，缩写为 PEPs）</a>，这其中的<a href="https://www.python.org/dev/peps/pep-0008/" target="_blank" rel="noopener">《Python 编码规范》（<em>Style Guide for Python Code</em>，编号为 PEP 8）</a>应该是学习 Python 编程的必读文本，其他的提案也可以选择性地读一读。</p>
+<p>另可参见：<br><a href="https://zh.wikipedia.org/wiki/Python%E4%B9%8B%E7%A6%85" target="_blank" rel="noopener">维基百科的 Python 之禅页面</a><br><a href="https://note.qidong.name/2018/01/the-zen-of-python/" target="_blank" rel="noopener">蛇宗三字经（The Zen of Python）</a><br><a href="https://zhuanlan.zhihu.com/p/51252175" target="_blank" rel="noopener">写在最前面：The Zen of Python</a><br><a href="https://www.zhihu.com/question/23484654" target="_blank" rel="noopener">Python 的众多 PEP 之中，除了 PEP 8，还有哪一些是值得阅读的？</a><br><a href="https://en.wikipedia.org/wiki/Dash" target="_blank" rel="noopener">维基百科的英文破折号（—）页面</a><br><a href="https://sspai.com/post/45516" target="_blank" rel="noopener">别再用「六个点」当省略号了，这些标点都有更规范的输入方式</a><br><a href="https://www.w3.org/TR/clreq/" target="_blank" rel="noopener">中文排版需求</a><br><a href="https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols" target="_blank" rel="noopener">Mathematical Alphanumeric Symbols</a><br><a href="https://blog.csdn.net/BNK_along/article/details/84000953" target="_blank" rel="noopener">VS Code 写 Python 时的代码错误提醒和自动格式化</a><br><a href="https://code.visualstudio.com/docs/python/linting" target="_blank" rel="noopener">Linting Python in Visual Studio Code</a></p>
+<h4 id="2-英文分词"><a href="#2-英文分词" class="headerlink" title="2. 英文分词"></a>2. 英文分词</h4><p>分词是个大问题。</p>
+<p>简单的文本，可以通过空格分词，但稍微复杂一点的文本，处理起来就很耗神。</p>
+<p>怎么叫“复杂”？包括但不限于：</p>
+<ul>
+<li>小数（1.25之类）；</li>
+<li>复杂词形（$10、10% 之类）；</li>
+<li>缩略语（U.S.A. 之类）；</li>
+<li>包含连字符的词汇（self-teaching 之类）；</li>
+<li>特殊符号（…、– 之类）</li>
+<li>转义符（\n 之类）。</li>
+</ul>
+<p>还好，本次练习要处理的文本，不算太复杂。</p>
+<p>不过要完成的目标（去掉文本中包含“ea”的单词），还是对分词有些要求的。举例来说，“idea—let’s”这样的部分，就得把“idea”去掉，别的内容保留，之后还要处理破折号两侧可能出现的多余空格。</p>
+<p>简单的分词用 <code>split()</code> 函数就行，但本次用作分词的分隔符不只一个，故而选择通过加载正则表达式模块（<code>re</code>），通过 <code>re.split()</code> 函数完成分词。这里有两个要注意的地方：</p>
+<ul>
+<li>间隔符表达式如果带括号（(…)），生成的列表里就包括分隔符，反之则不包括；</li>
+<li>正则表达式字符串建议在前面加上标记 <code>r</code>，举例来说，我使用的表达式为 <code>r&#39;(\s|,|\.|—)&#39;</code>。</li>
+</ul>
+<p>更复杂的分词可以通过加载其他的分词工具完成，具体可以参见《<a href="https://datartisan.gitbooks.io/begining-text-mining-with-python/" target="_blank" rel="noopener">Python 文本数据分析初学指南</a>》的“<a href="https://datartisan.gitbooks.io/begining-text-mining-with-python/第4章%20分词与词性标注/4.2%20英文分词及词性标注.html" target="_blank" rel="noopener">4.2 英文分词及词性标注</a>”部分。</p>
+<h4 id="3-正则表达式"><a href="#3-正则表达式" class="headerlink" title="3. 正则表达式"></a>3. 正则表达式</h4><p>正则表达式（Regular Expression，常简写为 regex、regexp 或 RE）是计算机科学的一个概念，其使用单个字符串来描述、匹配一系列符合某个句法规则的字符串。<a href="参见[维基百科的“正则表达式”页面](https://zh.wikipedia.org/wiki/正则表达式)">^Wiki_cs_RE</a></p>
+<p>简单地说，如果需要查找或替换某个具体的字词，使用普通的查找或替换工具就可以了，但如果需要查找或替换的，是符合某些特定规则的字符串，就需要依靠正则表达式了。</p>
+<p>快速地了解一下正则表达式，可以阅读<a href="http://deerchao.net/" target="_blank" rel="noopener">陆超</a>编写的《<a href="http://deerchao.net/tutorials/regex/regex.htm" target="_blank" rel="noopener">正则表达式30分钟入门教程</a>》，深入学习，可以参考<a href="http://regex.info/" target="_blank" rel="noopener">杰弗里·弗里德尔（Jeffrey E. F. Friedl）</a>撰写的 500 多页的大部头《<a href="https://book.douban.com/subject/2154713/" target="_blank" rel="noopener">精通正则表达式</a>》和<a href="https://www.luanxiang.org/blog/" target="_blank" rel="noopener">余晟</a>撰写的《<a href="https://book.douban.com/subject/30352656/" target="_blank" rel="noopener">正则指引</a>》，还可以通过使用 <a href="http://deerchao.net/tools/regester/index.htm" target="_blank" rel="noopener">Regester</a> 和 <a href="http://www.regexbuddy.com/" target="_blank" rel="noopener">RegexBuddy</a> 等软件进行练习和测试。</p>
+<p>无论如何，正则表达式的语法都很难读写，令人头疼，可为了它能实现的功能，只能认了。</p>
+<p>上文已经说过，在 Python 里使用正则表达式需要加载正则表达式模块（<code>re</code>），不过在我用的时候遭遇了这么几个问题：</p>
+<ol>
+<li><strong>后向引用</strong><br>我认为包含撇号（’）的单词（如 ’s、’re、don’t 等），应该单独特别处理，而非简单地和它周围的词混在一起。举例来说，“Let’s”应该断成“Let”和“’s”，“don’t”就应该是一个整体。<br>好在要处理的文本只有 3 个撇号，都是断开就行的，我就简化处理了——在撇号之前加空格把它和关联单词分开。<br>完成这个任务需要使用“后向引用”，其默认的表达方式应该是类似“<code>\1</code>”、“<code>\2</code>”这样的，但我调了数次都报错，又作了一番功课才明白在这里应该用“<code>\\1</code>”、“<code>\\2</code>”。<br>捎带要提一下的是，VS Code 里的查找/替换功能也可以用正则表达式，但它的后向引用要写成“<code>$1</code>”、“<code>$2</code>”这种形式。</li>
+<li><strong>转义序列</strong><br>“转义（escape）”是指用多个字符的有序组合来表示原本需要的字符的手段，“转义序列（escape sequence）”则指在转义时使用的有序字符组合。<a href="参见[维基百科的“转义序列”页面](https://zh.wikipedia.org/wiki/转义序列)">^Wiki_cs_Escape_Sequence</a><br>转义序列通常用作表示那些“无法直接输入”的字符，比如回车符、换行符、制表符等等。<br>在 Python 里，转义序列是用“<code>\</code>”开头的一系列字符组合，常用的有：换行符“<code>\n</code>”，制表符“<code>\t</code>”。<br>但在正则表达式里，也会用到转义序列，正则表达式的转义序列还比 Python 多些，如：空白符“<code>\s</code>”，数字“<code>\d</code>”，单词边缘“<code>\b</code>”等。<br>转义序列很有用，可也会带来麻烦，比如要输入 <code>&#39;C:\new\&#39;</code> 这个路径的字符串，其中的 <code>\n</code> 就会被转义，要避免这一问题，有两种方式：一，使用“<code>\\</code>”来表示不需要转义的反斜线（\），也即写为 <code>&#39;C:\\new\&#39;</code>，二，使用“<code>r</code>”标记告诉 Python 此处不转义，也即写为 <code>r&#39;C:\new\&#39;</code>。<br>当在 Python 里用正则表达式时，问题就更严重了，因为 Python 本身会处理一层转义，正则表达式又会处理一层转义，故而要向正则表达式里传递一个不转义的“\”，字符串要写成“<code>&#39;\\\\&#39;</code>”，这实在是很麻烦，在这种情况下，建议更多地使用“<code>r</code>”标记来处理正则表达式。<br>Python 官方发布的静态代码检查工具 <a href="http://flake8.pycqa.org/en/latest/" target="_blank" rel="noopener">Flake8</a> 现在已经把所有 Python 不支持的转义序列标记成错误，提示“<a href="https://lintlyci.github.io/Flake8Rules/rules/W605.html" target="_blank" rel="noopener">invalid escape sequence ‘x’ (W605)</a>”，解决的办法也是在相应字符串加“<code>r</code>”标记。<br>除了“<code>r</code>”外，字符串可用的标记还有“<code>u</code>”、“<code>f</code>”等，具体使用可以参见《<a href="https://docs.python.org/3/reference/index.html" target="_blank" rel="noopener"><em>The Python Language Reference</em></a>》的“<a href="https://docs.python.org/3/reference/lexical_analysis.html#string-and-bytes-literals" target="_blank" rel="noopener">2.4.1. String and Bytes literals</a>”和“<a href="https://docs.python.org/3/reference/lexical_analysis.html#formatted-string-literals" target="_blank" rel="noopener">2.4.3. Formatted string literals</a>”部分。</li>
+<li><strong>特殊字符</strong><br>正则表达式里的“<code>\s</code>”困惑了我一阵子。我一开始用它来匹配空格了，发现不好用。搜索了一下才明确，“<code>\s</code>”可以匹配任意的空白符，包括制表符（<code>\t</code>，即<code>&#39;\u0009&#39;</code>）、换行符（<code>\n</code>，即<code>&#39;\u000A&#39;</code>）、回车符（<code>\r</code>，即<code>&#39;\u000D&#39;</code>）、换页符（<code>\f</code>，即<code>&#39;\u000C&#39;</code>）、竖向制表符（<code>\v</code>，即<code>&#39;\u000B&#39;</code>）、半角空格（“ ”，即<code>&#39;\u0020&#39;</code>），如果是 Unicode 的正则表达式，<code>\s</code> 还可以匹配全角空格（“　”，即<code>&#39;\u3000&#39;</code>）。<br>半角空格没有转义序列，要怎么匹配呢？查了好一会儿我才反应过来，直接输入“ ”就可以了……<br>顺便我还了解了一下各种不同编码的转义序列表达法，前面“<code>\u</code>”开头的那些字符串，就是 Unicode 编码的转义序列表达法，具体细节可以参见《<a href="https://www.cnblogs.com/zhankang/articles/4881314.html" target="_blank" rel="noopener">JavaScript 转义字符</a>》（<a href="https://mathiasbynens.be/notes/javascript-escapes" target="_blank" rel="noopener"><em>JavaScript character escape sequences</em></a>），《<a href="http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html" target="_blank" rel="noopener">字符编码笔记：ASCII，Unicode 和 UTF-8</a>》，《<a href="http://www.ruanyifeng.com/blog/2014/12/unicode.html" target="_blank" rel="noopener">Unicode 与 JavaScript 详解</a>》等文，具体字符的转换可以用站长之家提供的<a href="https://tool.chinaz.com/tools/unicode.aspx" target="_blank" rel="noopener">Unicode编码转换</a>工具。</li>
+</ol>
+<h4 id="4-字典的统计和排序"><a href="#4-字典的统计和排序" class="headerlink" title="4. 字典的统计和排序"></a>4. 字典的统计和排序</h4><p>生成字典不难，有这么几个值得记录的点：</p>
+<ol>
+<li><p>使用“<code>not in</code>”而非“<code>not...in</code>”<br>更具体地说，<code>if w not in text</code> 和 <code>if not w in text</code> 是等价的，但前一种写法更易读。<br>现在 Flake8 会把“<code>not...in</code>”标记出来（<a href="https://lintlyci.github.io/Flake8Rules/rules/E713.html" target="_blank" rel="noopener">E713</a>）并给出修改为“<code>not in</code>”的建议，同理，“<code>is not</code>”和“<code>not...is</code>”也有同样的问题（<a href="https://lintlyci.github.io/Flake8Rules/rules/E714.html" target="_blank" rel="noopener">E714</a>）。<a href="https://www.python.org/dev/peps/pep-0008/" target="_blank" rel="noopener">PEP 8</a> 对此也有<a href="https://www.python.org/dev/peps/pep-0008/#programming-recommendations" target="_blank" rel="noopener">说明</a>。另可参考《<a href="https://blog.csdn.net/Evan123mg/article/details/50174669" target="_blank" rel="noopener">Python 中 not 的用法</a>》一文。</p>
+</li>
+<li><p>字典、元组、列表<br>字典不能直接排序，需要用 <code>item()</code> 函数把字典转成一个由元组构成的列表，然后再用 <code>sorted()</code> 函数排序。<br>这里可能出现的波折是混淆了 <code>sort()</code> 和 <code>sorted()</code>。简单说，由字典转成的列表，不能用 <code>sort()</code> 排序，只能用 <code>sorted()</code> 排序。更多的信息可以参考《<a href="https://blog.csdn.net/Kyrie001/article/details/82528011" target="_blank" rel="noopener">Python 中列表、元组及字典的排序</a>》、《<a href="https://blog.csdn.net/chengxugou001/article/details/79684615" target="_blank" rel="noopener">Python 中方法 sort() 和函数 sorted() 的区别</a>》、《<a href="https://blog.csdn.net/sinat_35512245/article/details/79584196" target="_blank" rel="noopener">Python 中排序函数 sort() 和 sorted() 的区别</a>》等文。</p>
+</li>
+<li><p>lambda 表达式<br>使用 <code>sorted()</code> 排序会用到 lambda 表达式，这个稍稍有些不易理解。<br>lambda 表达式定义的是一个“匿名函数”，是为了简化代码而使用的。<br>举例来说，</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">lambda</span> x: x[<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+
+<p>和</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">g</span><span class="params">(x)</span>:</span></span><br><span class="line">   <span class="keyword">return</span> x[<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+
+<p>的功能是一样的。<br>更进一步说，</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sorted(text, key=<span class="keyword">lambda</span> x: x[<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+
+<p>和</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">g</span><span class="params">(x)</span>:</span></span><br><span class="line">   <span class="keyword">return</span> x[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sorted(text, key=g)</span><br></pre></td></tr></table></figure>
+
+<p>的功能也是一样的。<br>显然，在使用 <code>sorted()</code> 的时候，lambda 表达式可以实现更简练的代码。不过，lambda 表达式会在一定程度上降低程序的可读性，所以要慎用。<br>什么时候用 lambda 表达式，Goodpy 在《<a href="https://www.cnblogs.com/evening/archive/2012/03/29/2423554.html" target="_blank" rel="noopener">Python lambda 介绍</a>》一文给了些很好的建议：</p>
+<blockquote>
+<ul>
+<li><p>lambda 并不会带来程序运行效率的提高，只会使代码更简洁。</p>
+</li>
+<li><p>如果可以使用 <code>for...in...if</code> 来完成的，坚决不用 lambda。</p>
+</li>
+<li><p>如果使用 lambda，lambda 内不要包含循环，如果有，我宁愿定义函数来完成，使代码获得可重用性和更好的可读性。</p>
+</li>
+</ul>
+</blockquote>
+<p>另可参考：<br><a href="https://www.polarxiong.com/archives/Python-使用lambda应对各种复杂情况的排序-包括list嵌套dict.html" target="_blank" rel="noopener">Python: 使用 lambda 应对各种复杂情况的排序，包括 list 嵌套 dict</a><br><a href="https://www.runoob.com/python/python-func-dict.html" target="_blank" rel="noopener">Python <code>dict()</code> 函数</a></p>
+</li>
+</ol>
+<h4 id="5-切片的使用"><a href="#5-切片的使用" class="headerlink" title="5. 切片的使用"></a>5. 切片的使用</h4><p>切片是从字符串、列表、元组中抽取部分内容的操作。它很常用，不过有些地方会让人有些困惑，记录如下。</p>
+<p>首先要明确每一个元素的位置编号，以列表 <code>li = [&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;, &#39;E&#39;, &#39;F&#39;, &#39;G&#39;]</code> 为例——</p>
+<table>
+<thead>
+<tr>
+<th align="center">列表元素</th>
+<th align="center">‘A’</th>
+<th align="center">‘B’</th>
+<th align="center">‘C’</th>
+<th align="center">‘D’</th>
+<th align="center">‘E’</th>
+<th align="center">‘F’</th>
+<th align="center">‘G’</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">正序编号</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">5</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="center">逆序编号</td>
+<td align="center">-7</td>
+<td align="center">-6</td>
+<td align="center">-5</td>
+<td align="center">-4</td>
+<td align="center">-3</td>
+<td align="center">-2</td>
+<td align="center">-1</td>
+</tr>
+</tbody></table>
+<p>注意正序编号是从 0 开始的，逆序编号是从 -1 开始的。</p>
+<p>切片的语法是 <code>list[start:stop:step]</code>，即 <code>名称[开始:结束:步伐]</code>。这其中：</p>
+<ul>
+<li>步伐可以省略，默认值为“1”；</li>
+<li>开始和结束的值可以省略，默认值为列表的两端（不是第一个元素和最后一个元素）；</li>
+<li>开始和结束中间的冒号不可省略；</li>
+<li>步伐既可以为正值，也可以为负值，正值表示正序取值，负值表示逆序取值；</li>
+<li>步伐为正值时，开始位置应在结束位置左侧，步伐为负值时，开始位置应在结束位置右侧，否则不会取出任何元素；</li>
+<li>开始和结束的值既可以用正序编号，也可以用逆序编号，两种编号可以混用；</li>
+<li>开始位置的元素会取出，结束位置的元素不会取出；</li>
+<li>所用位置编号可以超出列表的元素位置编号；</li>
+<li>所有的冒号两侧都没有空格。</li>
+</ul>
+<p>还以列表 <code>li = [&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;, &#39;E&#39;, &#39;F&#39;, &#39;G&#39;]</code> 为例——</p>
+<table>
+<thead>
+<tr>
+<th align="center"><span style="white-space: nowrap;">行号</span></th>
+<th><span style="white-space: nowrap;">代码　　　　　</span></th>
+<th><span style="white-space: nowrap;">结果　　　　　　　　　　　　　　　　　　</span></th>
+<th><span style="white-space: nowrap;">注释</span></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td><code>li[:]</code></td>
+<td><code>[&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;, &#39;E&#39;, &#39;F&#39;, &#39;G&#39;]</code></td>
+<td>从列表左端取到列表右端，即取了整个列表</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td><code>li[::1]</code></td>
+<td><code>[&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;, &#39;E&#39;, &#39;F&#39;, &#39;G&#39;]</code></td>
+<td>从列表左端取到列表右端，步伐为“1”，即取了整个列表</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td><code>li[::2]</code></td>
+<td><code>[&#39;A&#39;, &#39;C&#39;, &#39;E&#39;, &#39;G&#39;]</code></td>
+<td>从列表左端取到列表右端，步伐为“2”，即每 2 个元素取 1 个元素，取出第 0、2、4、6 号元素</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td><code>li[::3]</code></td>
+<td><code>[&#39;A&#39;, &#39;D&#39;, &#39;G&#39;]</code></td>
+<td>从列表左端取到列表右端，步伐为“3”，即每 3 个元素取 1 个元素，取出第 0、3、6 号元素</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td><code>li[::-1]</code></td>
+<td><code>[&#39;G&#39;, &#39;F&#39;, &#39;E&#39;, &#39;D&#39;, &#39;C&#39;, &#39;B&#39;, &#39;A&#39;]</code></td>
+<td>从列表左端取到列表右端，步伐为“-1”，把整个列表逆序</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td><code>li[::-2]</code></td>
+<td><code>[&#39;G&#39;, &#39;E&#39;, &#39;C&#39;, &#39;A&#39;]</code></td>
+<td>从列表右端取到列表左端，步伐为“-2”，取出第 -1、-3、-5、-7 号元素</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td><code>li[2:5]</code></td>
+<td><code>[&#39;C&#39;, &#39;D&#39;, &#39;E&#39;]</code></td>
+<td>从编号为 2 的元素（含）取到编号为 5 的元素（不含），步伐为默认值“1”，取出第 2、3、4 号元素</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td><code>li[2:5:1]</code></td>
+<td><code>[&#39;C&#39;, &#39;D&#39;, &#39;E&#39;]</code></td>
+<td>从编号为 2 的元素（含）取到编号为 5 的元素（不含），步伐为“1”，取出第 2、3、4 号元素</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td><code>li[2:5:-1]</code></td>
+<td><code>[]</code></td>
+<td>从编号为 2 的元素（含）取到编号为 5 的元素（不含），步伐为“-1”，没有取出元素</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td><code>li[5:2:-1]</code></td>
+<td><code>[&#39;F&#39;, &#39;E&#39;, &#39;D&#39;]</code></td>
+<td>从编号为 5 的元素（含）取到编号为 2 的元素（不含），步伐为“-1”，取出第 5、4、3 号元素</td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td><code>li[0:6]</code></td>
+<td><code>[&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;, &#39;E&#39;, &#39;F&#39;]</code></td>
+<td>从编号为 0 的元素（含）取到编号为 6 的元素（不含），步伐为默认值“1”，取出第 0、1、2、3、4、5 号元素</td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td><code>li[0:-1]</code></td>
+<td><code>[&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;, &#39;E&#39;, &#39;F&#39;]</code></td>
+<td>从编号为 0 的元素（含）取到编号为 -1 的元素（不含），步伐为默认值“1”，取出第 0、1、2、3、4、5 号元素</td>
+</tr>
+<tr>
+<td align="center">13</td>
+<td><code>li[0:]</code></td>
+<td><code>[&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;, &#39;E&#39;, &#39;F&#39;, &#39;G&#39;]</code></td>
+<td>从编号为 0 的元素（含）取到列表右端，步伐为默认值“1”，取了整个列表</td>
+</tr>
+<tr>
+<td align="center">14</td>
+<td><code>li[0:9]</code></td>
+<td><code>[&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;, &#39;E&#39;, &#39;F&#39;, &#39;G&#39;]</code></td>
+<td>从编号为 0 的元素（含）取到编号为 9 的元素（不含），步伐为默认值“1”，由于最大元素编号为 6，取了整个列表</td>
+</tr>
+<tr>
+<td align="center">15</td>
+<td><code>li[9:0:-1]</code></td>
+<td><code>[&#39;G&#39;, &#39;F&#39;, &#39;E&#39;, &#39;D&#39;, &#39;C&#39;, &#39;B&#39;]</code></td>
+<td>从编号为 9 的元素（含）取到编号为 0 的元素（不含），步伐为默认值“-1”，由于最大元素编号为 6，取出第 6、5、4、3、2、1 号元素</td>
+</tr>
+<tr>
+<td align="center">16</td>
+<td><code>li[9:-9:-1]</code></td>
+<td><code>[&#39;G&#39;, &#39;F&#39;, &#39;E&#39;, &#39;D&#39;, &#39;C&#39;, &#39;B&#39;, &#39;A&#39;]</code></td>
+<td>从编号为 9 的元素（含）取到编号为 - 的元素（不含），步伐为默认值“-1”，由于最大元素编号为 6，最小元素编号为 -7，取出第 6、5、4、3、2、1、0 号元素</td>
+</tr>
+<tr>
+<td align="center">17</td>
+<td><code>li[0::-1]</code></td>
+<td><code>[&#39;A&#39;]</code></td>
+<td>从编号为 0 的元素（含）取到列表左端，步伐为“-1”，取出第 0 号元素</td>
+</tr>
+<tr>
+<td align="center">18</td>
+<td><code>li[:0:-1]</code></td>
+<td><code>[&#39;G&#39;, &#39;F&#39;, &#39;E&#39;, &#39;D&#39;, &#39;C&#39;, &#39;B&#39;]</code></td>
+<td>从列表右侧取到编号为 0 的元素（不含），步伐为“-1”，取出第 -1、-2、-3、-4、-5、-6 号元素</td>
+</tr>
+<tr>
+<td align="center">19</td>
+<td><code>li[1:-2:-1]</code></td>
+<td><code>[]</code></td>
+<td>从编号为 1 的元素（含）取到编号为 -2 的元素（不含），步伐为“-1”，没有取出元素</td>
+</tr>
+<tr>
+<td align="center">20</td>
+<td><code>li[-2:1:-1]</code></td>
+<td><code>[&#39;F&#39;, &#39;E&#39;, &#39;D&#39;, &#39;C&#39;]</code></td>
+<td>从编号为 -2 的元素（含）取到编号为 1 的元素（不含），步伐为“-1”，取出第 -2、-3、-4、-5 号元素</td>
+</tr>
+<tr>
+<td align="center">21</td>
+<td><code>li[0:3:-1]</code></td>
+<td><code>[]</code></td>
+<td>从编号为 0 的元素（含）取到编号为 3 的元素（不含），步伐为“-1”，没有取出元素</td>
+</tr>
+<tr>
+<td align="center">22</td>
+<td><code>li[:3:-1]</code></td>
+<td><code>[&#39;G&#39;, &#39;F&#39;, &#39;E&#39;]</code></td>
+<td>从列表右端取到编号为 3 的元素（不含），步伐为“-1”，取出第 -1、-2、-3 号元素</td>
+</tr>
+</tbody></table>
+<p>字符串和元组的操作与列表类似。</p>
+<p>要翻转（逆序）一个名为 <code>li</code> 的列表有两种途径，一种是用 <code>li.reverse()</code>，另一种是用 <code>li[::-1]</code>。但要翻转字符串和元组就只能用切片了。这样来看，切片的方法比较通用。</p>
+<p>字典不能切片，不过可以用把字典的关键字转成列表，对列表切片，再用查询重新生成字典的方法实现切片，具体的操作可以参考李阳良的《<a href="http://liyangliang.me/posts/2012/12/python-dict-slice/" target="_blank" rel="noopener">Python 字典切片</a>》一文。</p>
+<h4 id="6-不同类型的转换"><a href="#6-不同类型的转换" class="headerlink" title="6. 不同类型的转换"></a>6. 不同类型的转换</h4><p>由数字构成的列表不能直接拼接成字符串，得把列表的每个元素都转成字符串才行。</p>
+<p>类型转换调用相应的函数就能完成，遍历列表的每个元素可以使用 <code>for...in...if</code> 语句。</p>
+<p>Python 里可用的转换函数有这些：</p>
+<table>
+<thead>
+<tr>
+<th><span style="white-space: nowrap;">函数　　　　　　　　　　</span></th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>int(x[, base])</code></td>
+<td>将 <code>x</code> 转换为一个整数，<strong>强制类型转换</strong></td>
+</tr>
+<tr>
+<td><code>long(x[, base])</code></td>
+<td>将 <code>x</code> 转换为一个长整数</td>
+</tr>
+<tr>
+<td><code>float(x)</code></td>
+<td>将 <code>x</code> 转换到一个浮点数，<strong>强制类型转换</strong></td>
+</tr>
+<tr>
+<td><code>complex(real[, imag])</code></td>
+<td>创建一个复数</td>
+</tr>
+<tr>
+<td><code>str(x)</code></td>
+<td>将对象 <code>x</code> 转换为字符串，<strong>强制类型转换</strong></td>
+</tr>
+<tr>
+<td><code>repr(x)</code></td>
+<td>将对象 <code>x</code> 转换为表达式字符串</td>
+</tr>
+<tr>
+<td><code>eval(str)</code></td>
+<td>用来计算在字符串中的有效 Python 表达式，并返回一个对象</td>
+</tr>
+<tr>
+<td><code>list(s)</code></td>
+<td>将序列 <code>s</code> 转换为一个列表，<strong>强制类型转换</strong></td>
+</tr>
+<tr>
+<td><code>tuple(s)</code></td>
+<td>将序列 <code>s</code> 转换为一个元组，<strong>强制类型转换</strong></td>
+</tr>
+<tr>
+<td><code>set(s)</code></td>
+<td>将序列 <code>s</code> 转换为一个集合，<strong>强制类型转换</strong></td>
+</tr>
+<tr>
+<td><code>chr(x)</code></td>
+<td>将一个整数转换为一个字符，Python 3.x 可以用其处理 Unicode 字符了</td>
+</tr>
+<tr>
+<td><code>unichr(x)</code></td>
+<td>将一个整数转换为 Unicode 字符，Python 3.x 将其合并进了 chr(x)</td>
+</tr>
+<tr>
+<td><code>ord(str)</code></td>
+<td>将一个字符转换为它的整数值</td>
+</tr>
+<tr>
+<td><code>bin(x)</code></td>
+<td>将一个整数转换为一个二进制字符串</td>
+</tr>
+<tr>
+<td><code>oct(x)</code></td>
+<td>将一个整数转换为一个八进制字符串</td>
+</tr>
+<tr>
+<td><code>hex(x)</code></td>
+<td>将一个整数转换为一个十六进制字符串</td>
+</tr>
+</tbody></table>
+<p>这里的 <code>eval(str)</code> 在第 3 天做计算器的时候也提到过。<code>str(x)</code> 和 <code>repr(x)</code> 有联系也有区别，具体可参见叶俊贤的《<a href="https://www.jianshu.com/p/2a41315ca47e" target="_blank" rel="noopener">Python 中 <code>str()</code> 与 <code>repr()</code> 函数的区别</a>》一文。还有一些数据类型转换的细节，可以参考范桂飓的《<a href="https://blog.csdn.net/Jmilk/article/details/49720611" target="_blank" rel="noopener">Python基本语法——强制数据类型转换</a>》一文和 Davidham 的《<a href="https://www.jianshu.com/p/bc57ad6f35c4" target="_blank" rel="noopener">Python 中的强制类型转换</a>》一文。</p>
+<p>其他参考资料：<br>《<a href="http://interpy.eastlakeside.com/" target="_blank" rel="noopener">Python进阶</a>》（<a href="http://book.pythontips.com" target="_blank" rel="noopener"><em>Intermediate Python</em></a>），穆罕默德·耶苏布·乌拉·哈立德（<a href="https://yasoob.me/" target="_blank" rel="noopener">Muhammad Yasoob Ullah Khalid</a>）著，刘宇（<a href="https://github.com/liuyu" target="_blank" rel="noopener">@liuyu</a>），老高（<a href="https://github.com/spawnris" target="_blank" rel="noopener">@spawnris</a>），大牙码特（<a href="https://github.com/suqi" target="_blank" rel="noopener">@suqi</a>），明源（<a href="https://github.com/muxueqz" target="_blank" rel="noopener">@muxueqz</a>）等译<br><a href="http://eastlakeside.com/2017/02/19/python-self-learn/" target="_blank" rel="noopener">给非 Python 开发的 Python 快速自学资源整理</a></p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ul>
+<li><input checked disabled type="checkbox"> 巩固了一些英文标点的用法</li>
+<li><input checked disabled type="checkbox"> 字符串内容的查找、替换、删除</li>
+<li><input checked disabled type="checkbox"> 字符串的大小写转换</li>
+<li><input checked disabled type="checkbox"> 英文单词词频统计与输出</li>
+<li><input checked disabled type="checkbox"> 数组的基础操作</li>
+<li><input checked disabled type="checkbox"> 不同进制数字的转换</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+        
+        <div class="post-tags">
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+            <a href="/tags/学习打卡/" rel="tag"># 学习打卡</a>
+          
+            <a href="/tags/自学营/" rel="tag"># 自学营</a>
+          
+            <a href="/tags/学习总结/" rel="tag"># 学习总结</a>
+          
+        </div>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+              <a href="/Python入门/1901100244-自学训练营-Python入门-Day04-学习心得/" rel="next" title="2019-08-11-1901100244-自学训练营-Python入门-Day04-学习心得">
+                <i class="fa fa-chevron-left"></i> 2019-08-11-1901100244-自学训练营-Python入门-Day04-学习心得
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+              <a href="/MIT60001/1901020043自学训练营MIT Python/" rel="prev" title="1901020043-MIT60001-LECTURE7-3">
+                1901020043-MIT60001-LECTURE7-3 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    
+  <div class="comments" id="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+  
+
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">自学营团队</p>
+  <div class="site-description motion-element" itemprop="description">该博客用于收录自学营学员在学习过程中的笔记，包括学习心得、总结、记录解决问题的过程等。。。</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">130</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">64</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#学员信息"><span class="nav-number">1.</span> <span class="nav-text">学员信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#收获总结"><span class="nav-number">2.</span> <span class="nav-text">收获总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遇到的难点与问题"><span class="nav-number">3.</span> <span class="nav-text">遇到的难点与问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-字符串样本的形式"><span class="nav-number">3.1.</span> <span class="nav-text">1. 字符串样本的形式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-英文分词"><span class="nav-number">3.2.</span> <span class="nav-text">2. 英文分词</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-正则表达式"><span class="nav-number">3.3.</span> <span class="nav-text">3. 正则表达式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-字典的统计和排序"><span class="nav-number">3.4.</span> <span class="nav-text">4. 字典的统计和排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-切片的使用"><span class="nav-number">3.5.</span> <span class="nav-text">5. 切片的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-不同类型的转换"><span class="nav-number">3.6.</span> <span class="nav-text">6. 不同类型的转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">3.7.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">自学营团队</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.2.0</div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+  
+  <script src="/js/affix.js?v=7.2.0"></script>
+  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
+
+  
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.2.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://selfteaching-learning-notes.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://selfteaching-learning-notes.github.io/Python入门/1901100244-自学训练营-Python入门-Day05-学习心得/";
+    this.page.identifier = "Python入门/1901100244-自学训练营-Python入门-Day05-学习心得/";
+    this.page.title = '2019-08-12-1901100244-自学训练营-Python入门-Day05-学习心得';};
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://selfteaching-learning-notes.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+    window.addEventListener('load', loadComments, false);
+  
+</script>
+
+
+</body>
+</html>

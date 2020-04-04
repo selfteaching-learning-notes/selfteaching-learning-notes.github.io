@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>自学营学员笔记</title>
+  
+  <subtitle>总结、记录、打卡、沉淀</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://selfteaching-learning-notes.github.io/"/>
+  <updated>2019-09-19T15:17:38.000Z</updated>
+  <id>https://selfteaching-learning-notes.github.io/</id>
+  
+  <author>
+    <name>自学营团队</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://selfteaching-learning-notes.github.io/uncategorized/2019-09-11901100295-%E8%87%AA%E5%AD%A6%E8%AE%AD%E7%BB%83%E8%90%A5%E5%AD%A6%E4%B9%A020%E7%BE%A4-%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/"/>
+    <id>https://selfteaching-learning-notes.github.io/uncategorized/2019-09-11901100295-自学训练营学习20群-自我介绍/</id>
+    <published>2020-04-04T21:01:12.360Z</published>
+    <updated>2019-09-19T15:17:38.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;title&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;date&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;tags&lt;/th&gt;
+&lt;th
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://selfteaching-learning-notes.github.io/uncategorized/1901040001-%E8%87%AA%E5%AD%A6%E8%AE%AD%E7%BB%83%E8%90%A5%E5%AD%A6%E4%B9%A03%E7%BE%A4-day11%E6%89%93%E5%8D%A1/"/>
+    <id>https://selfteaching-learning-notes.github.io/uncategorized/1901040001-自学训练营学习3群-day11打卡/</id>
+    <published>2019-09-22T16:00:00.000Z</published>
+    <updated>2019-09-23T06:38:44.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;p&gt;title: 1901040001-自学训练营3群-Python入门day11学习心得&lt;br&gt;date: 2019-09-23&lt;br&gt;tags: [‘Python’, ‘自学营’,’学习心得’]&lt;/p&gt;
+&lt;h2 id=&quot;categories-‘学习心得’&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://selfteaching-learning-notes.github.io/uncategorized/1901040001-%E8%87%AA%E5%AD%A6%E8%AE%AD%E7%BB%83%E8%90%A5%E5%AD%A6%E4%B9%A03%E7%BE%A4-day10%E6%89%93%E5%8D%A1/"/>
+    <id>https://selfteaching-learning-notes.github.io/uncategorized/1901040001-自学训练营学习3群-day10打卡/</id>
+    <published>2019-09-11T16:00:00.000Z</published>
+    <updated>2019-09-13T05:30:38.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;p&gt;title: 1901040001-自学训练营3群-Python入门day10学习心得&lt;br&gt;date: 2019-09-12&lt;br&gt;tags: [‘Python’, ‘自学营’,’学习心得’]&lt;/p&gt;
+&lt;h2 id=&quot;categories-‘学习心得’&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://selfteaching-learning-notes.github.io/uncategorized/1901040001-%E8%87%AA%E5%AD%A6%E8%AE%AD%E7%BB%83%E8%90%A5%E5%AD%A6%E4%B9%A03%E7%BE%A4-day1%E6%89%93%E5%8D%A1/"/>
+    <id>https://selfteaching-learning-notes.github.io/uncategorized/1901040001-自学训练营学习3群-day1打卡/</id>
+    <published>2019-09-11T16:00:00.000Z</published>
+    <updated>2019-09-12T17:17:52.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;p&gt;title: 1901040001-自学训练营3群-Python入门day1学习心得&lt;br&gt;date: 2019-09-12&lt;br&gt;tags: [‘Python’, ‘自学营’,’学习心得’]&lt;/p&gt;
+&lt;h2 id=&quot;categories-‘学习心得’&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://selfteaching-learning-notes.github.io/uncategorized/1901040001-%E8%87%AA%E5%AD%A6%E8%AE%AD%E7%BB%83%E8%90%A5%E5%AD%A6%E4%B9%A03%E7%BE%A4-day2%E6%89%93%E5%8D%A1/"/>
+    <id>https://selfteaching-learning-notes.github.io/uncategorized/1901040001-自学训练营学习3群-day2打卡/</id>
+    <published>2019-09-11T16:00:00.000Z</published>
+    <updated>2019-09-12T17:22:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;p&gt;title: 1901040001-自学训练营3群-Python入门day2学习心得&lt;br&gt;date: 2019-09-12&lt;br&gt;tags: [‘Python’, ‘自学营’,’学习心得’]&lt;/p&gt;
+&lt;h2 id=&quot;categories-‘学习心得’&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://selfteaching-learning-notes.github.io/uncategorized/1901040001-%E8%87%AA%E5%AD%A6%E8%AE%AD%E7%BB%83%E8%90%A5%E5%AD%A6%E4%B9%A03%E7%BE%A4-day3%E6%89%93%E5%8D%A1/"/>
+    <id>https://selfteaching-learning-notes.github.io/uncategorized/1901040001-自学训练营学习3群-day3打卡/</id>
+    <published>2019-09-11T16:00:00.000Z</published>
+    <updated>2019-09-12T17:24:29.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;p&gt;title: 1901040001-自学训练营3群-Python入门day3学习心得&lt;br&gt;date: 2019-09-12&lt;br&gt;tags: [‘Python’, ‘自学营’,’学习心得’]&lt;/p&gt;
+&lt;h2 id=&quot;categories-‘学习心得’&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://selfteaching-learning-notes.github.io/uncategorized/1901040001-%E8%87%AA%E5%AD%A6%E8%AE%AD%E7%BB%83%E8%90%A5%E5%AD%A6%E4%B9%A03%E7%BE%A4-day4%E6%89%93%E5%8D%A1/"/>
+    <id>https://selfteaching-learning-notes.github.io/uncategorized/1901040001-自学训练营学习3群-day4打卡/</id>
+    <published>2019-09-11T16:00:00.000Z</published>
+    <updated>2019-09-12T17:27:59.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;p&gt;title: 1901040001-自学训练营3群-Python入门day4学习心得&lt;br&gt;date: 2019-09-12&lt;br&gt;tags: [‘Python’, ‘自学营’,’学习心得’]&lt;/p&gt;
+&lt;h2 id=&quot;categories-‘学习心得’&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://selfteaching-learning-notes.github.io/uncategorized/1901040001-%E8%87%AA%E5%AD%A6%E8%AE%AD%E7%BB%83%E8%90%A5%E5%AD%A6%E4%B9%A03%E7%BE%A4-day5%E6%89%93%E5%8D%A1/"/>
+    <id>https://selfteaching-learning-notes.github.io/uncategorized/1901040001-自学训练营学习3群-day5打卡/</id>
+    <published>2019-09-11T16:00:00.000Z</published>
+    <updated>2019-09-12T17:30:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;p&gt;title: 1901040001-自学训练营3群-Python入门day5学习心得&lt;br&gt;date: 2019-09-12&lt;br&gt;tags: [‘Python’, ‘自学营’,’学习心得’]&lt;/p&gt;
+&lt;h2 id=&quot;categories-‘学习心得’&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://selfteaching-learning-notes.github.io/uncategorized/1901040001-%E8%87%AA%E5%AD%A6%E8%AE%AD%E7%BB%83%E8%90%A5%E5%AD%A6%E4%B9%A03%E7%BE%A4-day6%E6%89%93%E5%8D%A1/"/>
+    <id>https://selfteaching-learning-notes.github.io/uncategorized/1901040001-自学训练营学习3群-day6打卡/</id>
+    <published>2019-09-11T16:00:00.000Z</published>
+    <updated>2019-09-12T17:33:20.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;p&gt;title: 1901040001-自学训练营3群-Python入门day6学习心得&lt;br&gt;date: 2019-09-12&lt;br&gt;tags: [‘Python’, ‘自学营’,’学习心得’]&lt;/p&gt;
+&lt;h2 id=&quot;categories-‘学习心得’&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://selfteaching-learning-notes.github.io/uncategorized/1901040001-%E8%87%AA%E5%AD%A6%E8%AE%AD%E7%BB%83%E8%90%A5%E5%AD%A6%E4%B9%A03%E7%BE%A4-day7%E6%89%93%E5%8D%A1/"/>
+    <id>https://selfteaching-learning-notes.github.io/uncategorized/1901040001-自学训练营学习3群-day7打卡/</id>
+    <published>2019-09-11T16:00:00.000Z</published>
+    <updated>2019-09-12T17:34:47.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;p&gt;title: 1901040001-自学训练营3群-Python入门day7学习心得&lt;br&gt;date: 2019-09-12&lt;br&gt;tags: [‘Python’, ‘自学营’,’学习心得’]&lt;/p&gt;
+&lt;h2 id=&quot;categories-‘学习心得’&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://selfteaching-learning-notes.github.io/uncategorized/1901040001-%E8%87%AA%E5%AD%A6%E8%AE%AD%E7%BB%83%E8%90%A5%E5%AD%A6%E4%B9%A03%E7%BE%A4-day8%E6%89%93%E5%8D%A1/"/>
+    <id>https://selfteaching-learning-notes.github.io/uncategorized/1901040001-自学训练营学习3群-day8打卡/</id>
+    <published>2019-09-11T16:00:00.000Z</published>
+    <updated>2019-09-12T17:36:15.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;p&gt;title: 1901040001-自学训练营3群-Python入门day8学习心得&lt;br&gt;date: 2019-09-12&lt;br&gt;tags: [‘Python’, ‘自学营’,’学习心得’]&lt;/p&gt;
+&lt;h2 id=&quot;categories-‘学习心得’&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://selfteaching-learning-notes.github.io/uncategorized/1901040001-%E8%87%AA%E5%AD%A6%E8%AE%AD%E7%BB%83%E8%90%A5%E5%AD%A6%E4%B9%A03%E7%BE%A4-day9%E6%89%93%E5%8D%A1/"/>
+    <id>https://selfteaching-learning-notes.github.io/uncategorized/1901040001-自学训练营学习3群-day9打卡/</id>
+    <published>2019-09-11T16:00:00.000Z</published>
+    <updated>2019-09-12T17:38:09.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;p&gt;title: 1901040001-自学训练营3群-Python入门day9学习心得&lt;br&gt;date: 2019-09-12&lt;br&gt;tags: [‘Python’, ‘自学营’,’学习心得’]&lt;/p&gt;
+&lt;h2 id=&quot;categories-‘学习心得’&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://selfteaching-learning-notes.github.io/uncategorized/1901040001-%E8%87%AA%E5%AD%A6%E8%AE%AD%E7%BB%83%E8%90%A5%E5%AD%A6%E4%B9%A03%E7%BE%A4-%E5%AD%A6%E4%B9%A0Markdown%E8%AF%AD%E6%B3%95/"/>
+    <id>https://selfteaching-learning-notes.github.io/uncategorized/1901040001-自学训练营学习3群-学习Markdown语法/</id>
+    <published>2019-09-11T16:00:00.000Z</published>
+    <updated>2019-09-13T05:34:20.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;学习Markdown语法&quot;&gt;&lt;a href=&quot;#学习Markdown语法&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://selfteaching-learning-notes.github.io/uncategorized/1901040001-%E8%87%AA%E5%AD%A6%E8%AE%AD%E7%BB%83%E8%90%A5%E5%AD%A6%E4%B9%A03%E7%BE%A4-%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/"/>
+    <id>https://selfteaching-learning-notes.github.io/uncategorized/1901040001-自学训练营学习3群-自我介绍/</id>
+    <published>2019-09-11T16:00:00.000Z</published>
+    <updated>2019-09-12T17:03:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;p&gt;title: 1901040001-自学训练营学习3群-自我介绍&lt;br&gt;date: 2019-09-12 22:31:07&lt;br&gt;tags: [‘Python入门’]&lt;/p&gt;
+&lt;h2 id=&quot;categories-‘自我介绍’&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>1901100371-自学训练营学习21群-自我介绍</title>
+    <link href="https://selfteaching-learning-notes.github.io/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/1901100371-%E8%87%AA%E5%AD%A6%E8%AE%AD%E7%BB%83%E8%90%A5%E5%AD%A6%E4%B9%A021%E7%BE%A4-%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/"/>
+    <id>https://selfteaching-learning-notes.github.io/自我介绍/1901100371-自学训练营学习21群-自我介绍/</id>
+    <published>2019-08-31T09:07:21.000Z</published>
+    <updated>2019-08-31T09:10:30.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;基本信息&quot;&gt;&lt;a href=&quot;#基本信息&quot; class=&quot;headerlink&quot; title=&quot;基本信息&quot;&gt;&lt;/a&gt;基本信息&lt;/h3&gt;&lt;p&gt;姓名：阿申&lt;br&gt;学号：1901100371&lt;/p&gt;
+&lt;h3 id=&quot;工作背景&quot;&gt;&lt;a href=&quot;#工作背景&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="自我介绍" scheme="https://selfteaching-learning-notes.github.io/categories/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/"/>
+    
+    
+      <category term="Python入门" scheme="https://selfteaching-learning-notes.github.io/tags/Python%E5%85%A5%E9%97%A8/"/>
+    
+      <category term="DBA" scheme="https://selfteaching-learning-notes.github.io/tags/DBA/"/>
+    
+      <category term="IT" scheme="https://selfteaching-learning-notes.github.io/tags/IT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1901100139-自学训练营17群-Python入门学习心得</title>
+    <link href="https://selfteaching-learning-notes.github.io/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/1901100139-%E8%87%AA%E5%AD%A6%E8%AE%AD%E7%BB%83%E8%90%A517%E7%BE%A4-Python%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/"/>
+    <id>https://selfteaching-learning-notes.github.io/学习心得/1901100139-自学训练营17群-Python入门学习心得/</id>
+    <published>2019-08-31T08:49:52.000Z</published>
+    <updated>2019-08-31T09:06:36.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;学员信息&quot;&gt;&lt;a href=&quot;#学员信息&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="学习心得" scheme="https://selfteaching-learning-notes.github.io/categories/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/"/>
+    
+    
+      <category term="Python" scheme="https://selfteaching-learning-notes.github.io/tags/Python/"/>
+    
+      <category term="自学营" scheme="https://selfteaching-learning-notes.github.io/tags/%E8%87%AA%E5%AD%A6%E8%90%A5/"/>
+    
+      <category term="学习心得" scheme="https://selfteaching-learning-notes.github.io/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1901100296-自学训练营学习20群-自我介绍</title>
+    <link href="https://selfteaching-learning-notes.github.io/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/1901100296-%E8%87%AA%E5%AD%A6%E8%AE%AD%E7%BB%83%E8%90%A5%E5%AD%A6%E4%B9%A020%E7%BE%A4-%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/"/>
+    <id>https://selfteaching-learning-notes.github.io/自我介绍/1901100296-自学训练营学习20群-自我介绍/</id>
+    <published>2019-08-30T07:31:07.000Z</published>
+    <updated>2019-08-30T07:33:50.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;基本信息&quot;&gt;&lt;a href=&quot;#基本信息&quot; class=&quot;headerlink&quot; title=&quot;基本信息&quot;&gt;&lt;/a&gt;基本信息&lt;/h3&gt;&lt;p&gt;姓名：灵越&lt;br&gt;学号：1901100296&lt;/p&gt;
+&lt;h3 id=&quot;工作背景&quot;&gt;&lt;a href=&quot;#工作背景&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="自我介绍" scheme="https://selfteaching-learning-notes.github.io/categories/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/"/>
+    
+    
+      <category term="Python入门" scheme="https://selfteaching-learning-notes.github.io/tags/Python%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1901100240-自学训练营学习19群-python入门14天总结</title>
+    <link href="https://selfteaching-learning-notes.github.io/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/1901100240-%E8%87%AA%E5%AD%A6%E8%AE%AD%E7%BB%83%E8%90%A5%E5%AD%A6%E4%B9%A019%E7%BE%A4-python%E5%85%A5%E9%97%A814%E5%A4%A9%E6%80%BB%E7%BB%93/"/>
+    <id>https://selfteaching-learning-notes.github.io/学习心得/1901100240-自学训练营学习19群-python入门14天总结/</id>
+    <published>2019-08-30T07:22:22.000Z</published>
+    <updated>2019-08-30T07:25:33.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;课程总结&quot;&gt;&lt;a href=&quot;#课程总结&quot; class=&quot;headerlink&quot; title=&quot;课程总结&quot;&gt;&lt;/a&gt;课程总结&lt;/h3&gt;&lt;h4 id=&quot;Github&quot;&gt;&lt;a href=&quot;#Github&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="学习心得" scheme="https://selfteaching-learning-notes.github.io/categories/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/"/>
+    
+    
+      <category term="Python" scheme="https://selfteaching-learning-notes.github.io/tags/Python/"/>
+    
+      <category term="自学营" scheme="https://selfteaching-learning-notes.github.io/tags/%E8%87%AA%E5%AD%A6%E8%90%A5/"/>
+    
+      <category term="学习总结" scheme="https://selfteaching-learning-notes.github.io/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1901100240-自学训练营学习19群-python入门打卡心得</title>
+    <link href="https://selfteaching-learning-notes.github.io/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/1901100240-%E8%87%AA%E5%AD%A6%E8%AE%AD%E7%BB%83%E8%90%A5%E5%AD%A6%E4%B9%A019%E7%BE%A4-python%E5%85%A5%E9%97%A8%E6%89%93%E5%8D%A1%E5%BF%83%E5%BE%97/"/>
+    <id>https://selfteaching-learning-notes.github.io/学习心得/1901100240-自学训练营学习19群-python入门打卡心得/</id>
+    <published>2019-08-30T07:08:01.000Z</published>
+    <updated>2019-08-30T07:25:33.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;学员信息&quot;&gt;&lt;a href=&quot;#学员信息&quot; class=&quot;headerlink&quot; title=&quot;学员信息&quot;&gt;&lt;/a&gt;学员信息&lt;/h3&gt;&lt;p&gt;&lt;code&gt;学号：1901100240&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&quot;day1&quot;&gt;&lt;a href=&quot;#day1&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="学习心得" scheme="https://selfteaching-learning-notes.github.io/categories/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/"/>
+    
+    
+      <category term="Python" scheme="https://selfteaching-learning-notes.github.io/tags/Python/"/>
+    
+      <category term="自学营" scheme="https://selfteaching-learning-notes.github.io/tags/%E8%87%AA%E5%AD%A6%E8%90%A5/"/>
+    
+      <category term="学习心得" scheme="https://selfteaching-learning-notes.github.io/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1901100231-自学训练营18群-Python入门学习心得</title>
+    <link href="https://selfteaching-learning-notes.github.io/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/1901100231-%E8%87%AA%E5%AD%A6%E8%AE%AD%E7%BB%83%E8%90%A518%E7%BE%A4-Python%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/"/>
+    <id>https://selfteaching-learning-notes.github.io/学习心得/1901100231-自学训练营18群-Python入门学习心得/</id>
+    <published>2019-08-29T07:27:23.000Z</published>
+    <updated>2019-08-29T07:36:19.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;学员信息&quot;&gt;&lt;a href=&quot;#学员信息&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="学习心得" scheme="https://selfteaching-learning-notes.github.io/categories/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/"/>
+    
+    
+      <category term="Python" scheme="https://selfteaching-learning-notes.github.io/tags/Python/"/>
+    
+      <category term="自学营" scheme="https://selfteaching-learning-notes.github.io/tags/%E8%87%AA%E5%AD%A6%E8%90%A5/"/>
+    
+      <category term="学习心得" scheme="https://selfteaching-learning-notes.github.io/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/"/>
+    
+  </entry>
+  
+</feed>

@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":"enable","trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    search: {
+      root: '/',
+      path: 'search.xml'
+    },
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="学员信息 学号：&amp;lt;1901100206&amp;gt; 学习内容：Python入门14天 学习用时：&amp;lt;25天&amp;gt;  学习笔记 day01 学习内容： day01: 使用github进行协作 学习用时： 合计3小时  收获总结：   在Pull Request时，base：是被合并的,compare：是有改动的，即把这些改动合并到base。 总体来说，没遇到什么困难，因为不是第一次接触git">
+<meta name="keywords" content="Python,学习打卡,自学营,学习总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1901100206-自学训练营学习18群-Python入门">
+<meta property="og:url" content="https://selfteaching-learning-notes.github.io/Python入门/1901100206-自学训练营学习18群-Python入门/index.html">
+<meta property="og:site_name" content="自学营学员笔记">
+<meta property="og:description" content="学员信息 学号：&amp;lt;1901100206&amp;gt; 学习内容：Python入门14天 学习用时：&amp;lt;25天&amp;gt;  学习笔记 day01 学习内容： day01: 使用github进行协作 学习用时： 合计3小时  收获总结：   在Pull Request时，base：是被合并的,compare：是有改动的，即把这些改动合并到base。 总体来说，没遇到什么困难，因为不是第一次接触git">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-22T06:24:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="1901100206-自学训练营学习18群-Python入门">
+<meta name="twitter:description" content="学员信息 学号：&amp;lt;1901100206&amp;gt; 学习内容：Python入门14天 学习用时：&amp;lt;25天&amp;gt;  学习笔记 day01 学习内容： day01: 使用github进行协作 学习用时： 合计3小时  收获总结：   在Pull Request时，base：是被合并的,compare：是有改动的，即把这些改动合并到base。 总体来说，没遇到什么困难，因为不是第一次接触git">
+  <link rel="alternate" href="/atom.xml" title="自学营学员笔记" type="application/atom+xml">
+  <link rel="canonical" href="https://selfteaching-learning-notes.github.io/Python入门/1901100206-自学训练营学习18群-Python入门/">
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>1901100206-自学训练营学习18群-Python入门 | 自学营学员笔记</title>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144933018-1"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-144933018-1');
+    }
+  </script>
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">自学营学员笔记</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">总结、记录、打卡、沉淀</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-search">
+          <a href="javascript:;" class="popup-trigger">
+          
+            <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>搜索</a>
+        </li>
+      
+    </ul>
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+    </div>
+</nav>
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://selfteaching-learning-notes.github.io/Python入门/1901100206-自学训练营学习18群-Python入门/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="自学营团队">
+      <meta itemprop="description" content="该博客用于收录自学营学员在学习过程中的笔记，包括学习心得、总结、记录解决问题的过程等。。。">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="自学营学员笔记">
+    </span>
+      <header class="post-header">
+
+        
+          <h2 class="post-title" itemprop="name headline">1901100206-自学训练营学习18群-Python入门
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-20 11:06:51" itemprop="dateCreated datePublished" datetime="2019-08-20T11:06:51+08:00">2019-08-20</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-22 14:24:34" itemprop="dateModified" datetime="2019-08-22T14:24:34+08:00">2019-08-22</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python入门/" itemprop="url" rel="index"><span itemprop="name">Python入门</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="fa fa-comment-o"></i>
+    </span>
+    
+      <span class="post-meta-item-text">评论数：</span>
+    
+  
+    <a href="/Python入门/1901100206-自学训练营学习18群-Python入门/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Python入门/1901100206-自学训练营学习18群-Python入门/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          <br/>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="学员信息"><a href="#学员信息" class="headerlink" title="学员信息"></a>学员信息</h3><ul>
+<li>学号：&lt;1901100206&gt;</li>
+<li>学习内容：Python入门14天</li>
+<li>学习用时：&lt;25天&gt;</li>
+</ul>
+<h3 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h3><hr>
+<h4 id="day01"><a href="#day01" class="headerlink" title="day01"></a>day01</h4><ul>
+<li>学习内容： day01: 使用github进行协作</li>
+<li>学习用时： 合计3小时</li>
+</ul>
+<p><strong>收获总结</strong>： </p>
+<ol>
+<li>在Pull Request时，base：是被合并的,compare：是有改动的，即把这些改动合并到base。</li>
+<li>总体来说，没遇到什么困难，因为不是第一次接触github了。</li>
+<li>这次做作业的过程中，和原来学习过程中遇到英语就退缩的我不一样的是，我开始试着读链接中的英文文档了，即使读得慢也坚持读完。</li>
+</ol>
+<hr>
+<h4 id="day02"><a href="#day02" class="headerlink" title="day02"></a>day02</h4><ul>
+<li>学习内容： day02：配置本地运行开发环境</li>
+<li>学习用时： 2小时</li>
+</ul>
+<p><strong>收获总结</strong>： </p>
+<ol>
+<li>对于作业，先clone文件到本地，修改后commit，然后合并，最后pull request到远程仓库。这一套流程已经很熟悉了。</li>
+<li>难点：在配置vs code开发环境时，面对长长的英文文档，有种没法下手的感觉，读了两段后开始云里雾里。就先跳过了。</li>
+</ol>
+<hr>
+<h4 id="day03"><a href="#day03" class="headerlink" title="day03"></a>day03</h4><ul>
+<li>学习内容： day03 hello python</li>
+<li>学习用时： 10小时</li>
+</ul>
+<p>笔记：</p>
+<p><strong>收获总结</strong>：</p>
+<ol>
+<li><p>函数round(3.1415, 2)，后面的参数代表返回几个小数位;<br>method：.append()，可在列表里使用;<br>print(a, end=” “)，end代表输入结果之间以什么结尾</p>
+</li>
+<li><p>继续和英文文档死磕到底，看懂了后写作业就不难。</p>
+</li>
+</ol>
+<hr>
+<h4 id="day04"><a href="#day04" class="headerlink" title="day04"></a>day04</h4><ul>
+<li>学习内容： day04 控制流程</li>
+<li>学习用时： 10小时</li>
+</ul>
+<p><strong>收获总结</strong>： </p>
+<ol>
+<li>list.insert(0, w) 第一个数代表位置，第二个数代表插入的东西</li>
+<li>单词：iterate 迭代;单词：indentation 缩进</li>
+<li>写for循环时，感觉不是很难。但搜索后得知有更好的写法。</li>
+<li>写while循环时，却因为定势思维以及思考不够深入而反复得不到正确结果。好在通过搜索也解决了问题。</li>
+</ol>
+<hr>
+<h4 id="day05"><a href="#day05" class="headerlink" title="day05"></a>day05</h4><ul>
+<li>学习内容： day05 数据容器</li>
+<li>学习用时： 20小时</li>
+</ul>
+<p><strong>收获总结</strong>： </p>
+<ol>
+<li>对python数据容器里的函数和methods要多加记忆，以便遇到问题随时拿来使用。</li>
+<li>第二个作业是统计词频，善用这种方法有利于学习数据分析，以后会多加注意。</li>
+</ol>
+<hr>
+<h4 id="day06"><a href="#day06" class="headerlink" title="day06"></a>day06</h4><ul>
+<li>学习内容： day06 函数</li>
+<li>学习用时： 20小时</li>
+</ul>
+<p><strong>收获总结</strong>： </p>
+<ol>
+<li>day06的作业是在day05作业的基础上修改的，所以统计英文词频的函数略加修改即可。而且稍稍优化了一下。</li>
+<li>统计中文词频时，就要换个思路，参考别人的代码时，都会有去除标点符号一项。但使用正则表达式时则直接略过这一步，相当于降维打击了。</li>
+</ol>
+<hr>
+<h4 id="day07"><a href="#day07" class="headerlink" title="day07"></a>day07</h4><ul>
+<li>学习内容： day07 模块</li>
+<li>学习用时： 5小时</li>
+</ul>
+<p><strong>收获总结</strong>： </p>
+<ol>
+<li>本次作业只需在day06作业上加以修改即可完成。</li>
+<li>其中text因为是中英文混合，所以原先的代码不能直接拿来用，统计英文字符时需要先剔除中文字符。统计中午字符时同理。</li>
+<li>封装模块时要细读作业要求，main.py与mymodule同目录。</li>
+</ol>
+<hr>
+<h4 id="day08"><a href="#day08" class="headerlink" title="day08"></a>day08</h4><ul>
+<li>学习内容： day08 异常处理</li>
+<li>学习用时： 5小时</li>
+</ul>
+<p><strong>收获总结</strong>： </p>
+<ol>
+<li>本次作业在day07作业上加以修改，在三个函数里加上类型判断，可选type()以及isinstance()。</li>
+<li>在main.py里，加上try: except:，如果输入的不是字符串，比如列表，则打印出错误提示。</li>
+</ol>
+<hr>
+<h4 id="day09"><a href="#day09" class="headerlink" title="day09"></a>day09</h4><ul>
+<li>学习内容： day09 标准库</li>
+<li>学习用时： 8小时</li>
+</ul>
+<p><strong>收获总结</strong>： </p>
+<ol>
+<li>本次作业在day08作业上加以修改，先在函数里多加一个变量，再使用python自带标准库里的Counter()，统计出的结果直接为字典形式。可转换成列表。</li>
+<li>在main.py里，需要先import json，使用open()打开文件时需要填写本地的绝对路径，路径前面以r开头，引号内为路径。</li>
+</ol>
+<hr>
+<h4 id="day10"><a href="#day10" class="headerlink" title="day10"></a>day10</h4><ul>
+<li>学习内容：&lt;day10 第三方库&gt;</li>
+<li>学习用时：&lt;3小时&gt;</li>
+</ul>
+<p><strong>收获总结</strong>：</p>
+<ol>
+<li>re.findall(r’[\u4E00-\u9FFF]’, text)<br>该用法取出所有中文字符</li>
+<li>re.sub(‘[^\u4e00-\u9fa5]’,’’,text)<br>该用法将所有非中文字符，替换为空，包含英文字符和标点符号等</li>
+<li>os.path用法<br>#path = os.path.abspath(<strong>file</strong>) 显示main.py的绝对路径<br>#path = os.path.dirname(os.path.abspath(<strong>file</strong>)) 显示main.py所在文件夹的目录<br>path = os.path.join(os.path.dirname(os.path.abspath(<strong>file</strong>)), ‘tang300.json’) </li>
+<li>文件读取：<br>with open(path, “r”, encoding=’UTF-8’) as f:  #open可直接读取本地文件里的内容<br>read_one = f.read() #read()将文件内容读取，并存在read_one</li>
+<li>每次作业都是基于上次作业的基础完成的，通过不断升级快捷易用的工具，以便得到更高效率的解决方案。这便是编程的魅力之一吧！</li>
+<li>re.findall用法，统计字频时可以使用，统计词频时需要用re.sub。</li>
+</ol>
+<hr>
+<h4 id="day11"><a href="#day11" class="headerlink" title="day11"></a>day11</h4><ul>
+<li>学习内容：&lt;day11 实战演练1&gt;</li>
+<li>学习用时：&lt;6小时&gt;</li>
+</ul>
+<p><strong>收获总结</strong>：</p>
+<ol>
+<li><p>yagmail（邮箱库）<br>用法：发送邮件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yag = yagmail.SMTP(sender, password, <span class="string">'服务器地址'</span>) <span class="comment">#发件人，密码以及服务器</span></span><br><span class="line">yag.send(recipients, <span class="string">'标题'</span>, word_str) <span class="comment">#收件地址，标题以及要发送的内容</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>requests（网络请求库）<br>最基本的用法：获取该网页内容</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response = requests.get(<span class="string">'https://mp.weixin.qq.com/s/pLmuGoc4bZrMNl7MSoWgiA'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>pyquery（xml 文档解析库)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">document = PyQuery(response.text) </span><br><span class="line">content = document(<span class="string">'#js_content'</span>).text() <span class="comment">#将网页内容转换成文本</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>这些第三方库都有着强大的功能，以及配套的详细的用法教程，本次作业只是用了点皮毛，后面更多的玩法有待发掘。</p>
+</li>
+<li><p>pyquery库的用法未参考教程，直接拷贝作业要求上的代码，复盘时需要再读读原教程。</p>
+</li>
+</ol>
+<hr>
+<h4 id="day12"><a href="#day12" class="headerlink" title="day12"></a>day12</h4><ul>
+<li>学习内容：&lt;day12 实战演练2&gt;</li>
+<li>学习用时：&lt;6小时&gt;</li>
+</ul>
+<p><strong>收获总结</strong>：</p>
+<ol>
+<li>littlecodersh/ItChat： 微信个人号接口、微信机器人及命令行微信，三十行即可自定义个人号机器人。</li>
+<li>liuwons/wxBot: 类似的基于Python的微信机器人</li>
+<li>zixia/wechaty: 基于Javascript(ES6)的微信个人账号机器人NodeJS框架/库</li>
+<li>sjdy521/Mojo-Weixin: 使用Perl语言编写的微信客户端框架，可通过插件提供基于HTTP协议的api接口供其他语言调用</li>
+<li>HanSon/vbot: 基于PHP7的微信个人号机器人，通过实现匿名函数可以方便地实现各种自定义的功能</li>
+<li>yaphone/itchat4j: 用Java扩展个人微信号的能力</li>
+<li>kanjielu/jeeves: 使用springboot开发的微信机器人</li>
+<li>用一个库时，不会的地方先读文档，一般情况下，文档里都会有关于用法的详细解释。</li>
+</ol>
+<p><strong>遇到的难点与问题（是否解决）</strong></p>
+<ol>
+<li>可惜了我三个微信号都登不上web微信，好在有教练的帮助完成了任务，只是不能继续体验微信机器人的更多玩法有点可惜。<br>ps：网上搜了很多类似案例，目前暂时没看到什么好的解决方案。。。</li>
+</ol>
+<hr>
+<h4 id="day13"><a href="#day13" class="headerlink" title="day13"></a>day13</h4><ul>
+<li>学习内容：&lt;day13 实战演练3&gt;</li>
+<li>学习用时：&lt;8小时&gt;</li>
+</ul>
+<p><strong>收获总结</strong>：</p>
+<ol>
+<li><p>matplotlib用法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">plt.bar((word_data[i][<span class="number">1</span>],),(word_data[i][<span class="number">0</span>],), facecolor=<span class="string">'#9999ff'</span>, edgecolor=<span class="string">'white'</span>) <span class="comment">#绘制柱状图</span></span><br><span class="line">plt.title(<span class="string">'中文词频(TOP1-10)'</span>)               <span class="comment"># 显示标题</span></span><br><span class="line">plt.xlabel(<span class="string">'单词'</span>)                                   <span class="comment"># 显示x轴名称</span></span><br><span class="line">plt.ylabel(<span class="string">'词频'</span>)                                   <span class="comment"># 显示y轴名称</span></span><br><span class="line">plt.legend(<span class="string">'直方图'</span>)                             <span class="comment"># 显示图例</span></span><br><span class="line">plt.savefig(<span class="string">'word_dict.png'</span>, dpi=<span class="number">300</span>) <span class="comment"># 保存图片</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>tplotlib的功能很强大，值得深入学习，本次使用的依然是只是皮毛，以后学习数据分析时会继续研读文档。</p>
+</li>
+</ol>
+<p><strong>遇到的难点与问题（是否解决）</strong></p>
+<ol>
+<li>网上的文档和教程都很丰富，经过搜索到第一种解决方案，先将统计的结果转换成csv文件:<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'dict.csv'</span>, <span class="string">'w'</span>) <span class="keyword">as</span> csv_file:</span><br><span class="line">    writer = csv.writer(csv_file)</span><br><span class="line">    <span class="keyword">for</span> key, value <span class="keyword">in</span> word_dict.items():</span><br><span class="line">       writer.writerow([key, value])</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>然后使用panda库读取csv文件，再使用matplotlib绘图。但此种方案实现起来有点复杂。</p>
+<ol start="2">
+<li>第二种解决方案，将统计结果转换成字典，遍历字典里的键值当做坐标值—出自知乎</li>
+</ol>
+<hr>
+<h4 id="day14"><a href="#day14" class="headerlink" title="day14"></a>day14</h4><ul>
+<li>学习内容：&lt;Python14天入门营总结&gt;</li>
+<li>学习用时：&lt;&gt; </li>
+</ul>
+<h5 id="lt-总结-gt"><a href="#lt-总结-gt" class="headerlink" title="&lt;总结&gt;"></a>&lt;总结&gt;</h5><ul>
+<li><p>2019年7月26日，我读到了新生大学的一篇关于自学编程的文章，作者在标题里说他写出了通过未来的代码，这引起了我的好奇心。点进去读完后，我就报名了，当晚就开始了学习。</p>
+</li>
+<li><p>事实上，我早就购买了李笑来老师的自学是门手艺一书，并读完了Part one，还在xue.cn上做习题。但是却和以往一样，坚持了一段时间后，我停了下来，原因正如李笑来老师所说：在最初“学”的阶段，社交也是极为重要的。而一个人的学习就是很难坚持下来，没有社交，且目标不明确，所以我选择了加入自学营，和一堆人一起学习。</p>
+</li>
+<li><p>自学营设计的14天作业，难度是循序渐进的，我觉得最大的优点是每次作业都是基于上次作业的基础完成的，而且通过不断升级快捷易用的工具，以便得到更高效率的解决方案。这是让我们不重复造轮子，用前人的智慧解决自己的难题。而且基于Python有那么库可用，更是这个编程语言的优势所在。</p>
+</li>
+<li><p>最后两次作业是学习wxpy库的使用，它可以让我们实现微信个人号的自动化操作，<a href="https://github.com/youfou/wxpy" target="_blank" rel="noopener">https://github.com/youfou/wxpy</a> ，功能非常强大，可惜了我几个微信都无法登录，好在有教练的帮助，最后也完成了作业。</p>
+</li>
+</ul>
+<h5 id="lt-下一步计划-gt"><a href="#lt-下一步计划-gt" class="headerlink" title="&lt;下一步计划&gt;"></a>&lt;下一步计划&gt;</h5><p>两个选择：</p>
+<ol>
+<li><p>重读自学是门手艺，用2到3个星期的时间读完，并在GitHub上同步打卡学习进度。</p>
+</li>
+<li><p>自学 MIT OCW 6.0001 课程，用一个月的时间看完，并打卡。</p>
+</li>
+</ol>
+<hr>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+        
+        <div class="post-tags">
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+            <a href="/tags/学习打卡/" rel="tag"># 学习打卡</a>
+          
+            <a href="/tags/自学营/" rel="tag"># 自学营</a>
+          
+            <a href="/tags/学习总结/" rel="tag"># 学习总结</a>
+          
+        </div>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+              <a href="/自我介绍/1901100205-自学训练营18群-自我介绍/" rel="next" title="1901100205-自学训练营18群-自我介绍">
+                <i class="fa fa-chevron-left"></i> 1901100205-自学训练营18群-自我介绍
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+              <a href="/Python入门/1901100178-自学训练营18群-Python入门/" rel="prev" title="1901100178-自学训练营18群-Python入门">
+                1901100178-自学训练营18群-Python入门 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    
+  <div class="comments" id="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+  
+
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">自学营团队</p>
+  <div class="site-description motion-element" itemprop="description">该博客用于收录自学营学员在学习过程中的笔记，包括学习心得、总结、记录解决问题的过程等。。。</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">130</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">64</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#学员信息"><span class="nav-number">1.</span> <span class="nav-text">学员信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习笔记"><span class="nav-number">2.</span> <span class="nav-text">学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#day01"><span class="nav-number">2.1.</span> <span class="nav-text">day01</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#day02"><span class="nav-number">2.2.</span> <span class="nav-text">day02</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#day03"><span class="nav-number">2.3.</span> <span class="nav-text">day03</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#day04"><span class="nav-number">2.4.</span> <span class="nav-text">day04</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#day05"><span class="nav-number">2.5.</span> <span class="nav-text">day05</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#day06"><span class="nav-number">2.6.</span> <span class="nav-text">day06</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#day07"><span class="nav-number">2.7.</span> <span class="nav-text">day07</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#day08"><span class="nav-number">2.8.</span> <span class="nav-text">day08</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#day09"><span class="nav-number">2.9.</span> <span class="nav-text">day09</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#day10"><span class="nav-number">2.10.</span> <span class="nav-text">day10</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#day11"><span class="nav-number">2.11.</span> <span class="nav-text">day11</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#day12"><span class="nav-number">2.12.</span> <span class="nav-text">day12</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#day13"><span class="nav-number">2.13.</span> <span class="nav-text">day13</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#day14"><span class="nav-number">2.14.</span> <span class="nav-text">day14</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#lt-总结-gt"><span class="nav-number">2.14.1.</span> <span class="nav-text">&lt;总结&gt;</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#lt-下一步计划-gt"><span class="nav-number">2.14.2.</span> <span class="nav-text">&lt;下一步计划&gt;</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">自学营团队</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.2.0</div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+  
+  <script src="/js/affix.js?v=7.2.0"></script>
+  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
+
+  
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.2.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://selfteaching-learning-notes.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://selfteaching-learning-notes.github.io/Python入门/1901100206-自学训练营学习18群-Python入门/";
+    this.page.identifier = "Python入门/1901100206-自学训练营学习18群-Python入门/";
+    this.page.title = '1901100206-自学训练营学习18群-Python入门';};
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://selfteaching-learning-notes.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+    window.addEventListener('load', loadComments, false);
+  
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":"enable","trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    search: {
+      root: '/',
+      path: 'search.xml'
+    },
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="Day14 给这次旅程画上一个句号这篇文章比起单纯的讨论这个project，更像是一次自我剖析，所以不算是一个‘好’的README。 越接近最后一刻收尾变得尤为艰难，因为特别想给这段路程画上一个’完美’ 的句号。最后的实战练习感觉进入了状态，一鼓作气，但又很难像Day5作业那般在开头从0探索，面对新建的file随意的编写。没开始的时候觉得开始艰难，在路途中时又觉得坚持下去不容易，临近结束又觉得做个">
+<meta name="keywords" content="Python,自学营">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1901050027-给这次旅程画上一个句号">
+<meta property="og:url" content="https://selfteaching-learning-notes.github.io/学员故事/1901050027-给这次旅程画上一个句号/index.html">
+<meta property="og:site_name" content="自学营学员笔记">
+<meta property="og:description" content="Day14 给这次旅程画上一个句号这篇文章比起单纯的讨论这个project，更像是一次自我剖析，所以不算是一个‘好’的README。 越接近最后一刻收尾变得尤为艰难，因为特别想给这段路程画上一个’完美’ 的句号。最后的实战练习感觉进入了状态，一鼓作气，但又很难像Day5作业那般在开头从0探索，面对新建的file随意的编写。没开始的时候觉得开始艰难，在路途中时又觉得坚持下去不容易，临近结束又觉得做个">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-17T02:41:58.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="1901050027-给这次旅程画上一个句号">
+<meta name="twitter:description" content="Day14 给这次旅程画上一个句号这篇文章比起单纯的讨论这个project，更像是一次自我剖析，所以不算是一个‘好’的README。 越接近最后一刻收尾变得尤为艰难，因为特别想给这段路程画上一个’完美’ 的句号。最后的实战练习感觉进入了状态，一鼓作气，但又很难像Day5作业那般在开头从0探索，面对新建的file随意的编写。没开始的时候觉得开始艰难，在路途中时又觉得坚持下去不容易，临近结束又觉得做个">
+  <link rel="alternate" href="/atom.xml" title="自学营学员笔记" type="application/atom+xml">
+  <link rel="canonical" href="https://selfteaching-learning-notes.github.io/学员故事/1901050027-给这次旅程画上一个句号/">
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>1901050027-给这次旅程画上一个句号 | 自学营学员笔记</title>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144933018-1"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-144933018-1');
+    }
+  </script>
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">自学营学员笔记</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">总结、记录、打卡、沉淀</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-search">
+          <a href="javascript:;" class="popup-trigger">
+          
+            <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>搜索</a>
+        </li>
+      
+    </ul>
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+    </div>
+</nav>
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://selfteaching-learning-notes.github.io/学员故事/1901050027-给这次旅程画上一个句号/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="自学营团队">
+      <meta itemprop="description" content="该博客用于收录自学营学员在学习过程中的笔记，包括学习心得、总结、记录解决问题的过程等。。。">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="自学营学员笔记">
+    </span>
+      <header class="post-header">
+
+        
+          <h2 class="post-title" itemprop="name headline">1901050027-给这次旅程画上一个句号
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-17 10:41:33 / 修改时间：10:41:58" itemprop="dateCreated datePublished" datetime="2019-08-17T10:41:33+08:00">2019-08-17</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学员故事/" itemprop="url" rel="index"><span itemprop="name">学员故事</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="fa fa-comment-o"></i>
+    </span>
+    
+      <span class="post-meta-item-text">评论数：</span>
+    
+  
+    <a href="/学员故事/1901050027-给这次旅程画上一个句号/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="学员故事/1901050027-给这次旅程画上一个句号/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          <br/>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Day14-给这次旅程画上一个句号"><a href="#Day14-给这次旅程画上一个句号" class="headerlink" title="Day14 给这次旅程画上一个句号"></a>Day14 给这次旅程画上一个句号</h1><p>这篇文章比起单纯的讨论这个project，更像是一次自我剖析，所以不算是一个‘好’的README。</p>
+<p>越接近最后一刻收尾变得尤为艰难，因为特别想给这段路程画上一个’完美’ 的句号。最后的实战练习感觉进入了状态，一鼓作气，但又很难像Day5作业那般在开头从0探索，面对新建的file随意的编写。没开始的时候觉得开始艰难，在路途中时又觉得坚持下去不容易，临近结束又觉得做个总结也有着纠结。开始让我思考为什么总脱离不了‘艰难’这种情绪。所以就让我从翻开以往的笔记开始吧。</p>
+<h2 id="petalsaya-getnote-0-12"><a href="#petalsaya-getnote-0-12" class="headerlink" title="petalsaya.getnote([0:12])"></a>petalsaya.getnote([0:12])</h2><p>Day1（4/7）<br>迈出第一步，Github学习前先读了书，尽早开始了自由模式，在笔记中写道: 探索也是一种乐趣。</p>
+<p>Day2 （4/9）<br>本地环境配置，编写了最最基础的一句反馈函数print Hello World，安装了三次Anaconda，真的是各种状况频出呢。</p>
+<p>Day3 （4/14）<br>一个小小的计算器，先看一下完成日期，距离Day2的作业间隔五天了呢，不过我在其中做了2个优化：欢迎语句和计算器的循环，现在可以称赞那时的自己一句了不起。</p>
+<p>Day4（4/15）<br>这个是9x9乘法表，循环流程是Python逻辑的基础，推荐回顾笑来老师‘入口’和‘控制流程’两章哟。</p>
+<p>Day5（4/20）<br>数据容器，写的最纠结的一次作业，Day3是因为事情忙无法继续编写，Day5可能是花费心力最多的一次，做了很多的尝试，也为之后三天的作业打下了坚实的基础。</p>
+<p>Day6 - Day8（4/22 - 23）<br>都是在优化Day5的作业，这边三天合在一起，分别是Day6的函数，Day7的模块，以及Day8的异常处理，这两天给我一种柳暗花明的感觉。</p>
+<p>Day9（4/26）<br>标准库让我稍稍费了一点心，因为Day5编写的内容没走寻常路，用了operator.itemgetter()，返回的是tuple格式。吐槽一句：Day10-12用了collection.counter，返回的是List格式，Day13还是需要转tuple分别提出两个值进行画图。</p>
+<p>Day10（4/26）<br>看了同学的code，对比下，发现自己的语言写的啰嗦，臣服于collection.counter让我看到了编程简洁的魅力。</p>
+<p>Day11 - 13（4/27 - 29）<br>实战练习，在开始我以为越到后面越艰难，不是的，连续三天一口气完成了！从未有的畅快吧，外部应用模块的功能实在是太强大了，jieba,wxpy,matplolib等等，每个都有其独特的功能。编程所产生的互动，那种及时的反馈，真的是一种美妙的感觉。</p>
+<p>对了，我在Day8写笔记的时候还立了一个Flag：总结一下自己看到帮助特别大的博客，乘此机会，一口做气的完成。</p>
+<blockquote>
+<p>（列出的内容仅是帮助到我的部分，当然博客中包含了更多原创的博文。）</p>
+</blockquote>
+<ol>
+<li>博主：Ruthless；python数据类型详解 </li>
+<li>博主：Python；字符串类型及操作</li>
+<li>博主：风泽茹岚 ； Python 统计汉字的频率</li>
+<li>博主：<em>失心疯</em> ；单词堆中查找特定单词（正则表达式）</li>
+<li>博主：jinruoyanxu；正则表达式-匹配中英文、字母和数字</li>
+<li>廖雪峰的官方网站 ；装饰器 （包含很系统的对Python介绍哟）</li>
+</ol>
+<p>仅仅是博客就收获良多，还不包括Google上其他的资料，一个属于自学者的时代。恭喜自己成功摘完一个Flag，顺便再立一个：回头一字不落的看完6.的全文。</p>
+<h2 id="以下为碎碎念警告："><a href="#以下为碎碎念警告：" class="headerlink" title="以下为碎碎念警告："></a>以下为碎碎念警告：</h2><h3 id="自问自答篇："><a href="#自问自答篇：" class="headerlink" title="自问自答篇："></a>自问自答篇：</h3><h4 id="Q：为什么有些人想做的比别人好，却能做到；而有些人却不能？"><a href="#Q：为什么有些人想做的比别人好，却能做到；而有些人却不能？" class="headerlink" title="Q：为什么有些人想做的比别人好，却能做到；而有些人却不能？"></a>Q：为什么有些人想做的比别人好，却能做到；而有些人却不能？</h4><p>A：人都有厌恶损失的情绪，那就索性在开始的时候大量投入，阅读各种的相关资料也好，和辅导员们交流也好，迅速达成多维度链接，这也算一种快速入门的技巧吧，也是为什么Day5之后的作业进度反而加速了。</p>
+<h4 id="Q：有趣的一面又是什么？孔雀开屏式的展示么？"><a href="#Q：有趣的一面又是什么？孔雀开屏式的展示么？" class="headerlink" title="Q：有趣的一面又是什么？孔雀开屏式的展示么？"></a>Q：有趣的一面又是什么？孔雀开屏式的展示么？</h4><p>A：做自己。做那种让你舒服，开心的事情，投入进去，万一一不小心就开屏了呢，并不是所谓的展示，而是一种不自知的状态。</p>
+<h3 id="感想篇："><a href="#感想篇：" class="headerlink" title="感想篇："></a>感想篇：</h3><p>不知道各位有没有体验过笑来老师所说的心流状态，时间仿佛加速了，不再是隔段时间看一下手机，而是完完全全的投入，美妙至极。但如果过度追求这种状态，期待一直保持，所以也造就了一味地延迟开始或者改变，因为不开始，才不会有不完美的出现，这可能是造成我心里波动的一个元凶。在加入训练营之前，我已经很长时间没有体验过这种感觉了。这种高度的集中，尤其是后面几天，我是特别特别享受的，包括现在在打这段话的时候。</p>
+<p>我有的时候在想，什么是所谓的规律生活。我，是个生活极其不规律的人，在写这篇的时候是在凌晨，包括很多时候我写代码时也是，不知道是不是单纯享受这种安安静静的时光，还是想标杆立意。不过，我现在能区分的是一味地熬着不睡和实实在在的享受工作是不同的感觉。不过，我还是倾向于正常的作息，早睡早起，而一觉醒来的白天，工作起来则更为高效。可能这种时候，就需要一种平衡了吧。我仔细想想，如果一个人厌恶熬夜（比如之前的自己）那么熬夜这种行为就该停止；如果是因为干一件事入了迷，此时此刻可以去享受这种快感。有意识的选择，一觉起来就不会去后悔，是不是也未尝不可。当然这也是一种给自己熬夜合理化的办法吧，不过，现在和之前还有一点是不同的，就是不会一味地缩减睡眠时间。睡眠是一切一切的良方，题外话，美食也是哟，或者所有美好的东西都是，都值得去追寻。我有的时候惊讶于为啥能写出看着特别正能量的东西，有时却连自己都不能控制的进入‘丧’的状态。不过，事后，我会对自己说：你是得到了自己的批准进入了‘丧’的状态，来自于潜意识的。还有如何正确面对身体和心理的反馈特别重要。如果特别特别想改变，其实最好的方法大家都知道，就是立刻去做。‘丧’的时候凡是有一点清醒意识都可以“求救”，外人拉一把的力量不可忽视。所以我在Day11的总结里有写上一句给自己的话：不骄傲自大，也不妄自菲薄。因为过度的正能量是骄傲自大的一面，而‘丧’则是妄自菲薄的一面。</p>
+<p>真的，太久没有这么写下来了，写作很像编程，就是把思路一缕一缕的记录下来，逻辑融洽。而且Code是给别的编程员读的，所以如何写的有逻辑性也尤为重要。同时，在打字的时候，有一种打字速度跟不上思路的感觉呢。</p>
+<p>其实回顾这么多，想感谢的人也不少，自学营的各位：小温温，小楠姐，白哥，糖总，小伙伴们还有最初的何教练；同时呢还有Day11和Day12帮我测试微信功能的基友；还有糖果和笑来老师提供的平台（逐渐官方）。嘿嘿，写上这么多，再在名单上加上自己吧。感谢各位，这趟旅程玩得很开心~</p>
+<h3 id="最后，我想放一段话："><a href="#最后，我想放一段话：" class="headerlink" title="最后，我想放一段话："></a>最后，我想放一段话：</h3><h4 id="年轻人，无论面对多么艰难的战局，理论上都有最恰当的解决办法。越是混乱，越是想自暴自弃的时候，越是不能忘记这一点。By-文豪野犬"><a href="#年轻人，无论面对多么艰难的战局，理论上都有最恰当的解决办法。越是混乱，越是想自暴自弃的时候，越是不能忘记这一点。By-文豪野犬" class="headerlink" title="年轻人，无论面对多么艰难的战局，理论上都有最恰当的解决办法。越是混乱，越是想自暴自弃的时候，越是不能忘记这一点。By: 文豪野犬"></a>年轻人，无论面对多么艰难的战局，理论上都有最恰当的解决办法。越是混乱，越是想自暴自弃的时候，越是不能忘记这一点。By: 文豪野犬</h4><h5 id="PetalSaya-2019-4-30"><a href="#PetalSaya-2019-4-30" class="headerlink" title="PetalSaya  2019/4/30"></a>PetalSaya  2019/4/30</h5>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+        
+        <div class="post-tags">
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+            <a href="/tags/自学营/" rel="tag"># 自学营</a>
+          
+        </div>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+              <a href="/学员故事/1901030032-自学——为自己而学/" rel="next" title="1901030032-自学——为自己而学">
+                <i class="fa fa-chevron-left"></i> 1901030032-自学——为自己而学
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+              <a href="/自我介绍/1901030029-自学训练营5群-自我介绍/" rel="prev" title="1901030029-自学训练营5群-自我介绍">
+                1901030029-自学训练营5群-自我介绍 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    
+  <div class="comments" id="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+  
+
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">自学营团队</p>
+  <div class="site-description motion-element" itemprop="description">该博客用于收录自学营学员在学习过程中的笔记，包括学习心得、总结、记录解决问题的过程等。。。</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">130</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">64</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Day14-给这次旅程画上一个句号"><span class="nav-number">1.</span> <span class="nav-text">Day14 给这次旅程画上一个句号</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#petalsaya-getnote-0-12"><span class="nav-number">1.1.</span> <span class="nav-text">petalsaya.getnote([0:12])</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#以下为碎碎念警告："><span class="nav-number">1.2.</span> <span class="nav-text">以下为碎碎念警告：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自问自答篇："><span class="nav-number">1.2.1.</span> <span class="nav-text">自问自答篇：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Q：为什么有些人想做的比别人好，却能做到；而有些人却不能？"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">Q：为什么有些人想做的比别人好，却能做到；而有些人却不能？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Q：有趣的一面又是什么？孔雀开屏式的展示么？"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">Q：有趣的一面又是什么？孔雀开屏式的展示么？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#感想篇："><span class="nav-number">1.2.2.</span> <span class="nav-text">感想篇：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最后，我想放一段话："><span class="nav-number">1.2.3.</span> <span class="nav-text">最后，我想放一段话：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#年轻人，无论面对多么艰难的战局，理论上都有最恰当的解决办法。越是混乱，越是想自暴自弃的时候，越是不能忘记这一点。By-文豪野犬"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">年轻人，无论面对多么艰难的战局，理论上都有最恰当的解决办法。越是混乱，越是想自暴自弃的时候，越是不能忘记这一点。By: 文豪野犬</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#PetalSaya-2019-4-30"><span class="nav-number">1.2.3.1.1.</span> <span class="nav-text">PetalSaya  2019/4/30</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">自学营团队</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.2.0</div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+  
+  <script src="/js/affix.js?v=7.2.0"></script>
+  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
+
+  
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.2.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://selfteaching-learning-notes.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://selfteaching-learning-notes.github.io/学员故事/1901050027-给这次旅程画上一个句号/";
+    this.page.identifier = "学员故事/1901050027-给这次旅程画上一个句号/";
+    this.page.title = '1901050027-给这次旅程画上一个句号';};
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://selfteaching-learning-notes.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+    window.addEventListener('load', loadComments, false);
+  
+</script>
+
+
+</body>
+</html>

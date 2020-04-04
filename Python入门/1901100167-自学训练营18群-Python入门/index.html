@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":"enable","trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    search: {
+      root: '/',
+      path: 'search.xml'
+    },
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="学员信息 姓名：徐响 学号：1901100167 学习内容：Python 14 天入门 学习用时：未知  学习笔记 Day1-9收获总结  print(‘%s%s=%s’%(x,y,xy),end=’\t’)在这种print函数中，前面字符串中%s会一一对应后面%（）中的元素。后面的end=‘\t’可以把每个结果之间以空格分开。 num1 =int(input(“number1:”))input接">
+<meta name="keywords" content="Python,学习打卡,自学营">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1901100167-自学训练营18群-Python入门">
+<meta property="og:url" content="https://selfteaching-learning-notes.github.io/Python入门/1901100167-自学训练营18群-Python入门/index.html">
+<meta property="og:site_name" content="自学营学员笔记">
+<meta property="og:description" content="学员信息 姓名：徐响 学号：1901100167 学习内容：Python 14 天入门 学习用时：未知  学习笔记 Day1-9收获总结  print(‘%s%s=%s’%(x,y,xy),end=’\t’)在这种print函数中，前面字符串中%s会一一对应后面%（）中的元素。后面的end=‘\t’可以把每个结果之间以空格分开。 num1 =int(input(“number1:”))input接">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-22T06:24:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="1901100167-自学训练营18群-Python入门">
+<meta name="twitter:description" content="学员信息 姓名：徐响 学号：1901100167 学习内容：Python 14 天入门 学习用时：未知  学习笔记 Day1-9收获总结  print(‘%s%s=%s’%(x,y,xy),end=’\t’)在这种print函数中，前面字符串中%s会一一对应后面%（）中的元素。后面的end=‘\t’可以把每个结果之间以空格分开。 num1 =int(input(“number1:”))input接">
+  <link rel="alternate" href="/atom.xml" title="自学营学员笔记" type="application/atom+xml">
+  <link rel="canonical" href="https://selfteaching-learning-notes.github.io/Python入门/1901100167-自学训练营18群-Python入门/">
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>1901100167-自学训练营18群-Python入门 | 自学营学员笔记</title>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144933018-1"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-144933018-1');
+    }
+  </script>
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">自学营学员笔记</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">总结、记录、打卡、沉淀</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-search">
+          <a href="javascript:;" class="popup-trigger">
+          
+            <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>搜索</a>
+        </li>
+      
+    </ul>
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+    </div>
+</nav>
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://selfteaching-learning-notes.github.io/Python入门/1901100167-自学训练营18群-Python入门/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="自学营团队">
+      <meta itemprop="description" content="该博客用于收录自学营学员在学习过程中的笔记，包括学习心得、总结、记录解决问题的过程等。。。">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="自学营学员笔记">
+    </span>
+      <header class="post-header">
+
+        
+          <h2 class="post-title" itemprop="name headline">1901100167-自学训练营18群-Python入门
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-19 19:04:20" itemprop="dateCreated datePublished" datetime="2019-08-19T19:04:20+08:00">2019-08-19</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-22 14:24:34" itemprop="dateModified" datetime="2019-08-22T14:24:34+08:00">2019-08-22</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python入门/" itemprop="url" rel="index"><span itemprop="name">Python入门</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="fa fa-comment-o"></i>
+    </span>
+    
+      <span class="post-meta-item-text">评论数：</span>
+    
+  
+    <a href="/Python入门/1901100167-自学训练营18群-Python入门/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Python入门/1901100167-自学训练营18群-Python入门/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          <br/>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="学员信息"><a href="#学员信息" class="headerlink" title="学员信息"></a>学员信息</h3><ul>
+<li>姓名：徐响</li>
+<li>学号：1901100167</li>
+<li>学习内容：Python 14 天入门</li>
+<li>学习用时：未知</li>
+</ul>
+<h3 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h3><hr>
+<h4 id="Day1-9"><a href="#Day1-9" class="headerlink" title="Day1-9"></a>Day1-9</h4><p><strong>收获总结</strong></p>
+<ol>
+<li>print(‘%s<em>%s=%s’%(x,y,x</em>y),end=’\t’)<br>在这种print函数中，前面字符串中%s会一一对应后面%（）中的元素。后面的end=‘\t’可以把每个结果之间以空格分开。</li>
+<li>num1 =int(input(“number1:”))<br>input接受键盘输入的内容，括号里的字符串为提示字符串。</li>
+<li>range函数和for while一样也是循环<br>range（x）：从0到x每次加1<br>range（x，y）：从x到y加1<br>range（x，y，z）：从x到y依次加z</li>
+<li>列表函数，reverse（）将列表元素倒序排列<br>[a]=[1,2,3,4,5]<br>print(a[-1]) ###取最后一个元素<br>[5]<br>print(a[:-1]) ### 除了最后一个取全部<br>[ 1 2 3 4 ]<br>print(a[::-1]) ### 取从后向前（相反）的元素<br>[ 5 4 3 2 1 ]<br>print(a[2::-1]) ### 取从下标为2的元素翻转读取<br>[ 3 2 1 ]<br>是取二维数组中第一维的所有数据<br>对于X[:,1]<br>是取二维数组中第二维的所有数据<br>对于X[:,m:n]<br>是取二维数组中第m维到第n-1维的所有数据<br>对于X[:,:,0]<br>是取三维矩阵中第一维的所有数据<br>对于X[:,:,1]<br>是取三维矩阵中第二维的所有数据<br>对于X[:,:,m:n]<br>是取三维矩阵中第m维到第n-1维的所有数据<br>数制：</li>
+<li>进制转换<br>Int（） 十进制<br>Bin（） 二进制<br>Oct（） 八进制<br>Hex（） 十六进制</li>
+<li>str字符串方法<br>map=str.maketrans(‘*-.’,’ ‘)<br>text=text.translate(map)<br>maketrans函数可以替换字符串中的特定字符，但是参数中前后位置要相同，前面写了几个字符，后面也要有几个字符替换，可以用空格。<br>text.split()<br>split（）函数可以把一个字符串分割成列表，括号内可以指定某种特殊字符作为分割标志，也可以什么都不写，凡是遇到空格，分行等等都会分割。<br>print str.split( ); # 以空格为分隔符，包含 \n<br>print str.split(‘ ‘, 1 ); # 以空格为分隔符，分隔成两个<br>strset=(‘’.join(‘%s’%id for id in set1))<br>把列表变成字符串，用join函数，第一个参数用‘’包括的东西就是合成字符串之间的间隔，一般来说是空格。<br>a = text.split()<br>dic={ }<br>for x in a:<br>dic.setdefault(x,0)<br>dic[x]+=1<br>之前的字符串已经被split分割成一个一个词的列表，要统计每个词出现的次数，先设一个空字典，然后用for 遍历这个字典，这里<br>Setdefault(x,0)<br>dic[x]+=1<br>可以把每个没出现的key都加到字典里去，然后再次出现就键值加一。<br>for k in sorted(dic,key=dic.getitem,reverse=True):<br>b=sorted(dic.items(),key=lambda x:x[1],reverse=True)<br>这两个都可以排序。</li>
+<li>collections.Counter<br>但后面知道更好的是用标准库中的collections中的Counter函数来实现排序<br>c=Counter(dic[])<br>c=Counter(‘str’) ##可以用各种格式，str，dict，set，tuple等等来输入Counter<br>其中可以使用most_common（‘填写限制个数’）<br>replace函数可以用来替换字符串中的指定字符<br>如text=text.replace(‘better’,’worse’)</li>
+<li>list操作<br>但如果在列表里，要移除或者替换有某种特征的元素，就要用for遍历<br>for x in a:<br>if ‘ea’ in x:<br>a.remove(x)<br>另外对于列表操作<br>cmp(list1, list2)<br>比较两个列表的元素<br>len(list)<br>列表元素个数<br>max(list)<br>返回列表元素最大值<br>min(list)<br>返回列表元素最小值<br>list(seq)<br>将元组转换为列表<br>list.append(obj)<br>在列表末尾添加新的对象<br>list.count(obj)<br>统计某个元素在列表中出现的次数<br>list.extend(seq)<br>在列表末尾一次性追加另一个序列中的多个值（用新列表扩展原来的列表）<br>list.index(obj)<br>从列表中找出某个值第一个匹配项的索引位置<br>list.insert(index, obj)<br>将对象插入列表<br>list.pop([index=-1])<br>移除列表中的一个元素（默认最后一个元素），并且返回该元素的值<br>list.remove(obj)<br>移除列表中某个值的第一个匹配项<br>list.reverse()<br>反向列表中元素<br>list.sort(cmp=None, key=None, reverse=False)<br>对原列表进行排序<br>list()函数还可以将字符串或者元组转换成列表。</li>
+<li>sys模块<br>让模块可用<br>import sys<br>sys.path.append(‘路径’)<br>from xxximport stats_word<br>sys.path包含一个目录（以字符串形式）列表，解释器就在这些目录中寻找模块。<br>Sys.path.append添加目录</li>
+<li>异常捕捉<br>异常，用途是使某些错误操作不至于导致程序整体崩溃，提出修改意见，保留修改的空间，<br>Raise exception/TypeError/等等（）<br>括号里可以写上提示语句。<br>在函数里用了raise里之后，在调用这些函数的时候，使用try/except/else/finally<br>捕获这些错误，再做其他处理</li>
+<li>os.path用法<br>file_path=os.path.join(os.path.dirname(os.path.abspath(file)),’文件名’)<br>file_path就是文件的绝对路径<br>打开文件的时候，遇到with open(‘文件名’,’r’,encoding=’utf-8’) as f:<br>找不到文件的时候<br>就可以使用with open(file_path,’r’,encoding=’utf-8’) as f:<br>用绝对路径代替文件名。</li>
+</ol>
+<hr>
+<h4 id="Day10"><a href="#Day10" class="headerlink" title="Day10"></a>Day10</h4><p><strong>收获总结</strong></p>
+<ol>
+<li>第三方库的安装，在anaconda prompt终端中使用pip命令下载，然后在程序中用import调用，因为环境问题，在Windows中的命令终端无法操作，只有在anaconda的终端中才能操作。</li>
+<li>打开文件的时候，若用open （***）则在最后需要用f.close();若用with open（） as f,则不需要f.close().<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(file_path,<span class="string">'r'</span>,encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    a=f.read()</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<hr>
+<h4 id="Day11"><a href="#Day11" class="headerlink" title="Day11"></a>Day11</h4><p><strong>收获总结</strong></p>
+<ol>
+<li><p>在需要输入密码的程序中可以用getpass函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> getpass</span><br><span class="line">sender=input(<span class="string">'fajian:'</span>)</span><br><span class="line">password=getpass.getpass(<span class="string">'mima:'</span>)</span><br><span class="line">recipients=input(<span class="string">'shoujian:'</span>)</span><br><span class="line">requests函数和pyquery函数配合使用，requests请求网页，pyquery将抓取网页上的内容。</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">r=requests.get(<span class="string">'https://mp.weixin.qq.com/s/pLmuGoc4bZrMNl7MSoWgiA'</span>)</span><br><span class="line"><span class="keyword">from</span> pyquery <span class="keyword">import</span> PyQuery</span><br><span class="line">document=PyQuery(r.text)</span><br><span class="line">content=document(<span class="string">'#js_content'</span>).text()</span><br><span class="line">&lt;!-- <span class="comment"># 用python发邮件的格式： --&gt;</span></span><br><span class="line"><span class="keyword">import</span> yagmail</span><br><span class="line">yag=yagmail.SMTP(user=sender,password=password,host=<span class="string">'smtp.163.com'</span>)</span><br><span class="line">content1=str(a)</span><br><span class="line">yag.send(to=recipients,subject=<span class="string">'Day11comevback'</span>,contents=content1)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><em>a为一个列表，要把a变为一个字符串。</em><br>本来可以用b=(‘’.join(a)),但例如本例中列表a内容是[(a,1),(b,2),(c,3)…],这样的元组元素，不能直接转字符串，要使用如下形式：b=(‘’.join(‘%s:%s\n’)%id for id in a);特别要注意join后面的括号中%s的数量等于a每一个元素中的数量。</p>
+</li>
+</ol>
+<hr>
+<h4 id="Day12-amp-13"><a href="#Day12-amp-13" class="headerlink" title="Day12&amp;13"></a>Day12&amp;13</h4><p><strong>收获总结</strong></p>
+<ol>
+<li><p>wxpy模块<br>使用wxpy将python对接到微信，有用。但我使用了19年，17年，13年注册的微信号，都根本登录不了wxpy，没有在网上找到可行的解决方法，只有碰运气，有的老微信号可以。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 基本操作</span></span><br><span class="line"><span class="keyword">import</span> wxpy</span><br><span class="line"><span class="keyword">from</span> wxpy <span class="keyword">import</span> *</span><br><span class="line">bot=Bot()</span><br><span class="line">myself=bot.self</span><br><span class="line">friends=bot.friends()</span><br></pre></td></tr></table></figure>
+
+<p>@bot.register 就是每一个功能的实现，在括号中不同参数的调用，对应了不同的对象和功能。例如作业中，实现一个接收 分享 类型的消息，然后使用词频统计的函数，得到结果返回给对方。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@bot.register(friends,SHARING)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">url</span><span class="params">(msg)</span>:</span></span><br><span class="line">    <span class="comment"># 从收到的消息（msg，SHARING类型）中抓取到文章内容转变为str格式</span></span><br><span class="line">    r=requests.get(msg.url)</span><br><span class="line">    document=PyQuery(r.text)</span><br><span class="line">    content=document(<span class="string">'#js_content'</span>).text()</span><br><span class="line">    <span class="comment"># 利用stats_word函数中的stats_text.cn/en功能获取词频，排序，及取前多少个词</span></span><br><span class="line">    a=stats_word.stats_text_cn(content)</span><br><span class="line">    <span class="comment"># 把得到的消息回复给对方</span></span><br><span class="line">    msg.reply(a)</span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line">embed()</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>其中，最关键的是回复函数msg.reply，一开始没用，就什么也没返回。另外friends（自定）=bot.friends()是选定对象，每个@bot.register功能后面的括号里，都要选定对象，没有选定的话，功能无法实现。</p>
+<ol start="2">
+<li>mabplolib库的使用<br>将day12的词频统计功能使用mabplolib画成一个条形图表:<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> matplotlib.pyplot <span class="keyword">import</span> plot,savefig</span><br><span class="line">plt.rcParams[<span class="string">'font.sans-serif'</span>]=[<span class="string">'SimHei'</span>]<span class="comment">#这一行使得中文字可以显现</span></span><br><span class="line">b=Counter(dict(a)) <span class="comment">#上个任务中得到的list类型结果，使用这个Counter(dict(a))将其变为Counter形式，也就是一种字典形式</span></span><br><span class="line">k=list(b)</span><br><span class="line">v=list(b.values())    <span class="comment">#这两行是分别取Counter形式的b的key值形成列表k，value值形成列表v*</span></span><br><span class="line">plt.bar(k,v)   <span class="comment">#用这两组值形成一个条形图。</span></span><br><span class="line">plt.xlabel(<span class="string">'词语'</span>)</span><br><span class="line">plt.ylabel(<span class="string">'次数'</span>)</span><br><span class="line">plt.title(<span class="string">'高频词统计'</span>)<span class="comment">#给x，y，和总体命名。</span></span><br><span class="line">plt.show()</span><br><span class="line">plt.savefig(<span class="string">'C:\\Users\\Administrator\\Desktop\\a.jpg'</span>,bbox_inchs = <span class="string">'tight'</span>)</span><br><span class="line"><span class="comment"># 这里是关键，得到了图的结果，但是没有保存，也没有指针，无法引用也无法发回给对方，所以需要使用plt.savefig(路径/文件名.后缀)来保存到本地一个地址。之后的引用需要用这个地址和文件名</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>将得到的图发还给对方</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msg.reply_image(<span class="string">'C:\Users\Administrator\Desktop\a.jpg'</span>)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="day14-自学训练营总结"><a href="#day14-自学训练营总结" class="headerlink" title="day14 自学训练营总结"></a>day14 自学训练营总结</h4><ul>
+<li><p>经过自学训练的13个任务，我对于编程有了更直观，有效的理解，不同于在学校学习C语音。在学校学习C的时候，完全不理解这是在干什么，只是按照指令，应付考试，考完之后就全忘了。而自学训练营</p>
+</li>
+<li><p>对于自学，我的感想是，要付诸实践东西，最适合自学的，换个角度说，自学某种技能，最好是要学以致用，首先要明白为什么学，做什么用，然后才可能在使用中强化记忆，最后变成自己的能力。特别是对于编程这样的一种普通人类思维很不熟悉的机器思维，更需要不断练习，要找到可以运用的地方。  </p>
+</li>
+<li><p>我自己经过14天训练营，任务在教练的帮助下基本都能完成，但是除去给我的任务，我还并没有去通过我学到的东西做一些其他工作，写其他的代码，所以我觉得我现在掌握的知识还是很脆弱的，如果不用就会被遗忘。所以我在这个训练营结束之际，还找了一些其他的课程，参加学习，不能忘掉python的基础语法，要赶紧学习python的更多用途。  </p>
+</li>
+<li><p>另外每天的任务给出的参考文档，英文文档我看着实在是太费力了，所以很多时候我都是自己在中文互联网中寻找解决方案，读的都是二手信息。这是这十几天我做的不好的地方，本以为有一定英语基础，但其实根本很难看懂英文文档，想要复习时候索引起来更是不方便，但实际上我知道英文世界的技术交流才是主流，所以想要进入编程领域，也要克服语言问题。  </p>
+</li>
+<li><p>最后我还依然是一个菜鸟，对很多问题还一头雾水，对我所学习的编程还没有一个清楚的感性认识，每次一看网上的交流讨论，看到那些术语名词，非常茫然，另外我对于计算机科学还有一个疑虑：是否应该了解底层原理，再去学习应用功能，我对于计算机和编程语言的底层原理一无所知，我也能学会一些编程技巧，我们是踩着巨人和众人的肩膀上，在编程中我们也不会每个函数都自己写，而是会大量调用别人写好的函数，包，但不了解底层原理，我始终有种恐慌感，不知道是否应该这样。  </p>
+</li>
+</ul>
+<hr>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+        
+        <div class="post-tags">
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+            <a href="/tags/学习打卡/" rel="tag"># 学习打卡</a>
+          
+            <a href="/tags/自学营/" rel="tag"># 自学营</a>
+          
+        </div>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+              <a href="/自我介绍/1901100302-自学训练营20群-自我介绍/" rel="next" title="1901100302-自学训练营学习20群-自我介绍">
+                <i class="fa fa-chevron-left"></i> 1901100302-自学训练营学习20群-自我介绍
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+              <a href="/自我介绍/1901100205-自学训练营18群-自我介绍/" rel="prev" title="1901100205-自学训练营18群-自我介绍">
+                1901100205-自学训练营18群-自我介绍 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    
+  <div class="comments" id="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+  
+
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">自学营团队</p>
+  <div class="site-description motion-element" itemprop="description">该博客用于收录自学营学员在学习过程中的笔记，包括学习心得、总结、记录解决问题的过程等。。。</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">130</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">64</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#学员信息"><span class="nav-number">1.</span> <span class="nav-text">学员信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习笔记"><span class="nav-number">2.</span> <span class="nav-text">学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Day1-9"><span class="nav-number">2.1.</span> <span class="nav-text">Day1-9</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Day10"><span class="nav-number">2.2.</span> <span class="nav-text">Day10</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Day11"><span class="nav-number">2.3.</span> <span class="nav-text">Day11</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Day12-amp-13"><span class="nav-number">2.4.</span> <span class="nav-text">Day12&amp;13</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#day14-自学训练营总结"><span class="nav-number">2.5.</span> <span class="nav-text">day14 自学训练营总结</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">自学营团队</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.2.0</div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+  
+  <script src="/js/affix.js?v=7.2.0"></script>
+  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
+
+  
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.2.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://selfteaching-learning-notes.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://selfteaching-learning-notes.github.io/Python入门/1901100167-自学训练营18群-Python入门/";
+    this.page.identifier = "Python入门/1901100167-自学训练营18群-Python入门/";
+    this.page.title = '1901100167-自学训练营18群-Python入门';};
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://selfteaching-learning-notes.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+    window.addEventListener('load', loadComments, false);
+  
+</script>
+
+
+</body>
+</html>

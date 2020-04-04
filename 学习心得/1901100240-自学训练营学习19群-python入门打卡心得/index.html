@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":"enable","trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    search: {
+      root: '/',
+      path: 'search.xml'
+    },
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="学员信息学号：1901100240 day1 学习内容：下载使用Github  学习用时：3小时   收获总结 除编译器之外的重要协作软件Github，其功能类似于编程版本的Google Doc，可以允许多人同时编程。 对每段更改保有历史记录，可回溯任意更改，避免代码被覆盖，且可回溯任意版本 Github建立在分支架构之上，主分支负责程序主体，dev分支则可供个人修改使用。个人修改的程序可通过pu">
+<meta name="keywords" content="Python,自学营,学习心得">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1901100240-自学训练营学习19群-python入门打卡心得">
+<meta property="og:url" content="https://selfteaching-learning-notes.github.io/学习心得/1901100240-自学训练营学习19群-python入门打卡心得/index.html">
+<meta property="og:site_name" content="自学营学员笔记">
+<meta property="og:description" content="学员信息学号：1901100240 day1 学习内容：下载使用Github  学习用时：3小时   收获总结 除编译器之外的重要协作软件Github，其功能类似于编程版本的Google Doc，可以允许多人同时编程。 对每段更改保有历史记录，可回溯任意更改，避免代码被覆盖，且可回溯任意版本 Github建立在分支架构之上，主分支负责程序主体，dev分支则可供个人修改使用。个人修改的程序可通过pu">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-30T07:25:33.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="1901100240-自学训练营学习19群-python入门打卡心得">
+<meta name="twitter:description" content="学员信息学号：1901100240 day1 学习内容：下载使用Github  学习用时：3小时   收获总结 除编译器之外的重要协作软件Github，其功能类似于编程版本的Google Doc，可以允许多人同时编程。 对每段更改保有历史记录，可回溯任意更改，避免代码被覆盖，且可回溯任意版本 Github建立在分支架构之上，主分支负责程序主体，dev分支则可供个人修改使用。个人修改的程序可通过pu">
+  <link rel="alternate" href="/atom.xml" title="自学营学员笔记" type="application/atom+xml">
+  <link rel="canonical" href="https://selfteaching-learning-notes.github.io/学习心得/1901100240-自学训练营学习19群-python入门打卡心得/">
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>1901100240-自学训练营学习19群-python入门打卡心得 | 自学营学员笔记</title>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144933018-1"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-144933018-1');
+    }
+  </script>
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">自学营学员笔记</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">总结、记录、打卡、沉淀</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-search">
+          <a href="javascript:;" class="popup-trigger">
+          
+            <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>搜索</a>
+        </li>
+      
+    </ul>
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+    </div>
+</nav>
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://selfteaching-learning-notes.github.io/学习心得/1901100240-自学训练营学习19群-python入门打卡心得/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="自学营团队">
+      <meta itemprop="description" content="该博客用于收录自学营学员在学习过程中的笔记，包括学习心得、总结、记录解决问题的过程等。。。">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="自学营学员笔记">
+    </span>
+      <header class="post-header">
+
+        
+          <h2 class="post-title" itemprop="name headline">1901100240-自学训练营学习19群-python入门打卡心得
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-30 15:08:01 / 修改时间：15:25:33" itemprop="dateCreated datePublished" datetime="2019-08-30T15:08:01+08:00">2019-08-30</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习心得/" itemprop="url" rel="index"><span itemprop="name">学习心得</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="fa fa-comment-o"></i>
+    </span>
+    
+      <span class="post-meta-item-text">评论数：</span>
+    
+  
+    <a href="/学习心得/1901100240-自学训练营学习19群-python入门打卡心得/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="学习心得/1901100240-自学训练营学习19群-python入门打卡心得/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          <br/>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="学员信息"><a href="#学员信息" class="headerlink" title="学员信息"></a>学员信息</h3><p><code>学号：1901100240</code></p>
+<h3 id="day1"><a href="#day1" class="headerlink" title="day1"></a>day1</h3><ul>
+<li><p>学习内容：下载使用Github</p>
+</li>
+<li><p>学习用时：3小时</p>
+</li>
+</ul>
+<h4 id="收获总结"><a href="#收获总结" class="headerlink" title="收获总结"></a>收获总结</h4><ul>
+<li>除编译器之外的重要协作软件Github，其功能类似于编程版本的Google Doc，可以允许多人同时编程。</li>
+<li>对每段更改保有历史记录，可回溯任意更改，避免代码被覆盖，且可回溯任意版本</li>
+<li>Github建立在分支架构之上，主分支负责程序主体，dev分支则可供个人修改使用。个人修改的程序可通过pull request请求并入主分支。此功能保证多人同时协作的同时，亦可以避免程序被个人错误更改。</li>
+<li>通过folk加入其他repository，通过clone下载到本地，通过commit讲更改提交到主分支，通过pull request将修改提交</li>
+</ul>
+<h4 id="遇到的难点与问题（是否解决）"><a href="#遇到的难点与问题（是否解决）" class="headerlink" title="遇到的难点与问题（是否解决）"></a>遇到的难点与问题（是否解决）</h4><ul>
+<li>对Github整体构架及操作目的了解不足 （已解决）</li>
+<li>对本地及云端操作可能产生的覆盖记录问题有所担忧 （已解决）</li>
+</ul>
+<hr>
+<h3 id="day2"><a href="#day2" class="headerlink" title="day2"></a>day2</h3><ul>
+<li>学习内容：安装Visual Studio Code 并编写程序 ‘hello world’</li>
+<li>学习用时：1小时</li>
+</ul>
+<h4 id="收获总结-1"><a href="#收获总结-1" class="headerlink" title="收获总结"></a>收获总结</h4><ul>
+<li>Anaconda-Navigator 综合了数个python编译器</li>
+<li>Visual Studio Code适合快速编译python shell内容，界面视觉效果较好。Spyder适合做短代码测试，界面一般</li>
+<li>Visual Studio Cose 和 Spyder 保存的代码可以自动同步，方便转换</li>
+<li>在python shell中需要print将数值显示，否则默认隐藏</li>
+</ul>
+<h4 id="遇到的难点与问题（是否解决）-1"><a href="#遇到的难点与问题（是否解决）-1" class="headerlink" title="遇到的难点与问题（是否解决）"></a>遇到的难点与问题（是否解决）</h4><ul>
+<li>Visual Studio Code 安装以及配置问题（已经解决）</li>
+<li>Visual Studio Code 界面熟悉 （已经解决）</li>
+</ul>
+<hr>
+<h3 id="day3"><a href="#day3" class="headerlink" title="day3"></a>day3</h3><ul>
+<li>学习内容： 编写计算器</li>
+<li>学习用时：0.5小时</li>
+</ul>
+<h4 id="收获总结-2"><a href="#收获总结-2" class="headerlink" title="收获总结"></a>收获总结</h4><ul>
+<li>以try except保证输入是数字</li>
+</ul>
+<h4 id="遇到的难点与问题（是否解决）-2"><a href="#遇到的难点与问题（是否解决）-2" class="headerlink" title="遇到的难点与问题（是否解决）"></a>遇到的难点与问题（是否解决）</h4><ul>
+<li>无</li>
+</ul>
+<hr>
+<h3 id="day4"><a href="#day4" class="headerlink" title="day4"></a>day4</h3><ul>
+<li>学习内容： 打印99乘法表</li>
+<li>学习用时：0.5小时</li>
+</ul>
+<h4 id="收获总结-3"><a href="#收获总结-3" class="headerlink" title="收获总结"></a>收获总结</h4><ul>
+<li>print时以’/t’控制同行空格打印</li>
+<li>print时以’’换新的一行</li>
+</ul>
+<h4 id="遇到的难点与问题（是否解决）-3"><a href="#遇到的难点与问题（是否解决）-3" class="headerlink" title="遇到的难点与问题（是否解决）"></a>遇到的难点与问题（是否解决）</h4><ul>
+<li>无</li>
+</ul>
+<hr>
+<h3 id="day5"><a href="#day5" class="headerlink" title="day5"></a>day5</h3><ul>
+<li>学习内容： 字符串，list，字典操作</li>
+<li>学习用时：2小时</li>
+</ul>
+<h4 id="收获总结-4"><a href="#收获总结-4" class="headerlink" title="收获总结"></a>收获总结</h4><ul>
+<li>list操作可采用内嵌函数进行</li>
+<li>英文分词可采用re包，re.split进行</li>
+<li>re.split时需要注意去除特殊符号</li>
+<li>字典的排序采用sorted(X.items(),key=lambda X:X[1],reverse=True)</li>
+</ul>
+<h4 id="遇到的难点与问题（是否解决）-4"><a href="#遇到的难点与问题（是否解决）-4" class="headerlink" title="遇到的难点与问题（是否解决）"></a>遇到的难点与问题（是否解决）</h4><ul>
+<li>无</li>
+</ul>
+<hr>
+<h3 id="day6"><a href="#day6" class="headerlink" title="day6"></a>day6</h3><ul>
+<li>学习内容：词频统计以及注释</li>
+<li>学习用时：3小时</li>
+</ul>
+<h4 id="收获总结-5"><a href="#收获总结-5" class="headerlink" title="收获总结"></a>收获总结</h4><ul>
+<li>使用符号’#’进行注释，规则为解释代码目的写在代码前一行，解释变量现在代码同行</li>
+<li>汉语分词逻辑与英语不同，无空格区分，故无法采用re.split</li>
+<li>汉语可使用list进行分字，再删除后续标点符号</li>
+</ul>
+<h4 id="遇到的难点与问题（是否解决）-5"><a href="#遇到的难点与问题（是否解决）-5" class="headerlink" title="遇到的难点与问题（是否解决）"></a>遇到的难点与问题（是否解决）</h4><ul>
+<li>无</li>
+</ul>
+<hr>
+<h3 id="day7"><a href="#day7" class="headerlink" title="day7"></a>day7</h3><ul>
+<li>学习内容： 模块及调用</li>
+<li>学习用时：3小时</li>
+</ul>
+<h4 id="收获总结-6"><a href="#收获总结-6" class="headerlink" title="收获总结"></a>收获总结</h4><ul>
+<li>模块调用同样采用import</li>
+<li>区分中英文需要先将字符串转为utf-8，分别取其中中英文赋值范围（可与网页搜索），再转换成原字符串</li>
+<li>字符串生成需要采用生成器</li>
+</ul>
+<h4 id="遇到的难点与问题（是否解决）-6"><a href="#遇到的难点与问题（是否解决）-6" class="headerlink" title="遇到的难点与问题（是否解决）"></a>遇到的难点与问题（是否解决）</h4><ul>
+<li>中英文区分问题（已解决）</li>
+</ul>
+<hr>
+<h3 id="day8"><a href="#day8" class="headerlink" title="day8"></a>day8</h3><ul>
+<li>学习内容： try except，final，raise的理解及应用</li>
+<li>学习用时：0.5小时</li>
+</ul>
+<h4 id="收获总结-7"><a href="#收获总结-7" class="headerlink" title="收获总结"></a>收获总结</h4><ul>
+<li>通过try except避免error使得程序继续运行</li>
+</ul>
+<h4 id="遇到的难点与问题（是否解决）-7"><a href="#遇到的难点与问题（是否解决）-7" class="headerlink" title="遇到的难点与问题（是否解决）"></a>遇到的难点与问题（是否解决）</h4><ul>
+<li>无</li>
+</ul>
+<hr>
+<h3 id="day9"><a href="#day9" class="headerlink" title="day9"></a>day9</h3><ul>
+<li>学习内容： Counter函数的调用和词频统计</li>
+<li>学习用时：1.5小时</li>
+</ul>
+<h4 id="收获总结-8"><a href="#收获总结-8" class="headerlink" title="收获总结"></a>收获总结</h4><ul>
+<li>import文件时路径是关键因素</li>
+<li>路径分绝对路径和相对路径</li>
+<li>Counter函数的调用和dict统计的对比并未有明显优势</li>
+</ul>
+<h4 id="遇到的难点与问题（是否解决）-8"><a href="#遇到的难点与问题（是否解决）-8" class="headerlink" title="遇到的难点与问题（是否解决）"></a>遇到的难点与问题（是否解决）</h4><ul>
+<li>无</li>
+</ul>
+<hr>
+<h3 id="day10"><a href="#day10" class="headerlink" title="day10"></a>day10</h3><ul>
+<li>学习内容： jieba，第三方模块的安装和调用</li>
+<li>学习用时：2小时</li>
+</ul>
+<h4 id="收获总结-9"><a href="#收获总结-9" class="headerlink" title="收获总结"></a>收获总结</h4><ul>
+<li>通过jieba进行词频统计</li>
+<li>jieba输出为不可见的list形式</li>
+</ul>
+<h4 id="遇到的难点与问题（是否解决）-9"><a href="#遇到的难点与问题（是否解决）-9" class="headerlink" title="遇到的难点与问题（是否解决）"></a>遇到的难点与问题（是否解决）</h4><ul>
+<li>中文分词问题（已解决）</li>
+</ul>
+<hr>
+<h3 id="day11"><a href="#day11" class="headerlink" title="day11"></a>day11</h3><ul>
+<li>学习内容：  yagmail(邮箱库)、 requests(⽹网络请求库)和 pyquery使用</li>
+<li>学习用时：4小时</li>
+</ul>
+<h4 id="收获总结-10"><a href="#收获总结-10" class="headerlink" title="收获总结"></a>收获总结</h4><ul>
+<li>邮件发送前邮箱需要授权Pop/SMTP</li>
+<li>授权后以授权码代替密码</li>
+<li>getpass默认隐藏密码，输入不可见</li>
+<li>yagmail.SMTP()中host需要输入，否则出现超时错误</li>
+</ul>
+<h4 id="遇到的难点与问题（是否解决）-10"><a href="#遇到的难点与问题（是否解决）-10" class="headerlink" title="遇到的难点与问题（是否解决）"></a>遇到的难点与问题（是否解决）</h4><ul>
+<li>邮件发送问题，网络设置（已解决）</li>
+</ul>
+<hr>
+<h3 id="day12"><a href="#day12" class="headerlink" title="day12"></a>day12</h3><ul>
+<li>学习内容： 微信自动聊天程序wxpy使用</li>
+<li>学习用时：3小时</li>
+</ul>
+<h4 id="收获总结-11"><a href="#收获总结-11" class="headerlink" title="收获总结"></a>收获总结</h4><ul>
+<li>微信外链的使用</li>
+</ul>
+<h4 id="遇到的难点与问题（是否解决）-11"><a href="#遇到的难点与问题（是否解决）-11" class="headerlink" title="遇到的难点与问题（是否解决）"></a>遇到的难点与问题（是否解决）</h4><ul>
+<li>微信被封问题</li>
+</ul>
+<hr>
+<h3 id="day13"><a href="#day13" class="headerlink" title="day13"></a>day13</h3><ul>
+<li>学习内容： matplotlib，numpy的使用</li>
+<li>学习用时：2小时</li>
+</ul>
+<h4 id="收获总结-12"><a href="#收获总结-12" class="headerlink" title="收获总结"></a>收获总结</h4><ul>
+<li>matplotlib不支持中文，会显示乱码。</li>
+<li>通过代码”lt.rcParams[‘font.family’] = [‘sans-serif’]<br>  plt.rcParams[‘font.sans-serif’] = [‘SimHei’]”以允许标题等采用中文</li>
+</ul>
+<h4 id="遇到的难点与问题（是否解决）-12"><a href="#遇到的难点与问题（是否解决）-12" class="headerlink" title="遇到的难点与问题（是否解决）"></a>遇到的难点与问题（是否解决）</h4><ul>
+<li>无</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+        
+        <div class="post-tags">
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+            <a href="/tags/自学营/" rel="tag"># 自学营</a>
+          
+            <a href="/tags/学习心得/" rel="tag"># 学习心得</a>
+          
+        </div>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+              <a href="/学习心得/1901100231-自学训练营18群-Python入门学习心得/" rel="next" title="1901100231-自学训练营18群-Python入门学习心得">
+                <i class="fa fa-chevron-left"></i> 1901100231-自学训练营18群-Python入门学习心得
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+              <a href="/学习心得/1901100240-自学训练营学习19群-python入门14天总结/" rel="prev" title="1901100240-自学训练营学习19群-python入门14天总结">
+                1901100240-自学训练营学习19群-python入门14天总结 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    
+  <div class="comments" id="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+  
+
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">自学营团队</p>
+  <div class="site-description motion-element" itemprop="description">该博客用于收录自学营学员在学习过程中的笔记，包括学习心得、总结、记录解决问题的过程等。。。</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">130</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">64</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#学员信息"><span class="nav-number">1.</span> <span class="nav-text">学员信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day1"><span class="nav-number">2.</span> <span class="nav-text">day1</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#收获总结"><span class="nav-number">2.1.</span> <span class="nav-text">收获总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到的难点与问题（是否解决）"><span class="nav-number">2.2.</span> <span class="nav-text">遇到的难点与问题（是否解决）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day2"><span class="nav-number">3.</span> <span class="nav-text">day2</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#收获总结-1"><span class="nav-number">3.1.</span> <span class="nav-text">收获总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到的难点与问题（是否解决）-1"><span class="nav-number">3.2.</span> <span class="nav-text">遇到的难点与问题（是否解决）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day3"><span class="nav-number">4.</span> <span class="nav-text">day3</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#收获总结-2"><span class="nav-number">4.1.</span> <span class="nav-text">收获总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到的难点与问题（是否解决）-2"><span class="nav-number">4.2.</span> <span class="nav-text">遇到的难点与问题（是否解决）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day4"><span class="nav-number">5.</span> <span class="nav-text">day4</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#收获总结-3"><span class="nav-number">5.1.</span> <span class="nav-text">收获总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到的难点与问题（是否解决）-3"><span class="nav-number">5.2.</span> <span class="nav-text">遇到的难点与问题（是否解决）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day5"><span class="nav-number">6.</span> <span class="nav-text">day5</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#收获总结-4"><span class="nav-number">6.1.</span> <span class="nav-text">收获总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到的难点与问题（是否解决）-4"><span class="nav-number">6.2.</span> <span class="nav-text">遇到的难点与问题（是否解决）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day6"><span class="nav-number">7.</span> <span class="nav-text">day6</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#收获总结-5"><span class="nav-number">7.1.</span> <span class="nav-text">收获总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到的难点与问题（是否解决）-5"><span class="nav-number">7.2.</span> <span class="nav-text">遇到的难点与问题（是否解决）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day7"><span class="nav-number">8.</span> <span class="nav-text">day7</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#收获总结-6"><span class="nav-number">8.1.</span> <span class="nav-text">收获总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到的难点与问题（是否解决）-6"><span class="nav-number">8.2.</span> <span class="nav-text">遇到的难点与问题（是否解决）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day8"><span class="nav-number">9.</span> <span class="nav-text">day8</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#收获总结-7"><span class="nav-number">9.1.</span> <span class="nav-text">收获总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到的难点与问题（是否解决）-7"><span class="nav-number">9.2.</span> <span class="nav-text">遇到的难点与问题（是否解决）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day9"><span class="nav-number">10.</span> <span class="nav-text">day9</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#收获总结-8"><span class="nav-number">10.1.</span> <span class="nav-text">收获总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到的难点与问题（是否解决）-8"><span class="nav-number">10.2.</span> <span class="nav-text">遇到的难点与问题（是否解决）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day10"><span class="nav-number">11.</span> <span class="nav-text">day10</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#收获总结-9"><span class="nav-number">11.1.</span> <span class="nav-text">收获总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到的难点与问题（是否解决）-9"><span class="nav-number">11.2.</span> <span class="nav-text">遇到的难点与问题（是否解决）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day11"><span class="nav-number">12.</span> <span class="nav-text">day11</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#收获总结-10"><span class="nav-number">12.1.</span> <span class="nav-text">收获总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到的难点与问题（是否解决）-10"><span class="nav-number">12.2.</span> <span class="nav-text">遇到的难点与问题（是否解决）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day12"><span class="nav-number">13.</span> <span class="nav-text">day12</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#收获总结-11"><span class="nav-number">13.1.</span> <span class="nav-text">收获总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到的难点与问题（是否解决）-11"><span class="nav-number">13.2.</span> <span class="nav-text">遇到的难点与问题（是否解决）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day13"><span class="nav-number">14.</span> <span class="nav-text">day13</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#收获总结-12"><span class="nav-number">14.1.</span> <span class="nav-text">收获总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到的难点与问题（是否解决）-12"><span class="nav-number">14.2.</span> <span class="nav-text">遇到的难点与问题（是否解决）</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">自学营团队</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.2.0</div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+  
+  <script src="/js/affix.js?v=7.2.0"></script>
+  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
+
+  
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.2.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://selfteaching-learning-notes.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://selfteaching-learning-notes.github.io/学习心得/1901100240-自学训练营学习19群-python入门打卡心得/";
+    this.page.identifier = "学习心得/1901100240-自学训练营学习19群-python入门打卡心得/";
+    this.page.title = '1901100240-自学训练营学习19群-python入门打卡心得';};
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://selfteaching-learning-notes.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+    window.addEventListener('load', loadComments, false);
+  
+</script>
+
+
+</body>
+</html>

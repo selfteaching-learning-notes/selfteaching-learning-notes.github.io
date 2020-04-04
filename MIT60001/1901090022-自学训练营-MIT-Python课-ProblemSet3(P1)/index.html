@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":"enable","trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    search: {
+      root: '/',
+      path: 'search.xml'
+    },
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="打卡记录 学号：1901090022 学习课程：Introduction to Computer Science and Programming in Python 学习内容：Problem Set 3 (ZIP) 打卡天数：D08  作业(Problem 1: Word scores):The first step is to implement a function that calculat">
+<meta name="keywords" content="Python,MIT,学习打卡">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1901090022-MIT60001-ProblemSet3(P1)">
+<meta property="og:url" content="https://selfteaching-learning-notes.github.io/MIT60001/1901090022-自学训练营-MIT-Python课-ProblemSet3(P1)/index.html">
+<meta property="og:site_name" content="自学营学员笔记">
+<meta property="og:description" content="打卡记录 学号：1901090022 学习课程：Introduction to Computer Science and Programming in Python 学习内容：Problem Set 3 (ZIP) 打卡天数：D08  作业(Problem 1: Word scores):The first step is to implement a function that calculat">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-04T08:12:09.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="1901090022-MIT60001-ProblemSet3(P1)">
+<meta name="twitter:description" content="打卡记录 学号：1901090022 学习课程：Introduction to Computer Science and Programming in Python 学习内容：Problem Set 3 (ZIP) 打卡天数：D08  作业(Problem 1: Word scores):The first step is to implement a function that calculat">
+  <link rel="alternate" href="/atom.xml" title="自学营学员笔记" type="application/atom+xml">
+  <link rel="canonical" href="https://selfteaching-learning-notes.github.io/MIT60001/1901090022-自学训练营-MIT-Python课-ProblemSet3(P1)/">
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>1901090022-MIT60001-ProblemSet3(P1) | 自学营学员笔记</title>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144933018-1"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-144933018-1');
+    }
+  </script>
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">自学营学员笔记</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">总结、记录、打卡、沉淀</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-search">
+          <a href="javascript:;" class="popup-trigger">
+          
+            <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>搜索</a>
+        </li>
+      
+    </ul>
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+    </div>
+</nav>
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://selfteaching-learning-notes.github.io/MIT60001/1901090022-自学训练营-MIT-Python课-ProblemSet3(P1)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="自学营团队">
+      <meta itemprop="description" content="该博客用于收录自学营学员在学习过程中的笔记，包括学习心得、总结、记录解决问题的过程等。。。">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="自学营学员笔记">
+    </span>
+      <header class="post-header">
+
+        
+          <h2 class="post-title" itemprop="name headline">1901090022-MIT60001-ProblemSet3(P1)
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-02 00:00:00" itemprop="dateCreated datePublished" datetime="2019-08-02T00:00:00+08:00">2019-08-02</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-04 16:12:09" itemprop="dateModified" datetime="2019-08-04T16:12:09+08:00">2019-08-04</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/MIT60001/" itemprop="url" rel="index"><span itemprop="name">MIT60001</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="fa fa-comment-o"></i>
+    </span>
+    
+      <span class="post-meta-item-text">评论数：</span>
+    
+  
+    <a href="/MIT60001/1901090022-自学训练营-MIT-Python课-ProblemSet3(P1)/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="MIT60001/1901090022-自学训练营-MIT-Python课-ProblemSet3(P1)/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          <br/>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="打卡记录"><a href="#打卡记录" class="headerlink" title="打卡记录"></a>打卡记录</h3><ul>
+<li>学号：1901090022</li>
+<li>学习课程：<a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/" target="_blank" rel="noopener">Introduction to Computer Science and Programming in Python</a></li>
+<li>学习内容：<a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/assignments/PS3.zip" target="_blank" rel="noopener">Problem Set 3 (ZIP)</a></li>
+<li>打卡天数：D08</li>
+</ul>
+<h3 id="作业-Problem-1-Word-scores"><a href="#作业-Problem-1-Word-scores" class="headerlink" title="作业(Problem 1: Word scores):"></a>作业(Problem 1: Word scores):</h3><p>The first step is to implement a function that calculates the score for a single word. Fill in the code for get_word_score in ps3.py according to the function specifications.</p>
+<p>As a reminder, here are the rules for scoring a word:</p>
+<ul>
+<li>The score for a word is the product of two components:<ul>
+<li>First component: the sum of the points for letters in the word.</li>
+<li>Second component: either [7 * word_length - 3 * (n-word_length)] or 1, whichever value is greater, where:<ul>
+<li>word_length is the number of letters used in the word</li>
+<li>n is the number of letters available in the current hand</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>You should use the SCRABBLE_LETTER_VALUES dictionary defined at the top of ps3.py. Do not assume that there are always 7 letters in a hand! The parameter n is the total number of letters in the hand when the word was entered.</p>
+<p>Finally, you may find the str.lower function helpful:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s = “My string”</span><br><span class="line">print(s.lower())</span><br><span class="line">&gt;&gt;&gt;&gt; “my string”</span><br></pre></td></tr></table></figure>
+
+<p>If you don’t know what this does you could try typing help(str.lower) in your Spyder shell to see the documentation for the functions.</p>
+<h3 id="作业心得"><a href="#作业心得" class="headerlink" title="作业心得"></a>作业心得</h3><p>这里有个2关键点：</p>
+<ol>
+<li>[7 * word_length - 3 * (n-word_length)]，如果计算值小于0，则 Second component 为1</li>
+<li>一定要认真看 Introduction章节的Scoring部分，从中得知这道题是要计算 First component 和 Second componen 相乘的结果</li>
+<li>要认真看 test_ps3.py 的 test_get_word_score 函数，参考这个函数可以知道如何测试</li>
+</ol>
+<h4 id="关键函数的理解"><a href="#关键函数的理解" class="headerlink" title="关键函数的理解"></a>关键函数的理解</h4><p>deal_hand(n):<br>该函数返回一个字典类型数据，包括 ceil(n/3) 个元音和若干个辅音与对应的次数，元音与辅音可重复</p>
+<p>update_hand(hand, word):<br>将存在 hand字典中 key 为 word 的元素删除并返回，但不修改原 hand 变量</p>
+<p>学习的新函数：</p>
+<ul>
+<li>Python ceil 函数:向上取整; <a href="https://www.runoob.com/python/func-number-ceil.html" target="_blank" rel="noopener">ceil()</a></li>
+<li>Python choice 函数: 从列表、元组、字符串中随机选择一个元素;<a href="https://www.runoob.com/python/func-number-choice.html" target="_blank" rel="noopener">choice</a></li>
+</ul>
+<h3 id="程序代码"><a href="#程序代码" class="headerlink" title="程序代码"></a>程序代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 6.0001 Problem Set 3</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># The 6.0001 Word Game</span></span><br><span class="line"><span class="comment"># Created by: Kevin Luu &lt;luuk&gt; and Jenna Wiens &lt;jwiens&gt;</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Name          : &lt;your name&gt;</span></span><br><span class="line"><span class="comment"># Collaborators : &lt;your collaborators&gt;</span></span><br><span class="line"><span class="comment"># Time spent    : &lt;total time&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> string</span><br><span class="line"></span><br><span class="line">VOWELS = <span class="string">'aeiou'</span></span><br><span class="line">CONSONANTS = <span class="string">'bcdfghjklmnpqrstvwxyz'</span></span><br><span class="line">HAND_SIZE = <span class="number">7</span></span><br><span class="line"></span><br><span class="line">SCRABBLE_LETTER_VALUES = &#123;</span><br><span class="line">    <span class="string">'a'</span>: <span class="number">1</span>, <span class="string">'b'</span>: <span class="number">3</span>, <span class="string">'c'</span>: <span class="number">3</span>, <span class="string">'d'</span>: <span class="number">2</span>, <span class="string">'e'</span>: <span class="number">1</span>, <span class="string">'f'</span>: <span class="number">4</span>, <span class="string">'g'</span>: <span class="number">2</span>, <span class="string">'h'</span>: <span class="number">4</span>, <span class="string">'i'</span>: <span class="number">1</span>, <span class="string">'j'</span>: <span class="number">8</span>, <span class="string">'k'</span>: <span class="number">5</span>, <span class="string">'l'</span>: <span class="number">1</span>, <span class="string">'m'</span>: <span class="number">3</span>, <span class="string">'n'</span>: <span class="number">1</span>, <span class="string">'o'</span>: <span class="number">1</span>, <span class="string">'p'</span>: <span class="number">3</span>, <span class="string">'q'</span>: <span class="number">10</span>, <span class="string">'r'</span>: <span class="number">1</span>, <span class="string">'s'</span>: <span class="number">1</span>, <span class="string">'t'</span>: <span class="number">1</span>, <span class="string">'u'</span>: <span class="number">1</span>, <span class="string">'v'</span>: <span class="number">4</span>, <span class="string">'w'</span>: <span class="number">4</span>, <span class="string">'x'</span>: <span class="number">8</span>, <span class="string">'y'</span>: <span class="number">4</span>, <span class="string">'z'</span>: <span class="number">10</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># -----------------------------------</span></span><br><span class="line"><span class="comment"># Helper code</span></span><br><span class="line"><span class="comment"># (you don't need to understand this helper code)</span></span><br><span class="line"></span><br><span class="line">WORDLIST_FILENAME = <span class="string">"words.txt"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">load_words</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    Returns a list of valid words. Words are strings of lowercase letters.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Depending on the size of the word list, this function may</span></span><br><span class="line"><span class="string">    take a while to finish.</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line"></span><br><span class="line">    print(<span class="string">"Loading word list from file..."</span>)</span><br><span class="line">    <span class="comment"># inFile: file</span></span><br><span class="line">    inFile = open(WORDLIST_FILENAME, <span class="string">'r'</span>)</span><br><span class="line">    <span class="comment"># wordlist: list of strings</span></span><br><span class="line">    wordlist = []</span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> inFile:</span><br><span class="line">        wordlist.append(line.strip().lower())</span><br><span class="line">    print(<span class="string">"  "</span>, len(wordlist), <span class="string">"words loaded."</span>)</span><br><span class="line">    <span class="keyword">return</span> wordlist</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_frequency_dict</span><span class="params">(sequence)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    Returns a dictionary where the keys are elements of the sequence</span></span><br><span class="line"><span class="string">    and the values are integer counts, for the number of times that</span></span><br><span class="line"><span class="string">    an element is repeated in the sequence.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    sequence: string or list</span></span><br><span class="line"><span class="string">    return: dictionary</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># freqs: dictionary (element_type -&gt; int)</span></span><br><span class="line">    freq = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> sequence:</span><br><span class="line">        freq[x] = freq.get(x,<span class="number">0</span>) + <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> freq</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># (end of helper code)</span></span><br><span class="line"><span class="comment"># -----------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Problem #1: Scoring a word</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_word_score</span><span class="params">(word, n)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    Returns the score for a word. Assumes the word is a</span></span><br><span class="line"><span class="string">    valid word.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    You may assume that the input word is always either a string of letters,</span></span><br><span class="line"><span class="string">    or the empty string "". You may not assume that the string will only contain</span></span><br><span class="line"><span class="string">    lowercase letters, so you will have to handle uppercase and mixed case strings</span></span><br><span class="line"><span class="string">    appropriately.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    The score for a word is the product of two components:</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    The first component is the sum of the points for letters in the word.</span></span><br><span class="line"><span class="string">    The second component is the larger of:</span></span><br><span class="line"><span class="string">            1, or</span></span><br><span class="line"><span class="string">            7*wordlen - 3*(n-wordlen), where wordlen is the length of the word</span></span><br><span class="line"><span class="string">            and n is the hand length when the word was played</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Letters are scored as in Scrabble; A is worth 1, B is</span></span><br><span class="line"><span class="string">    worth 3, C is worth 3, D is worth 2, E is worth 1, and so on.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    word: string</span></span><br><span class="line"><span class="string">    n: int &gt;= 0</span></span><br><span class="line"><span class="string">    returns: int &gt;= 0</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    word = word.lower()</span><br><span class="line"></span><br><span class="line">    first_component = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> letter <span class="keyword">in</span> word:</span><br><span class="line">        first_component += SCRABBLE_LETTER_VALUES[letter]</span><br><span class="line"></span><br><span class="line">    second_component = <span class="number">7</span> * len(word) - <span class="number">3</span> * (n - len(word))</span><br><span class="line">    <span class="keyword">if</span> (second_component &lt; <span class="number">1</span>):</span><br><span class="line">        second_component = <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> first_component * second_component</span><br><span class="line"></span><br><span class="line">    <span class="comment"># "it"  7*2-3*(7-2) = 14-15 = -1</span></span><br><span class="line">    <span class="comment"># "was" 7*3-3*(7-3) = 21-12=9+6</span></span><br><span class="line">    <span class="comment"># [7 * word_length - 3 * (n-word_length)]</span></span><br><span class="line">    <span class="comment"># pass  # TO DO... Remove this line when you implement this function</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Make sure you understand how this function works and what it does!</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">display_hand</span><span class="params">(hand)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    Displays the letters currently in the hand.</span></span><br><span class="line"><span class="string">    显示当前手里的字母</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    For example:</span></span><br><span class="line"><span class="string">       display_hand(&#123;'a':1, 'x':2, 'l':3, 'e':1&#125;)</span></span><br><span class="line"><span class="string">    Should print out something like:</span></span><br><span class="line"><span class="string">       a x x l l l e</span></span><br><span class="line"><span class="string">    The order of the letters is unimportant.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    hand: dictionary (string -&gt; int)</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> letter <span class="keyword">in</span> hand.keys():</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(hand[letter]):</span><br><span class="line">             print(letter, end=<span class="string">' '</span>)      <span class="comment"># print all on the same line</span></span><br><span class="line">    print()                              <span class="comment"># print an empty line</span></span><br><span class="line"></span><br><span class="line">display_hand(&#123;<span class="string">'a'</span>:<span class="number">1</span>, <span class="string">'x'</span>:<span class="number">2</span>, <span class="string">'l'</span>:<span class="number">3</span>, <span class="string">'e'</span>:<span class="number">1</span>&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Make sure you understand how this function works and what it does!</span></span><br><span class="line"><span class="comment"># You will need to modify this for Problem #4.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">deal_hand</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    Returns a random hand containing n lowercase letters.</span></span><br><span class="line"><span class="string">    ceil(n/3) letters in the hand should be VOWELS (note,</span></span><br><span class="line"><span class="string">    ceil(n/3) means the smallest integer not less than n/3).</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Hands are represented as dictionaries. The keys are</span></span><br><span class="line"><span class="string">    letters and the values are the number of times the</span></span><br><span class="line"><span class="string">    particular letter is repeated in that hand.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    n: int &gt;= 0</span></span><br><span class="line"><span class="string">    returns: dictionary (string -&gt; int)</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line"></span><br><span class="line">    hand=&#123;&#125;</span><br><span class="line">    num_vowels = int(math.ceil(n / <span class="number">3</span>))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(num_vowels):</span><br><span class="line">        x = random.choice(VOWELS)</span><br><span class="line">        hand[x] = hand.get(x, <span class="number">0</span>) + <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(num_vowels, n):    </span><br><span class="line">        x = random.choice(CONSONANTS)</span><br><span class="line">        hand[x] = hand.get(x, <span class="number">0</span>) + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> hand</span><br><span class="line"></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Problem #2: Update a hand by removing letters</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">update_hand</span><span class="params">(hand, word)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    Does NOT assume that hand contains every letter in word at least as</span></span><br><span class="line"><span class="string">    many times as the letter appears in word. Letters in word that don't</span></span><br><span class="line"><span class="string">    appear in hand should be ignored. Letters that appear in word more times</span></span><br><span class="line"><span class="string">    than in hand should never result in a negative count; instead, set the</span></span><br><span class="line"><span class="string">    count in the returned hand to 0 (or remove the letter from the</span></span><br><span class="line"><span class="string">    dictionary, depending on how your code is structured).</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Updates the hand: uses up the letters in the given word</span></span><br><span class="line"><span class="string">    and returns the new hand, without those letters in it.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Has no side effects: does not modify hand.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    word: string</span></span><br><span class="line"><span class="string">    hand: dictionary (string -&gt; int)    </span></span><br><span class="line"><span class="string">    returns: dictionary (string -&gt; int)</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">pass</span>  <span class="comment"># TO DO... Remove this line when you implement this function</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Problem #3: Test word validity</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_valid_word</span><span class="params">(word, hand, word_list)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    Returns True if word is in the word_list and is entirely</span></span><br><span class="line"><span class="string">    composed of letters in the hand. Otherwise, returns False.</span></span><br><span class="line"><span class="string">    Does not mutate hand or word_list.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    word: string</span></span><br><span class="line"><span class="string">    hand: dictionary (string -&gt; int)</span></span><br><span class="line"><span class="string">    word_list: list of lowercase strings</span></span><br><span class="line"><span class="string">    returns: boolean</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">pass</span>  <span class="comment"># TO DO... Remove this line when you implement this function</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Problem #5: Playing a hand</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calculate_handlen</span><span class="params">(hand)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    Returns the length (number of letters) in the current hand.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    hand: dictionary (string-&gt; int)</span></span><br><span class="line"><span class="string">    returns: integer</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">pass</span>  <span class="comment"># TO DO... Remove this line when you implement this function</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">play_hand</span><span class="params">(hand, word_list)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    Allows the user to play the given hand, as follows:</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    * The hand is displayed.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    * The user may input a word.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    * When any word is entered (valid or invalid), it uses up letters</span></span><br><span class="line"><span class="string">      from the hand.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    * An invalid word is rejected, and a message is displayed asking</span></span><br><span class="line"><span class="string">      the user to choose another word.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    * After every valid word: the score for that word is displayed,</span></span><br><span class="line"><span class="string">      the remaining letters in the hand are displayed, and the user</span></span><br><span class="line"><span class="string">      is asked to input another word.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    * The sum of the word scores is displayed when the hand finishes.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    * The hand finishes when there are no more unused letters.</span></span><br><span class="line"><span class="string">      The user can also finish playing the hand by inputing two</span></span><br><span class="line"><span class="string">      exclamation points (the string '!!') instead of a word.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">      hand: dictionary (string -&gt; int)</span></span><br><span class="line"><span class="string">      word_list: list of lowercase strings</span></span><br><span class="line"><span class="string">      returns: the total score for the hand</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># BEGIN PSEUDOCODE &lt;-- Remove this comment when you implement this function</span></span><br><span class="line">    <span class="comment"># Keep track of the total score</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># As long as there are still letters left in the hand:</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># Display the hand</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># Ask user for input</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># If the input is two exclamation points:</span></span><br><span class="line"></span><br><span class="line">            <span class="comment"># End the game (break out of the loop)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment"># Otherwise (the input is not two exclamation points):</span></span><br><span class="line"></span><br><span class="line">            <span class="comment"># If the word is valid:</span></span><br><span class="line"></span><br><span class="line">                <span class="comment"># Tell the user how many points the word earned,</span></span><br><span class="line">                <span class="comment"># and the updated total score</span></span><br><span class="line"></span><br><span class="line">            <span class="comment"># Otherwise (the word is not valid):</span></span><br><span class="line">                <span class="comment"># Reject invalid word (print a message)</span></span><br><span class="line"></span><br><span class="line">            <span class="comment"># update the user's hand by removing the letters of their inputted word</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Game is over (user entered '!!' or ran out of letters),</span></span><br><span class="line">    <span class="comment"># so tell user the total score</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Return the total score as result of function</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Problem #6: Playing a game</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># procedure you will use to substitute a letter in a hand</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">substitute_hand</span><span class="params">(hand, letter)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    Allow the user to replace all copies of one letter in the hand (chosen by user)</span></span><br><span class="line"><span class="string">    with a new letter chosen from the VOWELS and CONSONANTS at random. The new letter</span></span><br><span class="line"><span class="string">    should be different from user's choice, and should not be any of the letters</span></span><br><span class="line"><span class="string">    already in the hand.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    If user provide a letter not in the hand, the hand should be the same.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Has no side effects: does not mutate hand.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    For example:</span></span><br><span class="line"><span class="string">        substitute_hand(&#123;'h':1, 'e':1, 'l':2, 'o':1&#125;, 'l')</span></span><br><span class="line"><span class="string">    might return:</span></span><br><span class="line"><span class="string">        &#123;'h':1, 'e':1, 'o':1, 'x':2&#125; -&gt; if the new letter is 'x'</span></span><br><span class="line"><span class="string">    The new letter should not be 'h', 'e', 'l', or 'o' since those letters were</span></span><br><span class="line"><span class="string">    already in the hand.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    hand: dictionary (string -&gt; int)</span></span><br><span class="line"><span class="string">    letter: string</span></span><br><span class="line"><span class="string">    returns: dictionary (string -&gt; int)</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">pass</span>  <span class="comment"># TO DO... Remove this line when you implement this function</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">play_game</span><span class="params">(word_list)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    Allow the user to play a series of hands</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    * Asks the user to input a total number of hands</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    * Accumulates the score for each hand into a total score for the</span></span><br><span class="line"><span class="string">      entire series</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    * For each hand, before playing, ask the user if they want to substitute</span></span><br><span class="line"><span class="string">      one letter for another. If the user inputs 'yes', prompt them for their</span></span><br><span class="line"><span class="string">      desired letter. This can only be done once during the game. Once the</span></span><br><span class="line"><span class="string">      substitue option is used, the user should not be asked if they want to</span></span><br><span class="line"><span class="string">      substitute letters in the future.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    * For each hand, ask the user if they would like to replay the hand.</span></span><br><span class="line"><span class="string">      If the user inputs 'yes', they will replay the hand and keep</span></span><br><span class="line"><span class="string">      the better of the two scores for that hand.  This can only be done once</span></span><br><span class="line"><span class="string">      during the game. Once the replay option is used, the user should not</span></span><br><span class="line"><span class="string">      be asked if they want to replay future hands. Replaying the hand does</span></span><br><span class="line"><span class="string">      not count as one of the total number of hands the user initially</span></span><br><span class="line"><span class="string">      wanted to play.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">            * Note: if you replay a hand, you do not get the option to substitute</span></span><br><span class="line"><span class="string">                    a letter - you must play whatever hand you just had.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    * Returns the total score for the series of hands</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    word_list: list of lowercase strings</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line"></span><br><span class="line">    print(<span class="string">"play_game not implemented."</span>) <span class="comment"># TO DO... Remove this line when you implement this function</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Build data structures used for entire session and play game</span></span><br><span class="line"><span class="comment"># Do not remove the "if __name__ == '__main__':" line - this code is executed</span></span><br><span class="line"><span class="comment"># when the program is run directly, instead of through an import statement</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    word_list = load_words()</span><br><span class="line">    play_game(word_list)</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+        
+        <div class="post-tags">
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+            <a href="/tags/MIT/" rel="tag"># MIT</a>
+          
+            <a href="/tags/学习打卡/" rel="tag"># 学习打卡</a>
+          
+        </div>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+              <a href="/自我介绍/1901030012-自学数据营-自我介绍/" rel="next" title="1901030012-自学数据营-自我介绍">
+                <i class="fa fa-chevron-left"></i> 1901030012-自学数据营-自我介绍
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+              <a href="/MIT60001/1901020043自学训练营MIT Python/" rel="prev" title="1901020043-MIT60001-LECTURE2">
+                1901020043-MIT60001-LECTURE2 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    
+  <div class="comments" id="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+  
+
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">自学营团队</p>
+  <div class="site-description motion-element" itemprop="description">该博客用于收录自学营学员在学习过程中的笔记，包括学习心得、总结、记录解决问题的过程等。。。</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">130</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">64</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#打卡记录"><span class="nav-number">1.</span> <span class="nav-text">打卡记录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#作业-Problem-1-Word-scores"><span class="nav-number">2.</span> <span class="nav-text">作业(Problem 1: Word scores):</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#作业心得"><span class="nav-number">3.</span> <span class="nav-text">作业心得</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关键函数的理解"><span class="nav-number">3.1.</span> <span class="nav-text">关键函数的理解</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#程序代码"><span class="nav-number">4.</span> <span class="nav-text">程序代码</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">自学营团队</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.2.0</div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+  
+  <script src="/js/affix.js?v=7.2.0"></script>
+  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
+
+  
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.2.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://selfteaching-learning-notes.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://selfteaching-learning-notes.github.io/MIT60001/1901090022-自学训练营-MIT-Python课-ProblemSet3(P1)/";
+    this.page.identifier = "MIT60001/1901090022-自学训练营-MIT-Python课-ProblemSet3(P1)/";
+    this.page.title = '1901090022-MIT60001-ProblemSet3(P1)';};
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://selfteaching-learning-notes.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+    window.addEventListener('load', loadComments, false);
+  
+</script>
+
+
+</body>
+</html>

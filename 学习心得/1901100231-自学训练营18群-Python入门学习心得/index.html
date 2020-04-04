@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":"enable","trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    search: {
+      root: '/',
+      path: 'search.xml'
+    },
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="学员信息 学号：1901100231 学习内容：Python入门   Python自学感悟 &amp;emsp;&amp;emsp;作为一名此前通过看书对C有过些许涉猎的程序菜鸟，我早已听闻Python的大名，但出于各种原因始终没能开始对Python的学习。作为一名准大学生，在这人生中少有的长假里，终于下定了决心，报了Python自学训练营开始了对Python的学习。&amp;emsp;&amp;emsp;市面上关于Python">
+<meta name="keywords" content="Python,自学营,学习心得">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1901100231-自学训练营18群-Python入门学习心得">
+<meta property="og:url" content="https://selfteaching-learning-notes.github.io/学习心得/1901100231-自学训练营18群-Python入门学习心得/index.html">
+<meta property="og:site_name" content="自学营学员笔记">
+<meta property="og:description" content="学员信息 学号：1901100231 学习内容：Python入门   Python自学感悟 &amp;emsp;&amp;emsp;作为一名此前通过看书对C有过些许涉猎的程序菜鸟，我早已听闻Python的大名，但出于各种原因始终没能开始对Python的学习。作为一名准大学生，在这人生中少有的长假里，终于下定了决心，报了Python自学训练营开始了对Python的学习。&amp;emsp;&amp;emsp;市面上关于Python">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-29T07:36:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="1901100231-自学训练营18群-Python入门学习心得">
+<meta name="twitter:description" content="学员信息 学号：1901100231 学习内容：Python入门   Python自学感悟 &amp;emsp;&amp;emsp;作为一名此前通过看书对C有过些许涉猎的程序菜鸟，我早已听闻Python的大名，但出于各种原因始终没能开始对Python的学习。作为一名准大学生，在这人生中少有的长假里，终于下定了决心，报了Python自学训练营开始了对Python的学习。&amp;emsp;&amp;emsp;市面上关于Python">
+  <link rel="alternate" href="/atom.xml" title="自学营学员笔记" type="application/atom+xml">
+  <link rel="canonical" href="https://selfteaching-learning-notes.github.io/学习心得/1901100231-自学训练营18群-Python入门学习心得/">
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>1901100231-自学训练营18群-Python入门学习心得 | 自学营学员笔记</title>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144933018-1"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-144933018-1');
+    }
+  </script>
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">自学营学员笔记</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">总结、记录、打卡、沉淀</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-search">
+          <a href="javascript:;" class="popup-trigger">
+          
+            <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>搜索</a>
+        </li>
+      
+    </ul>
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+    </div>
+</nav>
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://selfteaching-learning-notes.github.io/学习心得/1901100231-自学训练营18群-Python入门学习心得/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="自学营团队">
+      <meta itemprop="description" content="该博客用于收录自学营学员在学习过程中的笔记，包括学习心得、总结、记录解决问题的过程等。。。">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="自学营学员笔记">
+    </span>
+      <header class="post-header">
+
+        
+          <h2 class="post-title" itemprop="name headline">1901100231-自学训练营18群-Python入门学习心得
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-29 15:27:23 / 修改时间：15:36:19" itemprop="dateCreated datePublished" datetime="2019-08-29T15:27:23+08:00">2019-08-29</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习心得/" itemprop="url" rel="index"><span itemprop="name">学习心得</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="fa fa-comment-o"></i>
+    </span>
+    
+      <span class="post-meta-item-text">评论数：</span>
+    
+  
+    <a href="/学习心得/1901100231-自学训练营18群-Python入门学习心得/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="学习心得/1901100231-自学训练营18群-Python入门学习心得/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          <br/>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="学员信息"><a href="#学员信息" class="headerlink" title="学员信息"></a>学员信息</h3><ul>
+<li>学号：1901100231</li>
+<li>学习内容：Python入门</li>
+</ul>
+<hr>
+<h3 id="Python自学感悟"><a href="#Python自学感悟" class="headerlink" title="Python自学感悟"></a>Python自学感悟</h3><blockquote>
+<p>&emsp;&emsp;作为一名此前通过看书对C有过些许涉猎的程序菜鸟，我早已听闻Python的大名，但出于各种原因始终没能开始对Python的学习。作为一名准大学生，在这人生中少有的长假里，终于下定了决心，报了Python自学训练营开始了对Python的学习。<br>&emsp;&emsp;市面上关于Python学习的教材铺天盖地，颇有乱花渐欲迷人眼之感。那么，为什么要通过这种方式来学习呢？尤其是考虑到市面上的选择何其之多。选择这种方式的本意，只是出于对自身积极性的不自信，想借外在的监督督促自己完成对Python的学习。但是在具体的学习过程中，却产生了不少的感悟，收获了意外之喜。</p>
+</blockquote>
+<hr>
+<h4 id="“拼积木”"><a href="#“拼积木”" class="headerlink" title="“拼积木”"></a>“拼积木”</h4><ul>
+<li>编程是什么呢？编程语言，既然有语言二字，说白了功能就是用来交流。计算机的算力远超过人脑，而为了利用这强大的算力，我们必须和计算机进行交流，让不明白人类语言的计算机能够听从我们的命令，实现我们的目的。编程语言就是专门用于和计算机交流的语言，而利用这种语言的过程，可以简单看成是在“拼积木”。</li>
+<li>在自学营中，每一次的任务都要经由两个步骤完成：阅读参考资料，然后就参考资料的内容进行组合，直到实现任务目标。这一“拼积木”的过程看似稀松平常，毕竟我们日常生活中使用的语言也可以看作是一个个的词语由一定的语法规则拼搭出的“积木”。但是日常语言使用的频繁让我们忽略了这么一个事实：同样一个意思，用不同的语气、语速、语句表达，会有截然不同的效果，不恰当的表达方式有时还会弄巧成拙。很多人其实都知道这个道理，但是真正会在平日里关注这一点的人，除了行业要求或经历使然，又有多少是完全自觉地关注语言表达的效率和艺术呢？而自学过程中信息的极度简约——只有“积木块”，拼搭积木的方式要由学员自己独立思考，这就使得平日里被忽略的事物重新被我们所思考。</li>
+<li>在与计算机交流的过程中，我们写下的每一个语句都清晰地摆在面前，随时可供改进与修改。正如写作有助于将人脑中纷乱的思绪得以整理，编程这一对积木进行拼搭的过程不由得使我们开始思考，每一种拼搭方式的优与劣，每种完成积木拼搭的可能性。将任务像拼搭积木一样分割成小块分别解决，以及思考改进拼搭的方法，这是不仅有利于编程，还是能在日常生活中持续发挥作用的宝贵思维工具。</li>
+</ul>
+<hr>
+<h4 id="试探边界"><a href="#试探边界" class="headerlink" title="试探边界"></a>试探边界</h4><ul>
+<li>正如上文所说，编程可以被看做是一种积木的拼搭，只是缺少图纸，拼搭的效果完全取决于编程者本人。方法总比困难多，虽说很像是摸着石头过河，但迟早可以到达彼岸，只是耗时多少的问题。而在这一过程中，总少不了试探。对于编程来说，一次次的调试，都是为了最终掌握某语句用法必不可少的试探。</li>
+<li>相比于学习其他技能，编程的试错成本相当低，以至于自学者可以就参考资料中的例子进行大胆的猜想和尝试，直到最终摸清边界，掌握用法。这不仅适用于编程，学习其他技能也同样需要这样试错的心态。举个亲身经历的例子，我在学习游泳和骑自行车时，一开始总是束手束脚，但当我学会浮水，学会防止摔跤——最大化降低试探的成本之后，我便可以开始肆意的试错，直到最终掌握这两项技能的要领。生活，就是对世界的一次次试探，直到找到与外界和睦共处的那个舒适点啊。</li>
+</ul>
+<hr>
+<h4 id="以任务为中心"><a href="#以任务为中心" class="headerlink" title="以任务为中心"></a>以任务为中心</h4><ul>
+<li>Python语言本身自带的模块中有很多功能，这些功能林林总总，花样繁多。老实说，在具体开始动手尝试之前，看到这数目繁多的用法实在是令人不免有些头痛。此外，相较于程序调试，阅览各种模块各种函数的用法实在是枯燥得多。这个问题其实很好解决，因为编程语言学习的目的是使用，根据要完成的目的去寻找解决问题的方法是有趣得多也高效得多的学习方式。</li>
+<li>事实上，作为初学者，很多进阶的用法其实并没有必要掌握。有时候，对某种函数的部分掌<br>握就足以解决现有的问题。编程本身就是为了利用电脑的算力解决问题，只要有具体的问题，围绕解决问题展开对编程的学习，即使没有掌握百分百的技能，但也已培养了解决大多数问题的能力。这个世界有太多信息，远超人力所能掌握，有些函数、模块的用法若是从未遇到有特定任务需求，不能掌握也无伤大雅。学会做减法，能让很多事情变得更加轻松。就好像我们身为中国人，但不是所有方块字都要求必须掌握。翻开康熙字典，多的是真实存在但几乎从未被我们所知的汉字。</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+        
+        <div class="post-tags">
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+            <a href="/tags/自学营/" rel="tag"># 自学营</a>
+          
+            <a href="/tags/学习心得/" rel="tag"># 学习心得</a>
+          
+        </div>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+              <a href="/学习心得/1901090017-自学训练营8群-Python入门学习心得/" rel="next" title="1901090017-自学训练营8群-Python入门学习心得">
+                <i class="fa fa-chevron-left"></i> 1901090017-自学训练营8群-Python入门学习心得
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+              <a href="/学习心得/1901100240-自学训练营学习19群-python入门打卡心得/" rel="prev" title="1901100240-自学训练营学习19群-python入门打卡心得">
+                1901100240-自学训练营学习19群-python入门打卡心得 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    
+  <div class="comments" id="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+  
+
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">自学营团队</p>
+  <div class="site-description motion-element" itemprop="description">该博客用于收录自学营学员在学习过程中的笔记，包括学习心得、总结、记录解决问题的过程等。。。</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">130</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">64</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#学员信息"><span class="nav-number">1.</span> <span class="nav-text">学员信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python自学感悟"><span class="nav-number">2.</span> <span class="nav-text">Python自学感悟</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#“拼积木”"><span class="nav-number">2.1.</span> <span class="nav-text">“拼积木”</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#试探边界"><span class="nav-number">2.2.</span> <span class="nav-text">试探边界</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#以任务为中心"><span class="nav-number">2.3.</span> <span class="nav-text">以任务为中心</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">自学营团队</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.2.0</div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+  
+  <script src="/js/affix.js?v=7.2.0"></script>
+  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
+
+  
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.2.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://selfteaching-learning-notes.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://selfteaching-learning-notes.github.io/学习心得/1901100231-自学训练营18群-Python入门学习心得/";
+    this.page.identifier = "学习心得/1901100231-自学训练营18群-Python入门学习心得/";
+    this.page.title = '1901100231-自学训练营18群-Python入门学习心得';};
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://selfteaching-learning-notes.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+    window.addEventListener('load', loadComments, false);
+  
+</script>
+
+
+</body>
+</html>
